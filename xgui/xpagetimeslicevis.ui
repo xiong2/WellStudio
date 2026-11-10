@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CXPageTimeSliceVis</class>
+ <widget class="CXBasePropertyPage" name="CXPageTimeSliceVis">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>597</width>
+    <height>412</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CXPageTimeSliceVisBM</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QStackedWidget" name="m_pStackedWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="m_pPageSection">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="lbl_section_linecolor">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Color:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="CXColorButton" name="m_pClrBtnSectionLineColor">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_section_linewidth">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Width:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="CXLineWidthListCombBox" name="m_pCbbSectionLineWidth"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_section_linetype">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Style:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="CXLineTypeListCombBox" name="m_pCbbSectionLineType"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="m_pPageBM">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="gbxBMMode">
+         <property name="title">
+          <string>Display Mode</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QRadioButton" name="m_pRdoBMSeismic">
+            <property name="text">
+             <string>Seismic</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="m_pRdoBMFrac">
+            <property name="text">
+             <string>Fracture</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="gbxBMFrame">
+         <property name="title">
+          <string>Frame</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="lbl_bm_framecolor">
+            <property name="text">
+             <string>Color:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="CXButtonColorEdit" name="m_pClrBtnBMFrameColor">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbl_bm_framewidth">
+            <property name="text">
+             <string>Width:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="CXLineWidthListCombBox" name="m_pCbbBMFrameWidth"/>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="m_pGbxBMFrac">
+         <property name="title">
+          <string>Fracture</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="m_pChkBMSeismic">
+            <property name="text">
+             <string>Seismic Display</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="7">
+           <widget class="QLabel" name="lbl_bm_frac_min_percent">
+            <property name="text">
+             <string>%</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QLabel" name="lbl_bm_frac_dy_trace">
+            <property name="text">
+             <string>Trace</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="m_pCbbBMFracDen"/>
+          </item>
+          <item row="6" column="5">
+           <widget class="QLineEdit" name="m_pEdtBMFracMax"/>
+          </item>
+          <item row="7" column="5">
+           <widget class="QLineEdit" name="m_pEdtBMFracWidth"/>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="lbl_bm_frac_scale">
+            <property name="text">
+             <string>Scale:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="5">
+           <widget class="QLineEdit" name="m_pEdtBMFracMin">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lbl_bm_frac_color">
+            <property name="text">
+             <string>Color:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="4">
+           <widget class="QLabel" name="lbl_bm_frac_width">
+            <property name="text">
+             <string>Width:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="m_pEdtBMFracDY">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="m_pEdtBMFracScale">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="lbl_bm_frac_dx">
+            <property name="text">
+             <string>DX:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lbl_bm_frac_azi">
+            <property name="text">
+             <string>Azimuth:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="m_pCbbBMFracAzi"/>
+          </item>
+          <item row="6" column="4">
+           <widget class="QLabel" name="lbl_bm_frac_max">
+            <property name="text">
+             <string>Max-threshold:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QLabel" name="lbl_bm_frac_dx_trace">
+            <property name="text">
+             <string>Trace</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="lbl_bm_frac_dy">
+            <property name="text">
+             <string>DY:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="7">
+           <widget class="QLabel" name="lbl_bm_frac_max_percent">
+            <property name="text">
+             <string>%</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="4">
+           <widget class="QLabel" name="lbl_bm_frac_min">
+            <property name="text">
+             <string>Min-threshold:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="8">
+           <spacer name="horizontalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="4" column="3">
+           <spacer name="horizontalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="1">
+           <widget class="CXButtonColorEdit" name="m_pClrBtnBMFracColor">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lbl_bm_frac_den">
+            <property name="text">
+             <string>Density:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="m_pEdtBMFracDX">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="m_pPage3D">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="gbx3DMode">
+         <property name="title">
+          <string>Display Mode</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QRadioButton" name="m_pRdo3DSeismic">
+            <property name="text">
+             <string>Seismic</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="m_pRdo3DFrac">
+            <property name="text">
+             <string>Fracture</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="m_pGbx3DFrac">
+         <property name="title">
+          <string>Fracture</string>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="m_pEdt3DFracDY">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="lbl_3d_frac_dx">
+            <property name="text">
+             <string>DX:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="2">
+           <widget class="QLabel" name="lbl_3d_frac_dy_trace">
+            <property name="text">
+             <string>Trace</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="m_pEdt3DFracDX">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QLabel" name="lbl_3d_frac_dx_trace">
+            <property name="text">
+             <string>Trace</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="lbl_3d_frac_dy">
+            <property name="text">
+             <string>DY:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="3">
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lbl_3d_frac_azi">
+            <property name="text">
+             <string>Azimuth:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="lbl_3d_frac_den">
+            <property name="text">
+             <string>Density:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="m_pCbb3DFracAzi"/>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="m_pCbb3DFracDen"/>
+          </item>
+          <item row="0" column="0" colspan="2">
+           <widget class="QCheckBox" name="m_pChk3DFracSeismic">
+            <property name="text">
+             <string>Seismic Display</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="lbl_3d_frac_scale">
+            <property name="text">
+             <string>Scale:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="4">
+           <widget class="QLabel" name="lbl_3d_frac_min">
+            <property name="text">
+             <string>Min-threshold:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="7">
+           <widget class="QLabel" name="lbl_3d_frac_min_percent">
+            <property name="text">
+             <string>%</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QLineEdit" name="m_pEdt3DFracScale">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="8">
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="6" column="4">
+           <widget class="QLabel" name="lbl_3d_frac_max">
+            <property name="text">
+             <string>Max-threshold:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="7">
+           <widget class="QLabel" name="lbl_3d_frac_max_percent">
+            <property name="text">
+             <string>%</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lbl_3d_frac_color">
+            <property name="text">
+             <string>Color:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="CXButtonColorEdit" name="m_pClrBtn3DFracColor">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="5">
+           <widget class="QLineEdit" name="m_pEdt3DFracMax"/>
+          </item>
+          <item row="4" column="5">
+           <widget class="QLineEdit" name="m_pEdt3DFracMin">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="4">
+           <widget class="QLabel" name="m_pLbl3DFracHeight">
+            <property name="text">
+             <string>Height:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="5">
+           <widget class="QLineEdit" name="m_pEdt3DFracHeight"/>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CXColorButton</class>
+   <extends>QPushButton</extends>
+   <header>xcolorbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CXLineWidthListCombBox</class>
+   <extends>QComboBox</extends>
+   <header>xlinecomponent.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CXLineTypeListCombBox</class>
+   <extends>QComboBox</extends>
+   <header>xlinecomponent.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CXBasePropertyPage</class>
+   <extends>QWidget</extends>
+   <header>xbasepropertypage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CXButtonColorEdit</class>
+   <extends>QPushButton</extends>
+   <header>xbuttoncoloredit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>m_pRdo3DFrac</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>m_pGbx3DFrac</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>107</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pRdoBMFrac</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>m_pGbxBMFrac</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>112</x>
+     <y>157</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

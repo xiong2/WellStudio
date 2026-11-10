@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CXPageImportFormation</class>
+ <widget class="QWizardPage" name="CXPageImportFormation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>486</width>
+    <height>399</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CXPageImportFormation</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="1">
+    <widget class="QPushButton" name="pushButtonSelectAll">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../xconsole/x.qrc">
+       <normaloff>:/Icon/SelectAll.png</normaloff>:/Icon/SelectAll.png</iconset>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="3">
+    <widget class="QTableWidget" name="tableWidget"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButtonUnselectAll">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../xconsole/x.qrc">
+       <normaloff>:/Icon/DisSelectAll.png</normaloff>:/Icon/DisSelectAll.png</iconset>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections/>
+</ui>

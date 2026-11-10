@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CX2DSectionWindow</class>
+ <widget class="QMainWindow" name="CX2DSectionWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>16</width>
+    <height>16</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="m_toolbarBasic">
+   <property name="windowTitle">
+    <string>Standard</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="m_actionProperties"/>
+   <addaction name="separator"/>
+   <addaction name="m_actionViewAll"/>
+   <addaction name="m_actionFitToWindowWidth"/>
+   <addaction name="m_actionFitToWindowHeight"/>
+   <addaction name="separator"/>
+   <addaction name="m_actionZoomIn"/>
+   <addaction name="m_actionZoomOut"/>
+   <addaction name="m_actionIncreaseHorizonScale"/>
+   <addaction name="m_actionDecreaseHorizonScale"/>
+   <addaction name="m_actionIncreaseVerticalScale"/>
+   <addaction name="m_actionDecreaseVerticalScale"/>
+   <addaction name="separator"/>
+   <addaction name="actionRectZoom"/>
+   <addaction name="actionRectZoomUndo"/>
+   <addaction name="actionCancelZoomin"/>
+   <addaction name="separator"/>
+   <addaction name="m_actionIncreaseExcursion"/>
+   <addaction name="m_actionDecreaseExcursion"/>
+  </widget>
+  <widget class="QToolBar" name="m_toolbarColormap">
+   <property name="windowTitle">
+    <string>Colormap</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="m_toolbarDisplayMode">
+   <property name="windowTitle">
+    <string>Display mode and scale</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="m_actionVariableIntensity"/>
+   <addaction name="m_actionWiggle"/>
+   <addaction name="m_actionVariableAreaWiggle"/>
+  </widget>
+  <widget class="QToolBar" name="m_toolbarDigitizingAndForeground">
+   <property name="windowTitle">
+    <string>Digitizing and foreground tools</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="m_actionHorizonTrackingTools"/>
+   <addaction name="m_actionFaultDigitizingTools"/>
+   <addaction name="m_action2ndLayerTools"/>
+   <addaction name="m_actionOrthoSections"/>
+  </widget>
+  <widget class="QToolBar" name="m_toolBarVolumes">
+   <property name="windowTitle">
+    <string>Toolbar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="m_actionProperties">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/Properties.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Properties Window</string>
+   </property>
+  </action>
+  <action name="m_actionZoomIn">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/ZoomIn.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+  </action>
+  <action name="m_actionZoomOut">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/ZoomOut.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="m_actionViewAll">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/ViewAll.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>View All</string>
+   </property>
+  </action>
+  <action name="m_actionSynchronize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/Synchronize.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Synchronize</string>
+   </property>
+  </action>
+  <action name="m_actionOrthoSections">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/OrthoSection.png</normaloff>:/Icon/OrthoSection.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show ortho sections</string>
+   </property>
+  </action>
+  <action name="m_actionFitToWindowWidth">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/FitWidth.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Fit to Window Width</string>
+   </property>
+  </action>
+  <action name="m_actionFitToWindowHeight">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/FitHeight.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Fit to Window Height</string>
+   </property>
+  </action>
+  <action name="m_actionIncreaseHorizonScale">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/IncaseHorizon.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Increase Horizon Scale</string>
+   </property>
+  </action>
+  <action name="m_actionDecreaseHorizonScale">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/DiscaseHorizon.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Decrease Horizon Scale</string>
+   </property>
+  </action>
+  <action name="m_actionIncreaseVerticalScale">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/IncaseVertical.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Increase Vertical Scale</string>
+   </property>
+  </action>
+  <action name="m_actionDecreaseVerticalScale">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/DiscaseVertical.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Decrease Vertical Scale</string>
+   </property>
+  </action>
+  <action name="m_actionIncreaseExcursion">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/IncaseExcursion.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Increase Excursion</string>
+   </property>
+  </action>
+  <action name="m_actionDecreaseExcursion">
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/DiscaseExcursion.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Decrease Excursion</string>
+   </property>
+  </action>
+  <action name="m_actionVariableIntensity">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/VaribleIntensity.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Variable Intensity</string>
+   </property>
+  </action>
+  <action name="m_actionWiggle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/Wiggle.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Wiggle</string>
+   </property>
+  </action>
+  <action name="m_actionVariableAreaWiggle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/WiggleArea.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Variable Area + Wiggle</string>
+   </property>
+  </action>
+  <action name="m_actionFaultDigitizingTools">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normalon>:/Icon/Fault.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Fault Digitizing Tools</string>
+   </property>
+  </action>
+  <action name="m_actionHorizonTrackingTools">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Horizon.png</normaloff>
+     <normalon>:/Icon/Horizon.png</normalon>:/Icon/Horizon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Horizon Tracking Tools</string>
+   </property>
+  </action>
+  <action name="m_action2ndLayerTools">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/SeismicDataVolume.png</normaloff>:/Icon/SeismicDataVolume.png</iconset>
+   </property>
+   <property name="text">
+    <string>2nd layer(Foreground) Tool</string>
+   </property>
+   <property name="toolTip">
+    <string>2nd layer(Foreground) Tool</string>
+   </property>
+  </action>
+  <action name="actionRectZoom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/RectZoom.png</normaloff>:/Icon/RectZoom.png</iconset>
+   </property>
+   <property name="text">
+    <string>RectZoom</string>
+   </property>
+   <property name="toolTip">
+    <string>Zoom in to fit the given rectangle</string>
+   </property>
+  </action>
+  <action name="actionRectZoomUndo">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/RectZoomUndo.png</normaloff>:/Icon/RectZoomUndo.png</iconset>
+   </property>
+   <property name="text">
+    <string>RectZoomUndo</string>
+   </property>
+   <property name="toolTip">
+    <string>Undo last zoom in</string>
+   </property>
+  </action>
+  <action name="actionCancelZoomin">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/RectZoomCancel.png</normaloff>:/Icon/RectZoomCancel.png</iconset>
+   </property>
+   <property name="text">
+    <string>CancelZoomin</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancel all the zoom in</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections/>
+</ui>

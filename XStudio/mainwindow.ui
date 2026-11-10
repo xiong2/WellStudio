@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1268</width>
+    <height>882</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>XStudio</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1268</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Project"/>
+    <addaction name="actionOpen_Project"/>
+    <addaction name="actionSave_Project"/>
+    <addaction name="actionProject_Properties"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <addaction name="actionLog_View"/>
+    <addaction name="actionCrossplot_view"/>
+    <addaction name="actionHistogram_Window"/>
+    <addaction name="action3DWindow"/>
+    <addaction name="actionSection_Window"/>
+    <addaction name="actionBasemap_Window"/>
+   </widget>
+   <widget class="QMenu" name="menuImport">
+    <property name="title">
+     <string>I/O</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>Import Wells</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../xconsole/x.qrc">
+       <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+     </property>
+     <addaction name="actionImportWellHeader"/>
+     <addaction name="actionImportWellPath"/>
+     <addaction name="actionImportWellLas"/>
+     <addaction name="actionImportWellWis"/>
+     <addaction name="actionImportWellXtf"/>
+     <addaction name="actionImportWellDlis"/>
+     <addaction name="actionImportWellASCIILog"/>
+     <addaction name="actionImportWellCheckShot"/>
+     <addaction name="actionImportWellTops"/>
+    </widget>
+    <widget class="QMenu" name="menu_2">
+     <property name="title">
+      <string>Import Fault</string>
+     </property>
+     <property name="icon">
+      <iconset resource="../xconsole/x.qrc">
+       <normaloff>:/Icon/Fault.png</normaloff>:/Icon/Fault.png</iconset>
+     </property>
+     <addaction name="actionImportFaultStick"/>
+     <addaction name="actionImportFaultPolygon"/>
+    </widget>
+    <addaction name="actionImportSegy"/>
+    <addaction name="actionCreateSeismicArea"/>
+    <addaction name="actionImport3DSurface"/>
+    <addaction name="menu_2"/>
+    <addaction name="menu"/>
+    <addaction name="actionImportWavelet"/>
+    <addaction name="actionImportPoints"/>
+    <addaction name="actionImportReservoir"/>
+    <addaction name="actionImportFracturePatch"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionTheoreticalWavelet"/>
+    <addaction name="actionTemplates"/>
+    <addaction name="actionUpdateSEGY"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionFAQ"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>Window</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuStress">
+    <property name="title">
+     <string>Stress</string>
+    </property>
+    <addaction name="actionHorizon_Management"/>
+    <addaction name="actionStress_Calculation"/>
+    <addaction name="actionRegional_Stress_Analysis"/>
+    <addaction name="separator"/>
+    <addaction name="actionGSBasemap_Window"/>
+    <addaction name="actionGSSection_Window"/>
+    <addaction name="actionPDG_Window"/>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_to_tool_bar"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuImport"/>
+   <addaction name="menuWindow"/>
+   <addaction name="menuStress"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>工具栏</string>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew_Project"/>
+   <addaction name="actionOpen_Project"/>
+   <addaction name="actionSave_Project"/>
+   <addaction name="separator"/>
+   <addaction name="actionSection_Window"/>
+   <addaction name="actionBasemap_Window"/>
+   <addaction name="action3DWindow"/>
+   <addaction name="actionLog_View"/>
+   <addaction name="actionCrossplot_view"/>
+   <addaction name="actionHistogram_Window"/>
+   <addaction name="separator"/>
+   <addaction name="actionSwitchWindowStyle"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockDataTree">
+   <property name="windowTitle">
+    <string>Data</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="CXMainTreeWidget" name="treeWidgetData">
+       <column>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWindowTree">
+   <property name="windowTitle">
+    <string>Windows</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_2">
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QTreeWidget" name="treeWidgetWindow">
+       <column>
+        <property name="text">
+         <string notr="true">1</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpen_Project">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Folder(open)32.png</normaloff>:/Icon/Folder(open)32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open...</string>
+   </property>
+   <property name="toolTip">
+    <string>打开已有项目</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Exit.png</normaloff>:/Icon/Exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionSave_Project">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Save32.png</normaloff>:/Icon/Save32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>保存当前项目</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionNew_Project">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/New32.png</normaloff>:/Icon/New32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Create...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionHistogram_Window">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Histogram32.png</normaloff>:/Icon/Histogram32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Histogram view...</string>
+   </property>
+   <property name="toolTip">
+    <string>创建直方图窗口</string>
+   </property>
+  </action>
+  <action name="actionTemplates">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Setting.png</normaloff>:/Icon/Setting.png</iconset>
+   </property>
+   <property name="text">
+    <string>Templates...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionLog_View">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Logview32.png</normaloff>:/Icon/Logview32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Log View...</string>
+   </property>
+   <property name="toolTip">
+    <string>创建曲线回放窗口</string>
+   </property>
+  </action>
+  <action name="actionCrossplot_view">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Crossplot32.png</normaloff>:/Icon/Crossplot32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Crossplot view...</string>
+   </property>
+   <property name="toolTip">
+    <string>创建交会图窗口</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Question4.png</normaloff>:/Icon/Question4.png</iconset>
+   </property>
+   <property name="text">
+    <string>Help...</string>
+   </property>
+  </action>
+  <action name="actionImportWellHeader">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Wellhead...</string>
+   </property>
+  </action>
+  <action name="actionImportWellPath">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Path...</string>
+   </property>
+  </action>
+  <action name="actionImportWellLas">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Las...</string>
+   </property>
+  </action>
+  <action name="actionImportWellTops">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Tops...</string>
+   </property>
+  </action>
+  <action name="actionImportFaultStick">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Fault.png</normaloff>:/Icon/Fault.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import FaultStick...</string>
+   </property>
+  </action>
+  <action name="actionImportFaultPolygon">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/FaultPolygon.png</normaloff>:/Icon/FaultPolygon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Fault Polygon...</string>
+   </property>
+  </action>
+  <action name="actionImportPoints">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Points.png</normaloff>:/Icon/Points.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Points...</string>
+   </property>
+  </action>
+  <action name="action3DWindow">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/3DWindow32.png</normaloff>:/Icon/3DWindow32.png</iconset>
+   </property>
+   <property name="text">
+    <string>3DWindow...</string>
+   </property>
+   <property name="toolTip">
+    <string>创建3DWindow</string>
+   </property>
+  </action>
+  <action name="actionImport3DSurface">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Surface.png</normaloff>:/Icon/Surface.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import 3D Horizon...</string>
+   </property>
+   <property name="iconText">
+    <string>Import 3-D Horizon</string>
+   </property>
+   <property name="toolTip">
+    <string>Import 3-D Horizon</string>
+   </property>
+  </action>
+  <action name="actionImportSegy">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Seismic.png</normaloff>:/Icon/Seismic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Seismic...</string>
+   </property>
+  </action>
+  <action name="actionSection_Window">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/SectionWindow32.png</normaloff>:/Icon/SectionWindow32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Section Window...</string>
+   </property>
+   <property name="toolTip">
+    <string>Create 2D Section Window</string>
+   </property>
+  </action>
+  <action name="actionBasemap_Window">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/BasemapWindow32.png</normaloff>:/Icon/BasemapWindow32.png</iconset>
+   </property>
+   <property name="text">
+    <string>Basemap Window...</string>
+   </property>
+   <property name="toolTip">
+    <string>New Base Map Window</string>
+   </property>
+  </action>
+  <action name="actionCreateSeismicArea">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Seismic.png</normaloff>:/Icon/Seismic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Create Survey...</string>
+   </property>
+  </action>
+  <action name="actionImportReservoir">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/ReservoirModel.png</normaloff>:/Icon/ReservoirModel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Geomodel...</string>
+   </property>
+  </action>
+  <action name="actionImportWellASCIILog">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import ASCII...</string>
+   </property>
+  </action>
+  <action name="actionProject_Properties">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/ProjectProperties.png</normaloff>:/Icon/ProjectProperties.png</iconset>
+   </property>
+   <property name="text">
+    <string>Option...</string>
+   </property>
+  </action>
+  <action name="actionSwitchWindowStyle">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/TopLevel32.png</normaloff>:/Icon/TopLevel32.png</iconset>
+   </property>
+   <property name="text">
+    <string>SwitchWindowStyle</string>
+   </property>
+   <property name="toolTip">
+    <string>Switch Window Style</string>
+   </property>
+  </action>
+  <action name="actionImportWellWis">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import WIS...</string>
+   </property>
+  </action>
+  <action name="actionImportWellXtf">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import XTF...</string>
+   </property>
+  </action>
+  <action name="actionFAQ">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Question4.png</normaloff>:/Icon/Question4.png</iconset>
+   </property>
+   <property name="text">
+    <string>About...</string>
+   </property>
+   <property name="toolTip">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionImportWellDlis">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import DLIS...</string>
+   </property>
+  </action>
+  <action name="actionHorizon_Management">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Horizon2.png</normaloff>:/Icon/Horizon2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Horizon Management...</string>
+   </property>
+  </action>
+  <action name="actionStress_Calculation">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Stress.png</normaloff>:/Icon/Stress.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stress Calculation...</string>
+   </property>
+  </action>
+  <action name="actionPDG_Window">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/PDG.png</normaloff>:/Icon/PDG.png</iconset>
+   </property>
+   <property name="text">
+    <string>PDG Window...</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionGSBasemap_Window">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/GSBasemapWindow.png</normaloff>:/Icon/GSBasemapWindow.png</iconset>
+   </property>
+   <property name="text">
+    <string>GSBasemap Window...</string>
+   </property>
+  </action>
+  <action name="actionGSSection_Window">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/GSSectionWindow.png</normaloff>:/Icon/GSSectionWindow.png</iconset>
+   </property>
+   <property name="text">
+    <string>GSSection Window...</string>
+   </property>
+  </action>
+  <action name="actionRegional_Stress_Analysis">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Global.png</normaloff>:/Icon/Global.png</iconset>
+   </property>
+   <property name="text">
+    <string>Regional Stress Analysis...</string>
+   </property>
+  </action>
+  <action name="actionAdd_to_tool_bar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show on Tool Bar</string>
+   </property>
+   <property name="toolTip">
+    <string>Show on tool bar</string>
+   </property>
+  </action>
+  <action name="actionImportWellCheckShot">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Check Shot...</string>
+   </property>
+   <property name="toolTip">
+    <string>Import check shot data</string>
+   </property>
+  </action>
+  <action name="actionTMInversion">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Calculator.png</normaloff>:/Icon/Calculator.png</iconset>
+   </property>
+   <property name="text">
+    <string>TMInversion</string>
+   </property>
+  </action>
+  <action name="actionImportWavelet">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/WaveletFile.png</normaloff>:/Icon/WaveletFile.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Wavelet...</string>
+   </property>
+   <property name="toolTip">
+    <string>Import wavelet from file</string>
+   </property>
+  </action>
+  <action name="actionTheoreticalWavelet">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Wavelet.png</normaloff>:/Icon/Wavelet.png</iconset>
+   </property>
+   <property name="text">
+    <string>Theoretical Wavlet...</string>
+   </property>
+   <property name="toolTip">
+    <string>Create theoretical wavelet</string>
+   </property>
+  </action>
+  <action name="actionUpdateSEGY">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Seismic.png</normaloff>:/Icon/Seismic.png</iconset>
+   </property>
+   <property name="text">
+    <string>UpdateSEGY</string>
+   </property>
+  </action>
+  <action name="actionImportFracturePatch">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/FracturePatch.png</normaloff>:/Icon/FracturePatch.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import Fracture Patches...</string>
+   </property>
+   <property name="toolTip">
+    <string>Import Fracture Patches</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CXMainTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header location="global">xmaintreewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections/>
+</ui>

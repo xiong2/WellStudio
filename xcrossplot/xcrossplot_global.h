@@ -1,0 +1,12 @@
+#ifndef XCROSSPLOT_GLOBAL_H
+#define XCROSSPLOT_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef XCROSSPLOT_LIB
+# define XCROSSPLOT_EXPORT Q_DECL_EXPORT
+#else
+# define XCROSSPLOT_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // XCROSSPLOT_GLOBAL_H

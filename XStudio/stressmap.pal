@@ -1,0 +1,21 @@
+!colormap file, it include color info and value info.
+<BaseInfo>
+    Discrete = 1
+    NullColor = 0, 0, 0, 0
+    ColorState = Normal(N)
+    ColorState = Loading(L)
+    ColorState = Uplift(U)
+    ColorState = Ext. Strike Slip(ESS)
+    ColorState = Strike Slip(SS)
+    ColorState = Comop. Strike Slip(CSS)
+    ColorState = Reverse(R)
+</BaseInfo>
+<ColorMap>
+    Color = 255, 255, 0, 0
+    Color = 255, 255, 192, 0
+    Color = 255, 255, 255, 0
+    Color = 255, 102, 255, 102
+    Color = 255, 51, 204, 51
+    Color = 255, 0, 153, 0
+    Color = 255, 68, 68, 236
+</ColorMap>

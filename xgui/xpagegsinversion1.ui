@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CXPageGSInversion1</class>
+ <widget class="QWizardPage" name="CXPageGSInversion1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>894</width>
+    <height>447</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CXPageGSInversion1</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Structure Model Setting</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTableWidget" name="tableWidgetSM">
+        <column>
+         <property name="text">
+          <string>Use</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Zone</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Reservoir</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="2">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Wells &amp; Logs</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" rowspan="8">
+       <widget class="QTableWidget" name="tableWidgetWells">
+        <column>
+         <property name="text">
+          <string>Use</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Well</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Discrete Propoerty</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" colspan="2">
+       <widget class="QComboBox" name="comboBoxDiscrete"/>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Continuous Propoerty</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" colspan="2">
+       <widget class="QComboBox" name="comboBoxContinuous">
+        <item>
+         <property name="text">
+          <string>Zp, Vp/Vs, Rho</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Vp, Vs, Rho</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Zp, Zs, Rho</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="labelContinuousLog1">
+        <property name="text">
+         <string>ZP</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3" colspan="2">
+       <widget class="QComboBox" name="comboBoxContinuousLog1"/>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="labelContinuousLog2">
+        <property name="text">
+         <string>VP/VS</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3" colspan="2">
+       <widget class="QComboBox" name="comboBoxContinuousLog2"/>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="labelContinuousLog3">
+        <property name="text">
+         <string>Rho</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3" colspan="2">
+       <widget class="QComboBox" name="comboBoxContinuousLog3"/>
+      </item>
+      <item row="5" column="1" colspan="3">
+       <widget class="QCheckBox" name="checkBox">
+        <property name="text">
+         <string>Fit prior pdfs of shape</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="4">
+       <widget class="QComboBox" name="comboBox">
+        <item>
+         <property name="text">
+          <string>Normal</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Log normal</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Binned</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Uniform</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="6" column="1" colspan="2">
+       <widget class="QLabel" name="labelNumBins">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Number of bins</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="4">
+       <widget class="QSpinBox" name="spinBox">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimum">
+         <number>10</number>
+        </property>
+        <property name="maximum">
+         <number>50</number>
+        </property>
+        <property name="value">
+         <number>25</number>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="2">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>211</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Output</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="1">
+       <widget class="QPushButton" name="pushButtonQCSection">
+        <property name="minimumSize">
+         <size>
+          <width>40</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>40</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/18804.png</normaloff>:/Icon/18804.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>QC Section:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLineEdit" name="lineEditQCSection"/>
+      </item>
+      <item row="0" column="0" colspan="4">
+       <widget class="CXSliderComplex" name="inlineRange" native="true"/>
+      </item>
+      <item row="1" column="0" colspan="4">
+       <widget class="CXSliderComplex" name="crosslineRange" native="true"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CXSliderComplex</class>
+   <extends>QWidget</extends>
+   <header>xslidercomplex.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections/>
+</ui>

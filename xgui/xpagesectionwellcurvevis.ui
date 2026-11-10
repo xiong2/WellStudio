@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CXPageSectionWellCurveVis</class>
+ <widget class="CXBasePropertyPage" name="CXPageSectionWellCurveVis">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>446</width>
+    <height>490</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CXPageSectionWellCurveVis</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="m_pGbxMode">
+     <property name="title">
+      <string>Display Mode</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="m_pRadioBtnCurve">
+        <property name="text">
+         <string>Curve</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="m_pRadioBtnVI">
+        <property name="text">
+         <string>Variable Indensity</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="m_pGbxVI">
+     <property name="title">
+      <string>VI</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="m_pLblVIWidth">
+        <property name="text">
+         <string>Width:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="m_pEdtVIWidth">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+     <zorder>m_pLblVIWidth</zorder>
+     <zorder>m_pEdtVIWidth</zorder>
+     <zorder>horizontalSpacer_5</zorder>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="m_pGbxLine">
+     <property name="title">
+      <string>Line</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0" colspan="2">
+       <widget class="QCheckBox" name="m_pChkVisibleLine">
+        <property name="text">
+         <string>Visible</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="m_pLblLineWidth">
+        <property name="text">
+         <string>Width: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="m_pLblLineColor">
+        <property name="text">
+         <string>Color: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="CXButtonColorEdit" name="m_pClrBtnLine">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="m_pEdtLineWidth">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <spacer name="horizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="m_pGbxFill">
+     <property name="title">
+      <string>Fill</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="3">
+       <widget class="CXButtonColorEdit" name="m_pClrBtnFill">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="m_pLblFillColor">
+        <property name="text">
+         <string>Color: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="m_pEdtFillWidth">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QCheckBox" name="m_pChkVisibleFill">
+        <property name="text">
+         <string>Visible</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="m_pLblFillWidth">
+        <property name="text">
+         <string>Width: </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="m_pGbxFilter">
+     <property name="title">
+      <string>Filter</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="1">
+       <widget class="QComboBox" name="m_pCbbFilterType">
+        <item>
+         <property name="text">
+          <string>No filtering</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Low pass filter</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Band pass filter</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>High pass filter</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="m_pLblFilterType">
+        <property name="text">
+         <string>Filter type</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QGroupBox" name="m_pGbxHighValues">
+        <property name="title">
+         <string>High pass parameter</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="1">
+          <widget class="QDoubleSpinBox" name="m_pDsbxHighFreq">
+           <property name="maximum">
+            <double>9999999999.989999771118164</double>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="m_pLblHighFreq">
+           <property name="text">
+            <string>Frequency</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="m_pLblHighOverlap">
+           <property name="text">
+            <string>Overlap</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QDoubleSpinBox" name="m_pDsbxHighOverlap">
+           <property name="maximum">
+            <double>9999999999.989999771118164</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QGroupBox" name="m_pGbxLowValues">
+        <property name="title">
+         <string>Low pass parameter</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QLabel" name="m_pLblLowFreq">
+           <property name="text">
+            <string>Frequency</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QDoubleSpinBox" name="m_pDsbxLowFreq">
+           <property name="maximum">
+            <double>9999999999.989999771118164</double>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="m_pLblLowOverlap">
+           <property name="text">
+            <string>Overlap</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QDoubleSpinBox" name="m_pDsbxLowOverlap">
+           <property name="maximum">
+            <double>9999999999.989999771118164</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CXButtonColorEdit</class>
+   <extends>QPushButton</extends>
+   <header>xbuttoncoloredit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CXBasePropertyPage</class>
+   <extends>QWidget</extends>
+   <header>xbasepropertypage.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>m_pRadioBtnVI</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>m_pGbxVI</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>130</x>
+     <y>77</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pRadioBtnVI</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>m_pGbxLine</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>170</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pRadioBtnVI</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>m_pGbxFill</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>150</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>148</x>
+     <y>226</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

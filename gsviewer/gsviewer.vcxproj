@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{174FDC09-6FE7-481C-BAB9-368F84EA0A96}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;opengl;sql;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>msvc2017_64</QtInstall>
+    <QtModules>core;gui;opengl;sql;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtMoc>
+      <PrependInclude>stdafx.h</PrependInclude>
+    </QtMoc>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>GSVIEWER_LIB;BUILD_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\xbasic;..\xdata\generatedfiles;..\xdata;..\xbasicui;..\xgui\generatedfiles;..\xgui;..\graphicview;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <QtUic>
+      <QtUicDir>GeneratedFiles</QtUicDir>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtMoc>
+      <PrependInclude>stdafx.h</PrependInclude>
+    </QtMoc>
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <PreprocessorDefinitions>GSVIEWER_LIB;BUILD_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\xbasic;..\xdata\generatedfiles;..\xdata;..\xbasicui;..\xgui\generatedfiles;..\xgui;..\graphicview;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).lib</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="gsbasemapscene.cpp" />
+    <ClCompile Include="gsbasemapview.cpp" />
+    <ClCompile Include="gsbasemapwindow.cpp" />
+    <ClCompile Include="gsbm3dhorizonitem.cpp" />
+    <ClCompile Include="gsbmcoordinateitem.cpp" />
+    <ClCompile Include="gsbmitembuilderfactory.cpp" />
+    <ClCompile Include="gsbmitemdefinerose.cpp" />
+    <ClCompile Include="gsbmitemrosediagram.cpp" />
+    <ClCompile Include="gsbmpdgitem.cpp" />
+    <ClCompile Include="gsbmsectionitem.cpp" />
+    <ClCompile Include="gsbmstressmapitem.cpp" />
+    <ClCompile Include="gsbmwellitem.cpp" />
+    <ClCompile Include="gsdlginteractivecalculation.cpp" />
+    <ClCompile Include="gsdlginteractivecurvatureanalysis.cpp" />
+    <ClCompile Include="gsdlgrosediagram.cpp" />
+    <ClCompile Include="gsdlgrsa.cpp" />
+    <ClCompile Include="gsitemanticlines.cpp" />
+    <ClCompile Include="gsitemfaultpolygons.cpp" />
+    <ClCompile Include="gsitemfrg.cpp" />
+    <ClCompile Include="gsitempdg.cpp" />
+    <ClCompile Include="gsitemprofile.cpp" />
+    <ClCompile Include="gsitemsticks.cpp" />
+    <ClCompile Include="gsitemstress.cpp" />
+    <ClCompile Include="gsitemstructures.cpp" />
+    <ClCompile Include="gsitemtrappoints.cpp" />
+    <ClCompile Include="gsitemwells.cpp" />
+    <ClCompile Include="gspdgscene.cpp" />
+    <ClCompile Include="gspdgview.cpp" />
+    <ClCompile Include="gspdgwindow.cpp" />
+    <ClCompile Include="gsrsitemcompose.cpp" />
+    <ClCompile Include="gsrsitemsource.cpp" />
+    <ClCompile Include="gssectionscene.cpp" />
+    <ClCompile Include="gssectionview.cpp" />
+    <ClCompile Include="gssectionwindow.cpp" />
+    <ClCompile Include="gstreenodecreator.cpp" />
+    <ClCompile Include="gsviewer.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="gsbasemapscene.h" />
+    <QtMoc Include="gsbasemapview.h" />
+    <QtMoc Include="gsbasemapwindow.h" />
+    <ClInclude Include="gsbm3dhorizonitem.h" />
+    <ClInclude Include="gsbmcoordinateitem.h" />
+    <ClInclude Include="gsbmitembuilderfactory.h" />
+    <ClInclude Include="gsbmitemdef.h" />
+    <ClInclude Include="gsbmitemdefinerose.h" />
+    <ClInclude Include="gsbmitemrosediagram.h" />
+    <ClInclude Include="gsbmpdgitem.h" />
+    <ClInclude Include="gsbmsectionitem.h" />
+    <ClInclude Include="gsbmstressmapitem.h" />
+    <ClInclude Include="gsbmwellitem.h" />
+    <QtMoc Include="gsdlginteractivecalculation.h" />
+    <QtMoc Include="gsdlginteractivecurvatureanalysis.h" />
+    <QtMoc Include="gsdlgrosediagram.h" />
+    <QtMoc Include="gsdlgrsa.h" />
+    <ClInclude Include="gsitemanticlines.h" />
+    <ClInclude Include="gsitemfaultpolygons.h" />
+    <ClInclude Include="gsitemfrg.h" />
+    <ClInclude Include="gsitempdg.h" />
+    <ClInclude Include="gsitemprofile.h" />
+    <ClInclude Include="gsitemsticks.h" />
+    <ClInclude Include="gsitemstress.h" />
+    <ClInclude Include="gsitemstructures.h" />
+    <ClInclude Include="gsitemtrappoints.h" />
+    <ClInclude Include="gsitemwells.h" />
+    <ClInclude Include="gsobjitem.h" />
+    <QtMoc Include="gspdgscene.h" />
+    <QtMoc Include="gspdgview.h" />
+    <QtMoc Include="gspdgwindow.h" />
+    <ClInclude Include="gsrsitemcompose.h" />
+    <ClInclude Include="gsrsitemsource.h" />
+    <QtMoc Include="gssectionscene.h" />
+    <QtMoc Include="gssectionview.h" />
+    <QtMoc Include="gssectionwindow.h" />
+    <ClInclude Include="gstreenodecreator.h" />
+    <ClInclude Include="gsviewer.h" />
+    <ClInclude Include="gsviewer_global.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="gsbasemapwindow.ui" />
+    <QtUic Include="gsdlginteractivecalculation.ui" />
+    <QtUic Include="gsdlginteractivecurvatureanalysis.ui" />
+    <QtUic Include="gsdlgrosediagram.ui" />
+    <QtUic Include="gsdlgrsa.ui" />
+    <QtUic Include="gspdgwindow.ui" />
+    <QtUic Include="gssectionwindow.ui" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

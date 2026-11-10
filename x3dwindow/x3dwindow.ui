@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>X3DWindow</class>
+ <widget class="QMainWindow" name="X3DWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>906</width>
+    <height>625</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>3-D Window</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../xconsole/x.qrc">
+    <normaloff>:/Icon/3dwindow.png</normaloff>:/Icon/3dwindow.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSelect_Mode"/>
+   <addaction name="actionSynchronize"/>
+   <addaction name="actionHome"/>
+   <addaction name="actionSet_Home"/>
+   <addaction name="separator"/>
+   <addaction name="actionView_All"/>
+   <addaction name="actionXY_Plane_View"/>
+   <addaction name="actionXZ_Plane_View"/>
+   <addaction name="actionYZ_Plane_View"/>
+   <addaction name="actionPerspective_Orthogonal_View_Mode"/>
+   <addaction name="separator"/>
+   <addaction name="actionShow_Hide_Coordinates"/>
+   <addaction name="actionShow_Hide_Coordinates_Grid"/>
+   <addaction name="actionCompass"/>
+   <addaction name="actionColorbar"/>
+   <addaction name="actionLight_Setting"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="bottomToolBar">
+   <property name="windowTitle">
+    <string>Toolbar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <action name="actionSelect_Mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Selection.png</normaloff>:/Icon/Selection.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select Mode</string>
+   </property>
+  </action>
+  <action name="actionView_All">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/ViewAll.png</normaloff>:/Icon/ViewAll.png</iconset>
+   </property>
+   <property name="text">
+    <string>View All</string>
+   </property>
+  </action>
+  <action name="actionHome">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Home.png</normaloff>:/Icon/Home.png</iconset>
+   </property>
+   <property name="text">
+    <string>Home</string>
+   </property>
+  </action>
+  <action name="actionSet_Home">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/SetHome.png</normaloff>:/Icon/SetHome.png</iconset>
+   </property>
+   <property name="text">
+    <string>Set Home</string>
+   </property>
+  </action>
+  <action name="actionXY_Plane_View">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/XYPlane.png</normaloff>:/Icon/XYPlane.png</iconset>
+   </property>
+   <property name="text">
+    <string>XY Plane View</string>
+   </property>
+  </action>
+  <action name="actionXZ_Plane_View">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/XZPlane.png</normaloff>:/Icon/XZPlane.png</iconset>
+   </property>
+   <property name="text">
+    <string>XZ Plane View</string>
+   </property>
+  </action>
+  <action name="actionYZ_Plane_View">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/YZPlane.png</normaloff>:/Icon/YZPlane.png</iconset>
+   </property>
+   <property name="text">
+    <string>YZ Plane View</string>
+   </property>
+  </action>
+  <action name="actionShow_Hide_Coordinates">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Axes.png</normaloff>:/Icon/Axes.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show/Hide Coordinates</string>
+   </property>
+  </action>
+  <action name="actionShow_Hide_Coordinates_Grid">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/AxesGrids.png</normaloff>:/Icon/AxesGrids.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show/Hide Coordinates Grid</string>
+   </property>
+  </action>
+  <action name="actionPerspective_Orthogonal_View_Mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Perspective.png</normaloff>
+     <normalon>:/Icon/Ortho.png</normalon>:/Icon/Perspective.png</iconset>
+   </property>
+   <property name="text">
+    <string>Perspective/Orthogonal View Mode</string>
+   </property>
+  </action>
+  <action name="actionCompass">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Compass.png</normaloff>:/Icon/Compass.png</iconset>
+   </property>
+   <property name="text">
+    <string>Compass</string>
+   </property>
+  </action>
+  <action name="actionSynchronize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Synchronize.png</normaloff>:/Icon/Synchronize.png</iconset>
+   </property>
+   <property name="text">
+    <string>Synchronize</string>
+   </property>
+  </action>
+  <action name="actionColorbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Colorbar.png</normaloff>:/Icon/Colorbar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Colorbar</string>
+   </property>
+  </action>
+  <action name="actionLight_Setting">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/lights.png</normaloff>:/Icon/lights.png</iconset>
+   </property>
+   <property name="text">
+    <string>Light Setting</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections/>
+</ui>

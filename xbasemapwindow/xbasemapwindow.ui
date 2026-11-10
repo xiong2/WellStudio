@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>rlbasemapmainwindow</class>
+ <widget class="QMainWindow" name="rlbasemapmainwindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Base Map Window</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../xconsole/x.qrc">
+    <normaloff>:/Icon/BasemapWindow.png</normaloff>:/Icon/BasemapWindow.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBarTop">
+   <property name="windowTitle">
+    <string>Toolbar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="m_actionProperties"/>
+   <addaction name="m_actionScreenshot"/>
+   <addaction name="m_actionSelectMode"/>
+   <addaction name="separator"/>
+   <addaction name="m_actionViewAll"/>
+   <addaction name="m_actionHome"/>
+   <addaction name="m_actionSetHome"/>
+   <addaction name="separator"/>
+   <addaction name="m_actionCoordinate"/>
+   <addaction name="m_actionColorbar"/>
+   <addaction name="m_actionCompass"/>
+   <addaction name="m_actionScale"/>
+   <addaction name="separator"/>
+   <addaction name="m_actionSynchronize"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarTrackingTools">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="windowTitle">
+    <string>Tracking tools</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="m_pActionPolygon_Mode"/>
+   <addaction name="m_pActionRandomSection_Mode"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarVolume">
+   <property name="windowTitle">
+    <string>Seismic Tools</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QToolBar" name="m_pToolBarRandomSection">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string>Random Section Tools</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="m_pActionRandomSectionNew"/>
+   <addaction name="m_pActionRandomSectionDelete"/>
+  </widget>
+  <widget class="QToolBar" name="m_pToolBarPolygon">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="windowTitle">
+    <string>Polygon Tools</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="m_pActionPolygonNew"/>
+   <addaction name="m_pActionPolygonDelete"/>
+  </widget>
+  <action name="m_actionViewAll">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/ViewAll.png</normaloff>:/Icon/ViewAll.png</iconset>
+   </property>
+   <property name="text">
+    <string>View all</string>
+   </property>
+   <property name="toolTip">
+    <string>View all</string>
+   </property>
+   <property name="shortcut">
+    <string>Space</string>
+   </property>
+  </action>
+  <action name="m_actionSelectMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Selection.png</normaloff>:/Icon/Selection.png</iconset>
+   </property>
+   <property name="text">
+    <string>Select mode</string>
+   </property>
+  </action>
+  <action name="m_actionHome">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Home.png</normaloff>:/Icon/Home.png</iconset>
+   </property>
+   <property name="text">
+    <string>Back to home</string>
+   </property>
+  </action>
+  <action name="m_actionSetHome">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/SetHome.png</normaloff>:/Icon/SetHome.png</iconset>
+   </property>
+   <property name="text">
+    <string>Set home</string>
+   </property>
+  </action>
+  <action name="m_actionSynchronize">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Synchronize.png</normaloff>:/Icon/Synchronize.png</iconset>
+   </property>
+   <property name="text">
+    <string>Synchronize</string>
+   </property>
+  </action>
+  <action name="m_actionProperties">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Properties.png</normaloff>:/Icon/Properties.png</iconset>
+   </property>
+   <property name="text">
+    <string>Properties</string>
+   </property>
+  </action>
+  <action name="m_actionCoordinate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Coordinates.png</normaloff>:/Icon/Coordinates.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show/Hide coordinate</string>
+   </property>
+  </action>
+  <action name="m_actionColorbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Colorbar.png</normaloff>:/Icon/Colorbar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show Color bar</string>
+   </property>
+  </action>
+  <action name="m_actionScale">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Scale.png</normaloff>:/Icon/Scale.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show/Hide scale</string>
+   </property>
+  </action>
+  <action name="m_pActionPolygonNew">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/DigitizePolygonNew.png</normaloff>:/Icon/DigitizePolygonNew.png</iconset>
+   </property>
+   <property name="text">
+    <string>Polygon new</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="m_pActionRandomSectionNew">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/RandomSectionNew.png</normaloff>:/Icon/RandomSectionNew.png</iconset>
+   </property>
+   <property name="text">
+    <string>RandomSection new</string>
+   </property>
+   <property name="visible">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="m_actionScreenshot">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Screenshot.png</normaloff>:/Icon/Screenshot.png</iconset>
+   </property>
+   <property name="text">
+    <string>Screenshot</string>
+   </property>
+   <property name="toolTip">
+    <string>Save Screenshot</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="m_actionCompass">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Compass.png</normaloff>:/Icon/Compass.png</iconset>
+   </property>
+   <property name="text">
+    <string>Show/Hide compass</string>
+   </property>
+  </action>
+  <action name="m_pActionRandomSection_Mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/RandomSectionCreate.png</normaloff>:/Icon/RandomSectionCreate.png</iconset>
+   </property>
+   <property name="text">
+    <string>RandomSection Mode</string>
+   </property>
+  </action>
+  <action name="m_pActionPolygon_Mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/DigitizePolygon.png</normaloff>:/Icon/DigitizePolygon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Polygon Mode</string>
+   </property>
+  </action>
+  <action name="m_pActionRandomSectionDelete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/RandomSectionDel.png</normaloff>:/Icon/RandomSectionDel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Random Section</string>
+   </property>
+  </action>
+  <action name="m_pActionPolygonDelete">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/DigitizePolygonDel.png</normaloff>:/Icon/DigitizePolygonDel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Polygon</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>m_pActionPolygon_Mode</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>m_pToolBarPolygon</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>86</x>
+     <y>566</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pActionRandomSection_Mode</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>m_pToolBarRandomSection</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>144</x>
+     <y>566</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pActionPolygon_Mode</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>m_pToolBarPolygon</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>463</x>
+     <y>566</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pActionRandomSection_Mode</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>m_pToolBarRandomSection</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>98</x>
+     <y>566</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

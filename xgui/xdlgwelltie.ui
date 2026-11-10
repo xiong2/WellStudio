@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CXDlgWellTie</class>
+ <widget class="QDialog" name="CXDlgWellTie">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1344</width>
+    <height>796</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CXDlgWellTie</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <property name="spacing">
+    <number>1</number>
+   </property>
+   <item row="1" column="3" rowspan="6">
+    <widget class="QScrollBar" name="verticalScrollBar">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="1">
+    <widget class="QScrollBar" name="horizontalScrollBar">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" rowspan="6">
+    <widget class="CXScrollArea" name="scrollAreaRight">
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>58</width>
+        <height>643</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="CXFrameWTCorner" name="frameTL">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="4" colspan="4">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Correlation Analysis</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0" colspan="3">
+       <widget class="CXFrameCorrelation" name="frame">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>200</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="3">
+       <widget class="CXSliderComplex" name="slideRangeWindow" native="true"/>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Time shift window</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSpinBox" name="spinBox">
+        <property name="minimum">
+         <number>20</number>
+        </property>
+        <property name="maximum">
+         <number>500</number>
+        </property>
+        <property name="singleStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QPushButton" name="pushButtonApply">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Apply</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/Flush.png</normaloff>:/Icon/Flush.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="CXFrameWTCorner" name="frameTR">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4" rowspan="3" colspan="4">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>600</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Synthetic Parameters</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="1" colspan="3">
+       <widget class="QComboBox" name="comboBoxDV"/>
+      </item>
+      <item row="6" column="3">
+       <widget class="QLineEdit" name="lineEditLength">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>51</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QRadioButton" name="radioButtonTrace">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Extract from seismic trace nearby</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Wavelet:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>AC Curve:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="3">
+       <widget class="QComboBox" name="comboBoxAC"/>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>3D Seismic Volume:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QLabel" name="labelWavelet">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>wavelet length:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Density Curvey:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="pushButtonWavelet">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/18804.png</normaloff>:/Icon/18804.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1" colspan="3">
+       <widget class="QComboBox" name="comboBoxDEN"/>
+      </item>
+      <item row="5" column="0">
+       <widget class="QRadioButton" name="radioButtonTree">
+        <property name="text">
+         <string>Select from Data Tree</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLineEdit" name="lineEditWavelet">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="6" column="6">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>635</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="1" rowspan="6">
+    <widget class="CXScrollArea" name="scrollArea">
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>737</width>
+        <height>643</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="1" column="0" rowspan="6">
+    <widget class="CXScrollArea" name="scrollAreaLeft">
+     <property name="maximumSize">
+      <size>
+       <width>60</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>58</width>
+        <height>643</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QScrollArea" name="scrollAreaTop">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>100</height>
+      </size>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>737</width>
+        <height>98</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </item>
+   <item row="7" column="4" colspan="4">
+    <widget class="QLabel" name="labelMessage">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4" colspan="4">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Operations</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="3" column="3">
+       <widget class="QPushButton" name="pushButtonSave">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Save</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/Save.png</normaloff>:/Icon/Save.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QPushButton" name="pushButtonUndo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>80</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Undo Stretch</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/Undo.png</normaloff>:/Icon/Undo.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButtonStr">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Stretch</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/WellTie.png</normaloff>:/Icon/WellTie.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButtonLast">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Clear Last Pick</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/Delete.png</normaloff>:/Icon/Delete.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>Output TD Name:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QComboBox" name="comboBoxSnap">
+        <item>
+         <property name="text">
+          <string>Peak or Trough</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Peak</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Trough</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>None</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QPushButton" name="pushButton">
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Close</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/Exit.png</normaloff>:/Icon/Exit.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QPushButton" name="pushButtonCal">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Calculate</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/Calculator.png</normaloff>:/Icon/Calculator.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QPushButton" name="pushButtonReset">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Reset</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/Flush.png</normaloff>:/Icon/Flush.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QPushButton" name="pushButtonRedo">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Redo Stretch</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/Redo.png</normaloff>:/Icon/Redo.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="pushButtonAll">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Clear All Picks</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/DisSelectAll.png</normaloff>:/Icon/DisSelectAll.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QPushButton" name="pushButtonLayout">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Layout</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../xconsole/x.qrc">
+          <normaloff>:/Icon/Logview32.png</normaloff>:/Icon/Logview32.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1" colspan="2">
+       <widget class="QLineEdit" name="lineEdit"/>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>Snap to</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CXSliderComplex</class>
+   <extends>QWidget</extends>
+   <header location="global">xslidercomplex.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CXFrameCorrelation</class>
+   <extends>QFrame</extends>
+   <header>xframecorrelation.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CXFrameWTCorner</class>
+   <extends>QFrame</extends>
+   <header>xframewtcorner.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CXScrollArea</class>
+   <extends>QScrollArea</extends>
+   <header>xscrollarea.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>CXDlgWellTie</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1078</x>
+     <y>786</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>675</x>
+     <y>795</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

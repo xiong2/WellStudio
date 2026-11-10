@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>XDlgLVSetting</class>
+ <widget class="QDialog" name="XDlgLVSetting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>975</width>
+    <height>586</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Log View Setting</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../xconsole/x.qrc">
+    <normaloff>:/Icon/X.png</normaloff>:/Icon/X.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Space between wells:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QSpinBox" name="spinBoxHInv">
+     <property name="minimum">
+      <number>20</number>
+     </property>
+     <property name="maximum">
+      <number>200</number>
+     </property>
+     <property name="singleStep">
+      <number>5</number>
+     </property>
+     <property name="value">
+      <number>40</number>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Vertical scale (pixel : meter)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QComboBox" name="comboBox">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>2 : 1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1 : 1</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1 : 2</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>1 : 3</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="5">
+    <widget class="QCheckBox" name="checkBoxUDepth">
+     <property name="text">
+      <string>Use unique depth coordinate</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="7">
+    <widget class="QGroupBox" name="groupBoxWells">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>120</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>120</height>
+      </size>
+     </property>
+     <property name="title">
+      <string>Wells</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QTableWidget" name="tableWidgetWells">
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="7">
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Log tracks</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="3">
+       <widget class="QCheckBox" name="checkBoxShowBin">
+        <property name="text">
+         <string>Show bin grid</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="spinBoxLTWidth">
+        <property name="minimum">
+         <number>80</number>
+        </property>
+        <property name="maximum">
+         <number>200</number>
+        </property>
+        <property name="singleStep">
+         <number>10</number>
+        </property>
+        <property name="value">
+         <number>140</number>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Log track width:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="4">
+       <widget class="QTableWidget" name="tableWidgetLogs">
+        <column>
+         <property name="text">
+          <string>Log</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Left value</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Right value</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Line Color</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>LineWidth</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Line Style</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Fill from</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Fill Color</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Fill Pattern</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Fill to</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Fill Color</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Fill Pattern</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="7">
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Well tops</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QCheckBox" name="checkBoxConnect">
+        <property name="text">
+         <string>Connect fromations of each well</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBoxLeft">
+        <property name="text">
+         <string>Show formation name on left side</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBoxRight">
+        <property name="text">
+         <string>Show formation name on right side</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Line Width:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="CXLineWidthListCombBox" name="comboBoxLW">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>Line Style:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="CXLineStyleCombo" name="comboBoxLS">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="4" column="6">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Apply|QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CXLineWidthListCombBox</class>
+   <extends>QComboBox</extends>
+   <header>xlinecomponent.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CXLineStyleCombo</class>
+   <extends>QComboBox</extends>
+   <header>xlinestylecombo.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>XDlgLVSetting</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1012</x>
+     <y>547</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>692</x>
+     <y>536</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>XDlgLVSetting</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>923</x>
+     <y>544</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>557</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
