@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xalgorithm_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xconcurrentparameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocess3termavoinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessanisotropyforwarding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessbrickconversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessbuildlfm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocesscssinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessdetectgeobody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessengine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessextracthorizonatt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessfractureattribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessfractureavo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessfractureinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessgsinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessinterpolatedv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocesslfminterpolation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocesslfmintersection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocesslfmupscaling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessmake2dgrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessmakerevattibute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessmodelintersection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocesspartialstack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocesspcafiltering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessrecalchistogram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessseismicfiltering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocesstracetoslice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocesswellhorizonintersect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadmake2dgrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadmakerevattribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadmodelintersecion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadtracetobrick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadtracetoslice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadwellhorizonintersect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadslicetotrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xconcurrentparameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocess3termavoinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessanisotropyforwarding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessbrickconversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessbuildlfm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocesscssinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessdetectgeobody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessengine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessextracthorizonatt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessfractureattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessfractureavo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessfractureinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessgsinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessinterpolatedv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocesslfminterpolation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocesslfmintersection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocesslfmupscaling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessmake2dgrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessmakerevattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessmodelintersection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocesspartialstack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocesspcafiltering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessrecalchistogram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessseismicfiltering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocesstracetoslice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocesswellhorizonintersect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadmake2dgrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadmakerevattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadmodelintersecion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadtracetobrick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadtracetoslice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadwellhorizonintersect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadslicetotrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0A047EF5-FDFD-42F1-BE0D-FA808F41311B}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;XDATA_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Sqld.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_CORE_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;XDATA_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;..\xbasic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>xbasic.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Sqld.lib;Qt5Widgetsd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;XDATA_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Sql.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_SQL_LIB;QT_WIDGETS_LIB;XDATA_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtSql;$(QTDIR)\include\QtWidgets;..\xbasic;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>xbasic.lib;qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Sql.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_xdlgattprogressbar.h" />
+    <ClInclude Include="gs3dhorizonfaulttraces.h" />
+    <ClInclude Include="gs3dhorizonviewinfo.h" />
+    <ClInclude Include="gsanticline.h" />
+    <ClInclude Include="gscompressionpulse.h" />
+    <ClInclude Include="gsdef.h" />
+    <ClInclude Include="gsfaultprocess.h" />
+    <ClInclude Include="gsfaulttrace.h" />
+    <ClInclude Include="gsfrg.h" />
+    <ClInclude Include="gsgeologicstage.h" />
+    <ClInclude Include="gsgeometry.h" />
+    <ClInclude Include="gsgrid.h" />
+    <ClInclude Include="gshorizongrid.h" />
+    <ClInclude Include="gspdg.h" />
+    <ClInclude Include="gsrosediagram.h" />
+    <ClInclude Include="gsrosediagramviewinfo.h" />
+    <ClInclude Include="gssection.h" />
+    <ClInclude Include="gssectionviewinfo.h" />
+    <ClInclude Include="gsstresscalculatemethods.h" />
+    <ClInclude Include="gsstressmap.h" />
+    <ClInclude Include="gsstressmapviewinfo.h" />
+    <ClInclude Include="gsstressparameters.h" />
+    <ClInclude Include="gsstructure.h" />
+    <ClInclude Include="gsthreadbuildgridcells.h" />
+    <ClInclude Include="gsthreadstresscalculation.h" />
+    <ClInclude Include="gsthreadstressinterpolation.h" />
+    <ClInclude Include="gsthreadsurfacecurvature.h" />
+    <ClInclude Include="gsthreadutminterpolation.h" />
+    <ClInclude Include="gswelltops.h" />
+    <ClInclude Include="xviewinfo3dfracturepatches.h" />
+    <ClInclude Include="tracesurfaceboundingpolygons.h" />
+    <ClInclude Include="x2dpolygon.h" />
+    <ClInclude Include="x2dseismicline.h" />
+    <ClInclude Include="x2dsurvey.h" />
+    <ClInclude Include="x3dhorizon.h" />
+    <ClInclude Include="x3dpoints.h" />
+    <ClInclude Include="x3dsurface.h" />
+    <ClInclude Include="x3dsurvey.h" />
+    <ClInclude Include="xarchive.h" />
+    <ClInclude Include="xasciifile.h" />
+    <ClInclude Include="xbaseconsole.h" />
+    <ClInclude Include="xbaseparameter.h" />
+    <ClInclude Include="xbrickreader.h" />
+    <ClInclude Include="xcolormap.h" />
+    <ClInclude Include="xcppoints.h" />
+    <ClInclude Include="xcppointsmanager.h" />
+    <ClInclude Include="xcursor.h" />
+    <ClInclude Include="xcurvecells.h" />
+    <ClInclude Include="xdatatype.h" />
+    <ClInclude Include="xdbinmemory.h" />
+    <ClInclude Include="xdbio.h" />
+    <ClInclude Include="xdef.h" />
+    <ClInclude Include="xdlisparser.h" />
+    <ClInclude Include="xeclipseobject.h" />
+    <ClInclude Include="xeventconsole.h" />
+    <ClInclude Include="xfaultsticks.h" />
+    <ClInclude Include="xfaultsticksfile.h" />
+    <ClInclude Include="xfracturepatch.h" />
+    <ClInclude Include="xgeneralfolder.h" />
+    <ClInclude Include="xgeobody.h" />
+    <ClInclude Include="xgeobodycollection.h" />
+    <ClInclude Include="xgeobodydetectionthread.h" />
+    <ClInclude Include="xglobal.h" />
+    <ClInclude Include="xglobalcoordtransform.h" />
+    <ClInclude Include="xgridcell.h" />
+    <ClInclude Include="xgridmodel.h" />
+    <ClInclude Include="xhorizontrackpar.h" />
+    <ClInclude Include="ximport3dsurfacemanager.h" />
+    <ClInclude Include="ximportreservoirthread.h" />
+    <ClInclude Include="xintersectedgridcell.h" />
+    <ClInclude Include="xintersectiongrid.h" />
+    <ClInclude Include="xio.h" />
+    <ClInclude Include="xlaswisfile.h" />
+    <ClInclude Include="xload2dsegythread.h" />
+    <ClInclude Include="xloadsegytozxythread.h" />
+    <ClInclude Include="xmicroseismicdata.h" />
+    <ClInclude Include="xmicroseismicfile.h" />
+    <ClInclude Include="xobjcalculator.h" />
+    <ClInclude Include="xobjectfactory.h" />
+    <ClInclude Include="xobjecttype.h" />
+    <ClInclude Include="xparametermake2dgrid.h" />
+    <ClInclude Include="xparametermakerevinterpolation.h" />
+    <ClInclude Include="xparametermanager.h" />
+    <ClInclude Include="xparametermodelintersecion.h" />
+    <ClInclude Include="xparametersgeobodydetection.h" />
+    <ClInclude Include="xparametersgsinversion.h" />
+    <ClInclude Include="xparameterspartialstack.h" />
+    <ClInclude Include="xparameterwellhorzionintersect.h" />
+    <ClInclude Include="xpointsfile.h" />
+    <ClInclude Include="xprestackgather.h" />
+    <ClInclude Include="xprocessfactory.h" />
+    <ClInclude Include="xprogressbar.h" />
+    <ClInclude Include="xpropertymodel.h" />
+    <ClInclude Include="xreservoirmodel.h" />
+    <ClInclude Include="xsaveload.h" />
+    <ClInclude Include="xsegylineheader.h" />
+    <ClInclude Include="xsegyloadparameters.h" />
+    <ClInclude Include="xsegytraceheader.h" />
+    <ClInclude Include="xseismicdataline.h" />
+    <ClInclude Include="xseismicdatavolume.h" />
+    <ClInclude Include="xseismicirregularreader.h" />
+    <ClInclude Include="xseismicobject.h" />
+    <ClInclude Include="xseismicrandomsection.h" />
+    <ClInclude Include="xseismicsection.h" />
+    <ClInclude Include="xseismicsubvolume.h" />
+    <ClInclude Include="xseismicutmtool.h" />
+    <ClInclude Include="xsurfaceapi.h" />
+    <ClInclude Include="xtemplate.h" />
+    <ClInclude Include="xthreadmanager.h" />
+    <ClInclude Include="xtracecontainer.h" />
+    <ClInclude Include="xtraceheaderscanthread.h" />
+    <ClInclude Include="xtree.h" />
+    <ClInclude Include="xtreewidgetitem.h" />
+    <ClInclude Include="xutmtool.h" />
+    <ClInclude Include="xview.h" />
+    <ClInclude Include="xviewinfo2dpolygon.h" />
+    <ClInclude Include="xviewinfo2dseismicline.h" />
+    <ClInclude Include="xviewinfo3dfaultsticks.h" />
+    <ClInclude Include="xviewinfo3dgridmodel.h" />
+    <ClInclude Include="xviewinfo3dhorizon.h" />
+    <ClInclude Include="xviewinfo3dpoints.h" />
+    <ClInclude Include="xviewinfo3dsurvey.h" />
+    <ClInclude Include="xviewinfo3dwelltopformation.h" />
+    <ClInclude Include="xviewinfo3dwelltops.h" />
+    <ClInclude Include="xviewinfocpcurve.h" />
+    <ClInclude Include="xviewinfocppolygon.h" />
+    <ClInclude Include="xviewinfohiscurve.h" />
+    <ClInclude Include="xviewinfolpcurve.h" />
+    <ClInclude Include="xviewinfolpwell.h" />
+    <ClInclude Include="xviewinfolpwelltops.h" />
+    <ClInclude Include="xviewinfomanager.h" />
+    <ClInclude Include="xviewinfomicroseismic.h" />
+    <ClInclude Include="xviewinfoobject.h" />
+    <ClInclude Include="xviewinfoprestackgather.h" />
+    <ClInclude Include="xviewinforandomsection.h" />
+    <ClInclude Include="xviewinfoseismicdv.h" />
+    <ClInclude Include="xviewinfoseismicsection.h" />
+    <ClInclude Include="xviewinfosurface.h" />
+    <ClInclude Include="xviewinfotimeslice.h" />
+    <ClInclude Include="xviewinfowellcondition.h" />
+    <ClInclude Include="xviewinfowellcurve.h" />
+    <ClInclude Include="xviewinfowellpath.h" />
+    <ClInclude Include="xwavelet.h" />
+    <ClInclude Include="xwell.h" />
+    <ClInclude Include="xwellcells.h" />
+    <ClInclude Include="xwellcheckshotfile.h" />
+    <ClInclude Include="xwellcomp.h" />
+    <ClInclude Include="xwellcompdata.h" />
+    <ClInclude Include="xwellcondition.h" />
+    <ClInclude Include="xwellcurve.h" />
+    <ClInclude Include="xwellcurvealias.h" />
+    <ClInclude Include="xwellcurvecells.h" />
+    <ClInclude Include="xwellheaderfile.h" />
+    <ClInclude Include="xwelllogasciifile.h" />
+    <ClInclude Include="xwellnmr.h" />
+    <ClInclude Include="xwellpath.h" />
+    <ClInclude Include="xwellpathfile.h" />
+    <ClInclude Include="xwelltd.h" />
+    <ClInclude Include="xwelltopformation.h" />
+    <ClInclude Include="xwelltops.h" />
+    <ClInclude Include="xwelltopsfile.h" />
+    <ClInclude Include="xwellzones.h" />
+    <ClInclude Include="xwindowinfo.h" />
+    <ClInclude Include="xwindowinfo3d.h" />
+    <ClInclude Include="xwindowinfobasemap.h" />
+    <ClInclude Include="xwindowinfosection.h" />
+    <ClInclude Include="xviewinfogather.h" />
+    <CustomBuild Include="xproject.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing xproject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing xproject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets" "-I.\..\xbasic"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing xproject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing xproject.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets" "-I.\..\xbasic"</Command>
+    </CustomBuild>
+    <CustomBuild Include="xprocess.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing xprocess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing xprocess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets" "-I.\..\xbasic"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing xprocess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing xprocess.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets" "-I.\..\xbasic"</Command>
+    </CustomBuild>
+    <CustomBuild Include="xobject.h">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+    </CustomBuild>
+    <CustomBuild Include="xdlgcalculatingprogress.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing xdlgcalculatingprogress.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing xdlgcalculatingprogress.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets" "-I.\..\xbasic"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing xdlgcalculatingprogress.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing xdlgcalculatingprogress.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets" "-I.\..\xbasic"</Command>
+    </CustomBuild>
+    <CustomBuild Include="xbasethread.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing xbasethread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing xbasethread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets" "-I.\..\xbasic"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing xbasethread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing xbasethread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DXDATA_LIB -D%(PreprocessorDefinitions)  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtSql" "-I$(QTDIR)\include\QtWidgets" "-I.\..\xbasic"</Command>
+    </CustomBuild>
+    <ClInclude Include="xdata_global.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xbasethread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xdlgcalculatingprogress.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xprocess.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xproject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xbasethread.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xdlgcalculatingprogress.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xprocess.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xproject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="gs3dhorizonfaulttraces.cpp" />
+    <ClCompile Include="gs3dhorizonviewinfo.cpp" />
+    <ClCompile Include="gsanticline.cpp" />
+    <ClCompile Include="gscompressionpulse.cpp" />
+    <ClCompile Include="gsfaultprocess.cpp" />
+    <ClCompile Include="gsfaulttrace.cpp" />
+    <ClCompile Include="gsfrg.cpp" />
+    <ClCompile Include="gsgeologicstage.cpp" />
+    <ClCompile Include="gsgeometry.cpp" />
+    <ClCompile Include="gsgrid.cpp" />
+    <ClCompile Include="gshorizongrid.cpp" />
+    <ClCompile Include="gspdg.cpp" />
+    <ClCompile Include="gsrosediagram.cpp" />
+    <ClCompile Include="gsrosediagramviewinfo.cpp" />
+    <ClCompile Include="gssection.cpp" />
+    <ClCompile Include="gssectionviewinfo.cpp" />
+    <ClCompile Include="gsstresscalculatemethods.cpp" />
+    <ClCompile Include="gsstressmap.cpp" />
+    <ClCompile Include="gsstressmapviewinfo.cpp" />
+    <ClCompile Include="gsstressparameters.cpp" />
+    <ClCompile Include="gsstructure.cpp" />
+    <ClCompile Include="gsthreadbuildgridcells.cpp" />
+    <ClCompile Include="gsthreadstresscalculation.cpp" />
+    <ClCompile Include="gsthreadstressinterpolation.cpp" />
+    <ClCompile Include="gsthreadsurfacecurvature.cpp" />
+    <ClCompile Include="gsthreadutminterpolation.cpp" />
+    <ClCompile Include="gswelltops.cpp" />
+    <ClCompile Include="tracesurfaceboundingpolygons.cpp" />
+    <ClCompile Include="x2dpolygon.cpp" />
+    <ClCompile Include="x2dseismicline.cpp" />
+    <ClCompile Include="x2dsurvey.cpp" />
+    <ClCompile Include="x3dhorizon.cpp" />
+    <ClCompile Include="x3dpoints.cpp" />
+    <ClCompile Include="x3dsurface.cpp" />
+    <ClCompile Include="x3dsurvey.cpp" />
+    <ClCompile Include="xarchive.cpp" />
+    <ClCompile Include="xasciifile.cpp" />
+    <ClCompile Include="xbaseconsole.cpp" />
+    <ClCompile Include="xbaseparameter.cpp" />
+    <ClCompile Include="xbasethread.cpp" />
+    <ClCompile Include="xbrickreader.cpp" />
+    <ClCompile Include="xcolormap.cpp" />
+    <ClCompile Include="xcppointsmanager.cpp" />
+    <ClCompile Include="xcursor.cpp" />
+    <ClCompile Include="xcurvecells.cpp" />
+    <ClCompile Include="xdatatype.cpp" />
+    <ClCompile Include="xdbinmemory.cpp" />
+    <ClCompile Include="xdbio.cpp" />
+    <ClCompile Include="xdlgcalculatingprogress.cpp" />
+    <ClCompile Include="xdlisparser.cpp" />
+    <ClCompile Include="xeclipseobject.cpp" />
+    <ClCompile Include="xeventconsole.cpp" />
+    <ClCompile Include="xfaultsticks.cpp" />
+    <ClCompile Include="xfaultsticksfile.cpp" />
+    <ClCompile Include="xfracturepatch.cpp" />
+    <ClCompile Include="xgeneralfolder.cpp" />
+    <ClCompile Include="xgeobody.cpp" />
+    <ClCompile Include="xgeobodycollection.cpp" />
+    <ClCompile Include="xgeobodydetectionthread.cpp" />
+    <ClCompile Include="xglobal.cpp" />
+    <ClCompile Include="xglobalcoordtransform.cpp" />
+    <ClCompile Include="xgridcell.cpp" />
+    <ClCompile Include="xgridmodel.cpp" />
+    <ClCompile Include="xhorizontrackpar.cpp" />
+    <ClCompile Include="ximport3dsurfacemanager.cpp" />
+    <ClCompile Include="ximportreservoirthread.cpp" />
+    <ClCompile Include="xintersectedgridcell.cpp" />
+    <ClCompile Include="xintersectiongrid.cpp" />
+    <ClCompile Include="xio.cpp" />
+    <ClCompile Include="xlaswisfile.cpp" />
+    <ClCompile Include="xload2dsegythread.cpp" />
+    <ClCompile Include="xloadsegytozxythread.cpp" />
+    <ClCompile Include="xmicroseismicdata.cpp" />
+    <ClCompile Include="xmicroseismicfile.cpp" />
+    <ClCompile Include="xobjcalculator.cpp" />
+    <ClCompile Include="xobject.cpp" />
+    <ClCompile Include="xobjectfactory.cpp" />
+    <ClCompile Include="xparametermake2dgrid.cpp" />
+    <ClCompile Include="xparametermakerevinterpolation.cpp" />
+    <ClCompile Include="xparametermanager.cpp" />
+    <ClCompile Include="xparametermodelintersecion.cpp" />
+    <ClCompile Include="xparametersgeobodydetection.cpp" />
+    <ClCompile Include="xparametersgsinversion.cpp" />
+    <ClCompile Include="xparameterspartialstack.cpp" />
+    <ClCompile Include="xparameterwellhorzionintersect.cpp" />
+    <ClCompile Include="xpointsfile.cpp" />
+    <ClCompile Include="xprestackgather.cpp" />
+    <ClCompile Include="xprocess.cpp" />
+    <ClCompile Include="xprocessfactory.cpp" />
+    <ClCompile Include="xprogressbar.cpp" />
+    <ClCompile Include="xproject.cpp" />
+    <ClCompile Include="xpropertymodel.cpp" />
+    <ClCompile Include="xreservoirmodel.cpp" />
+    <ClCompile Include="xsegylineheader.cpp" />
+    <ClCompile Include="xsegyloadparameters.cpp" />
+    <ClCompile Include="xsegytraceheader.cpp" />
+    <ClCompile Include="xseismicdataline.cpp" />
+    <ClCompile Include="xseismicdatavolume.cpp" />
+    <ClCompile Include="xseismicirregularreader.cpp" />
+    <ClCompile Include="xseismicobject.cpp" />
+    <ClCompile Include="xseismicrandomsection.cpp" />
+    <ClCompile Include="xseismicsection.cpp" />
+    <ClCompile Include="xseismicsubvolume.cpp" />
+    <ClCompile Include="xseismicutmtool.cpp" />
+    <ClCompile Include="xsurfaceapi.cpp" />
+    <ClCompile Include="xtemplate.cpp" />
+    <ClCompile Include="xthreadmanager.cpp" />
+    <ClCompile Include="xtracecontainer.cpp" />
+    <ClCompile Include="xtraceheaderscanthread.cpp" />
+    <ClCompile Include="xtree.cpp" />
+    <ClCompile Include="xtreewidgetitem.cpp" />
+    <ClCompile Include="xutmtool.cpp" />
+    <ClCompile Include="xview.cpp" />
+    <ClCompile Include="xviewinfo2dpolygon.cpp" />
+    <ClCompile Include="xviewinfo2dseismicline.cpp" />
+    <ClCompile Include="xviewinfo3dfaultsticks.cpp" />
+    <ClCompile Include="xviewinfo3dfracturepatches.cpp" />
+    <ClCompile Include="xviewinfo3dgridmodel.cpp" />
+    <ClCompile Include="xviewinfo3dhorizon.cpp" />
+    <ClCompile Include="xviewinfo3dpoints.cpp" />
+    <ClCompile Include="xviewinfo3dsurvey.cpp" />
+    <ClCompile Include="xviewinfo3dwelltopformation.cpp" />
+    <ClCompile Include="xviewinfo3dwelltops.cpp" />
+    <ClCompile Include="xviewinfocpcurve.cpp" />
+    <ClCompile Include="xviewinfocppolygon.cpp" />
+    <ClCompile Include="xviewinfogather.cpp" />
+    <ClCompile Include="xviewinfohiscurve.cpp" />
+    <ClCompile Include="xviewinfolpcurve.cpp" />
+    <ClCompile Include="xviewinfolpwell.cpp" />
+    <ClCompile Include="xviewinfolpwelltops.cpp" />
+    <ClCompile Include="xviewinfomanager.cpp" />
+    <ClCompile Include="xviewinfomicroseismic.cpp" />
+    <ClCompile Include="xviewinfoobject.cpp" />
+    <ClCompile Include="xviewinfoprestackgather.cpp" />
+    <ClCompile Include="xviewinforandomsection.cpp" />
+    <ClCompile Include="xviewinfoseismicdv.cpp" />
+    <ClCompile Include="xviewinfoseismicsection.cpp" />
+    <ClCompile Include="xviewinfosurface.cpp" />
+    <ClCompile Include="xviewinfotimeslice.cpp" />
+    <ClCompile Include="xviewinfowellcondition.cpp" />
+    <ClCompile Include="xviewinfowellcurve.cpp" />
+    <ClCompile Include="xviewinfowellpath.cpp" />
+    <ClCompile Include="xwavelet.cpp" />
+    <ClCompile Include="xwell.cpp" />
+    <ClCompile Include="xwellcells.cpp" />
+    <ClCompile Include="xwellcheckshotfile.cpp" />
+    <ClCompile Include="xwellcomp.cpp" />
+    <ClCompile Include="xwellcompdata.cpp" />
+    <ClCompile Include="xwellcondition.cpp" />
+    <ClCompile Include="xwellcurve.cpp" />
+    <ClCompile Include="xwellcurvealias.cpp" />
+    <ClCompile Include="xwellcurvecells.cpp" />
+    <ClCompile Include="xwellheaderfile.cpp" />
+    <ClCompile Include="xwelllogasciifile.cpp" />
+    <ClCompile Include="xwellnmr.cpp" />
+    <ClCompile Include="xwellpath.cpp" />
+    <ClCompile Include="xwellpathfile.cpp" />
+    <ClCompile Include="xwelltd.cpp" />
+    <ClCompile Include="xwelltopformation.cpp" />
+    <ClCompile Include="xwelltops.cpp" />
+    <ClCompile Include="xwelltopsfile.cpp" />
+    <ClCompile Include="xwellzones.cpp" />
+    <ClCompile Include="xwindowinfo.cpp" />
+    <ClCompile Include="xwindowinfo3d.cpp" />
+    <ClCompile Include="xwindowinfobasemap.cpp" />
+    <ClCompile Include="xwindowinfosection.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xdata_zh_CN.ts" />
+    <CustomBuild Include="xdlgattprogressbar.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="msvc2017_64" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

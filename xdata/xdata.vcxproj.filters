@@ -1,0 +1,1097 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{3fda8478-0ee9-4184-8142-f1645e4b4101}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{e1226055-6935-4b08-86ae-4afb9abf2524}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xdata_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x2dpolygon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x2dseismicline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x2dsurvey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x3dhorizon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x3dpoints.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x3dsurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="x3dsurvey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xarchive.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xasciifile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xbaseconsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xbaseparameter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xbrickreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xcolormap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xcppoints.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xcppointsmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xcursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xcurvecells.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xdatatype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xdbinmemory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xdbio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_xdlgattprogressbar.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xdlisparser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xeclipseobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xeventconsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xfaultsticks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xfaultsticksfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xgeneralfolder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xgeobody.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xgeobodycollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xgeobodydetectionthread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xglobal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xgridcell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xgridmodel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xhorizontrackpar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ximport3dsurfacemanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ximportreservoirthread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xintersectedgridcell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xintersectiongrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xlaswisfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xload2dsegythread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xloadsegytozxythread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xmicroseismicdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xmicroseismicfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xobjcalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xobjectfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xobjecttype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparametermake2dgrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparametermakerevinterpolation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparametermanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparametermodelintersecion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparametersgeobodydetection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparametersgsinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterspartialstack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterwellhorzionintersect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xpointsfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprocessfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprogressbar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xpropertymodel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xreservoirmodel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xsaveload.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xsegylineheader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xsegyloadparameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xsegytraceheader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xseismicdataline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xseismicdatavolume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xseismicirregularreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xseismicobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xseismicrandomsection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xseismicsection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xseismicsubvolume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xseismicutmtool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xsurfaceapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xtemplate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xtracecontainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xtraceheaderscanthread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xtree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xtreewidgetitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xutmtool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo2dpolygon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo2dseismicline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo3dfaultsticks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo3dgridmodel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo3dhorizon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo3dsurvey.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo3dwelltopformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo3dwelltops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfocpcurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfocppolygon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfohiscurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfolpcurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfolpwell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfolpwelltops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfomanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfomicroseismic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfoobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinforandomsection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfoseismicdv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfoseismicsection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfosurface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfotimeslice.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfowellcondition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfowellcurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfowellpath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwavelet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellcells.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellcomp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellcompdata.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellcondition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellcurve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellcurvealias.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellcurvecells.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellheaderfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwelllogasciifile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellnmr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellpath.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellpathfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwelltd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwelltopformation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwelltops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwelltopsfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellzones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwindowinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwindowinfo3d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwindowinfobasemap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwindowinfosection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprestackgather.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfoprestackgather.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo3dpoints.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gscompressionpulse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gs3dhorizonfaulttraces.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsfaulttrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsfaultprocess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsthreadbuildgridcells.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xglobalcoordtransform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gshorizongrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsthreadutminterpolation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsthreadsurfacecurvature.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsstructure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsgeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsstressmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsstressparameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsanticline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsstresscalculatemethods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsthreadstresscalculation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsthreadstressinterpolation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsgrid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsfrg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gssectionviewinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gspdg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gssection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gs3dhorizonviewinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsrosediagramviewinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsstressmapviewinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsrosediagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gswelltops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsgeologicstage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tracesurfaceboundingpolygons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwellcheckshotfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xfracturepatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfo3dfracturepatches.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfogather.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="x2dpolygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="x2dseismicline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="x2dsurvey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="x3dhorizon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="x3dpoints.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="x3dsurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="x3dsurvey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xarchive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xasciifile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xbaseconsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xbaseparameter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xbasethread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xbasethread.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xbasethread.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="xbrickreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xcolormap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xcppointsmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xcursor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xcurvecells.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xdatatype.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xdbinmemory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xdbio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xdlgcalculatingprogress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xdlgcalculatingprogress.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xdlgcalculatingprogress.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="xdlisparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xeclipseobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xeventconsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xfaultsticks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xfaultsticksfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xgeneralfolder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xgeobody.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xgeobodycollection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xgeobodydetectionthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xglobal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xgridcell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xgridmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xhorizontrackpar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ximport3dsurfacemanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ximportreservoirthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xintersectedgridcell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xintersectiongrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xlaswisfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xload2dsegythread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xloadsegytozxythread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xmicroseismicdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xmicroseismicfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xobjcalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xobjectfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparametermake2dgrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparametermakerevinterpolation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparametermanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparametermodelintersecion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparametersgeobodydetection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparametersgsinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterspartialstack.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterwellhorzionintersect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xpointsfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xprocess.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xprocess.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="xprocessfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprogressbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xproject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xproject.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xproject.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="xpropertymodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xreservoirmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xsegylineheader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xsegyloadparameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xsegytraceheader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xseismicdataline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xseismicdatavolume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xseismicirregularreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xseismicobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xseismicrandomsection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xseismicsection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xseismicsubvolume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xseismicutmtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xsurfaceapi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xtemplate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xtracecontainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xtraceheaderscanthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xtree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xtreewidgetitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xutmtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo2dpolygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo2dseismicline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo3dfaultsticks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo3dgridmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo3dhorizon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo3dsurvey.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo3dwelltopformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo3dwelltops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfocpcurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfocppolygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfohiscurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfolpcurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfolpwell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfolpwelltops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfomanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfomicroseismic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfoobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinforandomsection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfoseismicdv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfoseismicsection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfosurface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfotimeslice.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfowellcondition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfowellcurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfowellpath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwavelet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellcells.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellcomp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellcompdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellcondition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellcurve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellcurvealias.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellcurvecells.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellheaderfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwelllogasciifile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellnmr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellpath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellpathfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwelltd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwelltopformation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwelltops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwelltopsfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellzones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwindowinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwindowinfo3d.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwindowinfobasemap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwindowinfosection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprestackgather.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfoprestackgather.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo3dpoints.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gscompressionpulse.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gs3dhorizonfaulttraces.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsfaulttrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsfaultprocess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsthreadbuildgridcells.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xglobalcoordtransform.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gshorizongrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsthreadutminterpolation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsthreadsurfacecurvature.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsstructure.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsgeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsstressmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsstressparameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsanticline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsstresscalculatemethods.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsthreadstresscalculation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsthreadstressinterpolation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsgrid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsfrg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gssectionviewinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gspdg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gssection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gs3dhorizonviewinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsrosediagramviewinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsstressmapviewinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsrosediagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gswelltops.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsgeologicstage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tracesurfaceboundingpolygons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwellcheckshotfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xfracturepatch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfo3dfracturepatches.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfogather.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="xbasethread.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="xdlgattprogressbar.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="xdlgcalculatingprogress.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="xobject.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="xprocess.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="xproject.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="xdata_zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

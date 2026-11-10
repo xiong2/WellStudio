@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gsviewer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitemfrg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitempdg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gspdgscene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gspdgview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gspdgwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbasemapscene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbasemapview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbasemapwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbm3dhorizonitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbmcoordinateitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbmitembuilderfactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbmitemdefinerose.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbmitemrosediagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbmpdgitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbmsectionitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbmstressmapitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsbmwellitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsdlginteractivecalculation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsdlginteractivecurvatureanalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsdlgrosediagram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsdlgrsa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitemanticlines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitemfaultpolygons.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitemsticks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitemstress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitemstructures.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitemtrappoints.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitemwells.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsrsitemcompose.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsrsitemsource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gstreenodecreator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gssectionscene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gssectionview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gssectionwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gsitemprofile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gsviewer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitemfrg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitempdg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsobjitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbm3dhorizonitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbmcoordinateitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbmitembuilderfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbmitemdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbmitemdefinerose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbmitemrosediagram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbmpdgitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbmsectionitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbmstressmapitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsbmwellitem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitemanticlines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitemfaultpolygons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitemsticks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitemstress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitemstructures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitemtrappoints.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitemwells.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsrsitemcompose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsrsitemsource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gstreenodecreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gsitemprofile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gsviewer_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="gspdgscene.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gspdgview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gspdgwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gsbasemapscene.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gsbasemapview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gsbasemapwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gsdlginteractivecalculation.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gsdlginteractivecurvatureanalysis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gsdlgrosediagram.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gsdlgrsa.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gssectionscene.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gssectionview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="gssectionwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="gspdgwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="gsbasemapwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="gsdlginteractivecalculation.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="gsdlginteractivecurvatureanalysis.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="gsdlgrosediagram.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="gsdlgrsa.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="gssectionwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+</Project>

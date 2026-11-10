@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CXSubGridSetting</class>
+ <widget class="QDialog" name="CXSubGridSetting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Geometry</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="1">
+    <widget class="QSlider" name="m_hSliderMinJ">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QSpinBox" name="m_spinBoxMinI"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Maximum I:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string>Maximum K:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QSlider" name="m_hSliderMaxJ">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QSpinBox" name="m_spinBoxMinJ"/>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Maximum J:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_5">
+     <property name="text">
+      <string>Minimum K:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Minimum I:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Minimum J:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QSlider" name="m_hSliderMaxI">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QSpinBox" name="m_spinBoxMaxI"/>
+   </item>
+   <item row="4" column="3">
+    <widget class="QSpinBox" name="m_spinBoxMaxJ"/>
+   </item>
+   <item row="6" column="3">
+    <widget class="QSpinBox" name="m_spinBoxMaxK"/>
+   </item>
+   <item row="5" column="3">
+    <widget class="QSpinBox" name="m_spinBoxMinK"/>
+   </item>
+   <item row="1" column="1">
+    <widget class="QSlider" name="m_hSliderMinI">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QSlider" name="m_hSliderMinK">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QSlider" name="m_hSliderMaxK">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="8" column="0" colspan="4">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_btReset">
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_btClose">
+       <property name="text">
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>m_hSliderMinI</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_spinBoxMinI</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>303</x>
+     <y>20</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>361</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_hSliderMaxI</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_spinBoxMaxI</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>300</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>352</x>
+     <y>53</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_hSliderMinJ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_spinBoxMinJ</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>292</x>
+     <y>80</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>351</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_hSliderMaxJ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_spinBoxMaxJ</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>264</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>111</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_hSliderMinK</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_spinBoxMinK</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>307</x>
+     <y>136</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>346</x>
+     <y>138</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_hSliderMaxK</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_spinBoxMaxK</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>293</x>
+     <y>166</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>351</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_spinBoxMinI</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_hSliderMinI</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>14</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>318</x>
+     <y>14</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_spinBoxMaxI</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_hSliderMaxI</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>346</x>
+     <y>44</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>43</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_spinBoxMinJ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_hSliderMinJ</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>346</x>
+     <y>73</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>73</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_spinBoxMaxJ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_hSliderMaxJ</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>346</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>315</x>
+     <y>102</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_spinBoxMinK</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_hSliderMinK</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>347</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>127</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_spinBoxMaxK</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>m_hSliderMaxK</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>346</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>159</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_btClose</sender>
+   <signal>clicked()</signal>
+   <receiver>CXSubGridSetting</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>128</x>
+     <y>277</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>44</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

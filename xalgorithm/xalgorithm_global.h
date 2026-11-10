@@ -1,0 +1,12 @@
+#ifndef XALGORITHM_GLOBAL_H
+#define XALGORITHM_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef XALGORITHM_LIB
+# define XALGORITHM_EXPORT Q_DECL_EXPORT
+#else
+# define XALGORITHM_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // XALGORITHM_GLOBAL_H

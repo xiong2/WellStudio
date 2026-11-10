@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CXDlgRruger</class>
+ <widget class="QDialog" name="CXDlgRruger">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>556</width>
+    <height>760</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Anisotropic (HTI) PP Reflection Coefficient Forwarding (Base on Ruger approximation)</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="m_pGroupPara">
+     <property name="title">
+      <string>Parameter setting</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QGroupBox" name="m_pBoxTable0">
+        <property name="title">
+         <string>First data set</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="m_pTable0">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>120</height>
+            </size>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>75</number>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>Up</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Down</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Vp-fast</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Vs-fast</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>ε</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>γ</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>δ</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Density</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>4338</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>2370</string>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="0" column="4">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="0" column="5">
+            <property name="text">
+             <string>2424</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>5716.546</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>3143.055</string>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string>-0.2323</string>
+            </property>
+           </item>
+           <item row="1" column="3">
+            <property name="text">
+             <string>-0.1312</string>
+            </property>
+           </item>
+           <item row="1" column="4">
+            <property name="text">
+             <string>-0.2327</string>
+            </property>
+           </item>
+           <item row="1" column="5">
+            <property name="text">
+             <string>2614.65</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_pBtnMore">
+        <property name="text">
+         <string>More...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="m_pBoxTable1">
+        <property name="title">
+         <string>Second data set</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="m_pTable1">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>120</height>
+            </size>
+           </property>
+           <property name="showGrid">
+            <bool>true</bool>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>75</number>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>Up</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Down</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Vp-fast</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Vs-fast</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>ε</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>γ</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>δ</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Density</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>4338</string>
+            </property>
+           </item>
+           <item row="0" column="1">
+            <property name="text">
+             <string>2370</string>
+            </property>
+           </item>
+           <item row="0" column="2">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="0" column="3">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="0" column="4">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </item>
+           <item row="0" column="5">
+            <property name="text">
+             <string>2424</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>3740.215</string>
+            </property>
+           </item>
+           <item row="1" column="1">
+            <property name="text">
+             <string>2115.559</string>
+            </property>
+           </item>
+           <item row="1" column="2">
+            <property name="text">
+             <string>-0.2462</string>
+            </property>
+           </item>
+           <item row="1" column="3">
+            <property name="text">
+             <string>-0.1407</string>
+            </property>
+           </item>
+           <item row="1" column="4">
+            <property name="text">
+             <string>-0.2208</string>
+            </property>
+           </item>
+           <item row="1" column="5">
+            <property name="text">
+             <string>2177.90</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="m_pBoxTable2">
+        <property name="title">
+         <string>Third data set</string>
+        </property>
+        <property name="checkable">
+         <bool>true</bool>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QTableWidget" name="m_pTable2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>120</height>
+            </size>
+           </property>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>75</number>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>Up</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>Down</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>Vp-fast</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Vs-fast</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>ε</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>γ</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>δ</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Density</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="m_pBtnLess">
+        <property name="text">
+         <string>Less...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="m_pGroupDisplay">
+     <property name="title">
+      <string>Display setting</string>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="m_pLabelAzimuth">
+        <property name="text">
+         <string>RC with azimuth in different incident</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QTableWidget" name="m_pTableAzimuth">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>120</height>
+         </size>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>60</number>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>Incident</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Azimuth</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>Start</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>End</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>interval</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string>40</string>
+         </property>
+        </item>
+        <item row="0" column="2">
+         <property name="text">
+          <string>10</string>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </item>
+        <item row="1" column="1">
+         <property name="text">
+          <string>350</string>
+         </property>
+        </item>
+        <item row="1" column="2">
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="m_pLabelIncident">
+        <property name="text">
+         <string>RC with incident in different azimuth</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QTableWidget" name="m_pTableIncident">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>120</height>
+         </size>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>60</number>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>Azimuth</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>Incident</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>Start</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>End</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>interval</string>
+         </property>
+        </column>
+        <item row="0" column="0">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </item>
+        <item row="0" column="1">
+         <property name="text">
+          <string>350</string>
+         </property>
+        </item>
+        <item row="0" column="2">
+         <property name="text">
+          <string>50</string>
+         </property>
+        </item>
+        <item row="1" column="0">
+         <property name="text">
+          <string>0</string>
+         </property>
+        </item>
+        <item row="1" column="1">
+         <property name="text">
+          <string>40</string>
+         </property>
+        </item>
+        <item row="1" column="2">
+         <property name="text">
+          <string>1</string>
+         </property>
+         <property name="flags">
+          <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="m_pLayoutStdBtn">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_pBtnRun">
+       <property name="text">
+        <string>Run</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="m_pBtnClose">
+       <property name="text">
+        <string>Close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>m_pBtnMore</sender>
+   <signal>clicked()</signal>
+   <receiver>m_pBtnMore</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>361</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>536</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pBtnMore</sender>
+   <signal>clicked()</signal>
+   <receiver>m_pBoxTable1</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>205</x>
+     <y>205</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>197</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pBtnMore</sender>
+   <signal>clicked()</signal>
+   <receiver>m_pBoxTable2</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>284</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>288</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pBtnMore</sender>
+   <signal>clicked()</signal>
+   <receiver>m_pBtnLess</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>553</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pBtnLess</sender>
+   <signal>clicked()</signal>
+   <receiver>m_pBtnLess</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>422</x>
+     <y>553</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>516</x>
+     <y>557</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pBtnLess</sender>
+   <signal>clicked()</signal>
+   <receiver>m_pBoxTable1</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>327</x>
+     <y>548</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>296</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pBtnLess</sender>
+   <signal>clicked()</signal>
+   <receiver>m_pBoxTable2</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>552</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>277</x>
+     <y>455</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>m_pBtnLess</sender>
+   <signal>clicked()</signal>
+   <receiver>m_pBtnMore</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>551</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>104</x>
+     <y>205</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

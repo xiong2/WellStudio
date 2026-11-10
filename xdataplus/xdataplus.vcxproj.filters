@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xdataplus_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xalgorithmutility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xasynregularwriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xavazfcs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xavazruger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xavo3terminversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xavoinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xavossinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xcssinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xdvcalculator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xfractureattributeone.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xlfmattribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xlfmgeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xlfmupscalingattribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xlfmupscalinggeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xmethodpcafiltering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xnlsqmethod.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameter3terminversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameteranisotropyforwarding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterbuildlfm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparametercssinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterextracthorizonatt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterfractureattribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterfractureavo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterlfminterpolation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterlfmintersecton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterpcafiltering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterseismicfiltering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterupscaling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprestackasynreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xprestackdatareaderbuff.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xseismicasynchronousreader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthread3termavoinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadanisotropyforwarding.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadavossinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadbuildlfm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadcalchistogram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadcssinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadextracthorizonatt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadfractureattribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadfractureavaz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadfractureavo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadfractureinversion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadinterpolatedv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadintersectlfm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadlfminterpolation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadlfmupscaling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadpcafiltering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadseismicfiltering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xviewinfolfmgeometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xpartialstackthread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xgeoquestcardimage7file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xdataplusutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadmergedv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xfracturepatchfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xthreadpythonprocess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xparameterremovefootprint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="xalgorithmutility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xasynregularwriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xavazfcs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xavazruger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xavo3terminversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xavoinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xavossinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xcssinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xdvcalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xfractureattributeone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xlfmattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xlfmgeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xlfmupscalingattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xlfmupscalinggeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xmethodpcafiltering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xnlsqmethod.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameter3terminversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameteranisotropyforwarding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterbuildlfm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparametercssinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterextracthorizonatt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterfractureattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterfractureavo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterlfminterpolation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterlfmintersecton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterpcafiltering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterseismicfiltering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterupscaling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprestackasynreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xprestackdatareaderbuff.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xseismicasynchronousreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthread3termavoinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadanisotropyforwarding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadavossinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadbuildlfm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadcalchistogram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadcssinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadextracthorizonatt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadfractureattribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadfractureavaz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadfractureavo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadfractureinversion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadinterpolatedv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadintersectlfm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadlfminterpolation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadlfmupscaling.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadpcafiltering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadseismicfiltering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfolfmgeometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xpartialstackthread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xgeoquestcardimage7file.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xdataplusutil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadmergedv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xfracturepatchfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xthreadpythonprocess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xpythonprocess.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xpythonprocess.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xpythonprocess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xparameterremovefootprint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="xpythonprocess.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

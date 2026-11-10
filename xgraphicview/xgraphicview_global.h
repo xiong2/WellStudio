@@ -1,0 +1,12 @@
+#ifndef XGRAPHICVIEW_GLOBAL_H
+#define XGRAPHICVIEW_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#ifdef XGRAPHICVIEW_LIB
+# define XGRAPHICVIEW_EXPORT Q_DECL_EXPORT
+#else
+# define XGRAPHICVIEW_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // XGRAPHICVIEW_GLOBAL_H

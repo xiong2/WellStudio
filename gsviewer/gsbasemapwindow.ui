@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CGSBasemapWindow</class>
+ <widget class="QMainWindow" name="CGSBasemapWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/icons/BasemapWindow.png</normaloff>:/icons/BasemapWindow.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="GSBasemapView" name="graphicsView">
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="iconSize">
+    <size>
+     <width>16</width>
+     <height>16</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionZoom_In"/>
+   <addaction name="actionZoom_Out"/>
+   <addaction name="actionZoom_to_width"/>
+   <addaction name="actionZoom_to_height"/>
+   <addaction name="actionZoom_By_Rect"/>
+   <addaction name="actionZoom_Undo"/>
+   <addaction name="actionZoom_Reset"/>
+   <addaction name="separator"/>
+   <addaction name="actionNewSection"/>
+   <addaction name="actionNewPDG"/>
+   <addaction name="actionNewRoseDiagram"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidgetColormap">
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="CXColormapWidget" name="colormapWidget" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionZoom_In">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/view_zoom_in.png</normaloff>:/Icon/view_zoom_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom In</string>
+   </property>
+  </action>
+  <action name="actionZoom_Out">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/view_zoom_out.png</normaloff>:/Icon/view_zoom_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Out</string>
+   </property>
+  </action>
+  <action name="actionZoom_Reset">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/view_zoom_page.png</normaloff>:/Icon/view_zoom_page.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Reset</string>
+   </property>
+  </action>
+  <action name="actionNewSection">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/SectionNew.png</normaloff>:/Icon/SectionNew.png</iconset>
+   </property>
+   <property name="text">
+    <string>New Section</string>
+   </property>
+   <property name="toolTip">
+    <string>Create a new section polyline</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionZoom_By_Rect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/view_zoom_rect.png</normaloff>:/Icon/view_zoom_rect.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom By Rect</string>
+   </property>
+  </action>
+  <action name="actionZoom_Undo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/view_zoom_undo.png</normaloff>:/Icon/view_zoom_undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom Undo</string>
+   </property>
+  </action>
+  <action name="actionZoom_to_width">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/view_zoom_width.png</normaloff>:/Icon/view_zoom_width.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom to width</string>
+   </property>
+  </action>
+  <action name="actionZoom_to_height">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/view_zoom_height.png</normaloff>:/Icon/view_zoom_height.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom to height</string>
+   </property>
+  </action>
+  <action name="actionNewPDG">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/PDGNew.png</normaloff>:/Icon/PDGNew.png</iconset>
+   </property>
+   <property name="text">
+    <string>New PDG</string>
+   </property>
+   <property name="toolTip">
+    <string>Create a new PDG</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionNewRoseDiagram">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/RoseDiagram.png</normaloff>:/Icon/RoseDiagram.png</iconset>
+   </property>
+   <property name="text">
+    <string>CreateRoseDiagram</string>
+   </property>
+   <property name="toolTip">
+    <string>Create new Rose diagram</string>
+   </property>
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GSBasemapView</class>
+   <extends>QGraphicsView</extends>
+   <header>gsbasemapview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CXColormapWidget</class>
+   <extends>QWidget</extends>
+   <header>xcolormapwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections/>
+</ui>

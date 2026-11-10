@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{957512ba-a867-407b-a837-3e6bc75ad239}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{a48e624d-1d3e-417c-bf24-562a37a9dcd0}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="xconsole_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xconsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xdataimporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xlicensemanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xsegyimporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xtreeconsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xwindowmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="x.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="xmaintreewidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="xrbm.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Icon\Minus.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Axes.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\AxesGrids.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CrossplotPickett24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SeismicInvCSSI24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SeismicInvAVO24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WaveletExport24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WaveletImport24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SEGYImport24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorFrac24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelCF24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelFlu24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelGE24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelDEM24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelSC24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelKT24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelBM24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelFS24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelEm24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelGXW24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelCXW24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelWy24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelCri24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ModelKri24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorWS24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorOpt24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorAr24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorTOC24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorK24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorJ24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorVCL24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorDualWater24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorPoro24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\MultiCurvesFitting24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorBackus24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculatorPseudoWell24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CalculateEla24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CurveSplic24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Undo24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Redo24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\DepthShift24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Calculator24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ASCIIFileImport24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellFileImport24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellFileExport24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Setting24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\RandomSectionDel.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\DigitizePolygonDel.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\HelpInfo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\RLPickett.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Exit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\RandomSectionNew.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\DigitizePolygon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\DigitizePolygonNew.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Screenshot.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Scale.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Colorbar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\2DHorizon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\2DLine.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\2DSurvey.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\3DSurveyFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Add.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Apply2All.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\BrickFile.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Calculator.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Coordinates.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\CoordinatesGrid.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Compass.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Colormap32x32.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Crossline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Crossplot.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Delete.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Disable.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\DisSelectAll.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Downwards.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Fault.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\FaultAssign.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\FaultFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\FaultNew.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\FaultPolygon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\FaultPolygonFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\File.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Folder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Folder(Open).png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Folder(open)24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Formation.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Geobody.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\GeobodyCollection.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\GeobodyFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\GeobodyWhole.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Histogram24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Home.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Horizon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\HorizonFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\HorizonNew.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\HorizonTrackAuto.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\HorizonTrackManual.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\HorizonTrackSemiAuto.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Imperial.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Inline.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\InlinePic.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\LockDepth.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Logview.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\MDI24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Metric.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\MicroSeismic.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\New24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\OK.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Ortho.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\OrthoSection.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\OrthoSectionNew.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Perspective.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Points.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\PointsFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Polygon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\PolygonFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\PolygonNew.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Play2Last.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\PlayPageDown.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\PlayForward.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\PlayStop.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\PlayBackward.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\PlayPageUp.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Play2First.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Plus.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Prestack3D.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Prestack5D.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ProjectProperties.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Question4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\RandomSection.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\RectZoom.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\RectZoomCancel.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\RectZoomUndo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Reload24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ReservoirModel.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ResGeometryModel.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Reset.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ResPropertyModel.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Save.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Save24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SectionWindow24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Seismic.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SeismicDataVolume.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SeismicDVFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SeismicLine.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SeismicSectionFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SelectAll.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Selection.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SetHome.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Setting.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SliceVolume.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Spreadsheet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SubVolume.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SubGrid.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Surface.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\SurfaceFolder.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Synchronize.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\TimeSlice.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\TopLevel24x24.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-AC.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-AZI.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-CAL.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-CORE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-DEPTH.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-DIP.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-EW.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-FRA.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-GEN.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-GR.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-LITH.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-NPHI.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-PE.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-PERM.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-POR.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-POTA.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-RHO.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-RT.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-SN.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-SP.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-SW.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-THOR.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\T-URAN.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Upwards.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\UpscaleGeometry.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\UpscaleResult.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ViewAll.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Well.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellAbo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellDisPro.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellDrilling.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellDry.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellEst.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellGas.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellGeology.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellLowGas.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellLowOil.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellBarefoot.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellOG.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellOil.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellPrePro.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellWater.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellCurveAlias.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellCondition.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellFile.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Wells.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WellTops.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\XYPlane.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\XZPlane.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\YZPlane.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ZoomIn.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ZoomOut.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ZIncrease.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\ZDecrease.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\227.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\228.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\229.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\230.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\231.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\301.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\309.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\342.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\365.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\388.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\393.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\403.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\3dwindow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\AreaIntensity.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WiggleIntensity.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\WiggleArea.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\VaribleIntensity.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\FitHeight.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\FitWidth.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Wiggle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\IncaseHorizon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\DiscaseHorizon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\IncaseVertical.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\DiscaseVertical.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\IncaseExcursion.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\DiscaseExcursion.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\BasemapWindow.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Properties.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\RandomSectionCreate.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\18804.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Chairmode.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\lights.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\1818.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\trackpara.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\stop.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\overwrite.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\Lock.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\sectionerase.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\Icon\faultDistribution.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\qrc_x.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xconsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xdataimporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xlicensemanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xmaintreewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xmaintreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xmaintreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="xrbm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xrbm.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xrbm.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="xsegyimporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xtreeconsole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xwindowmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UILineHeader</class>
+ <widget class="QWidget" name="UILineHeader">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>726</width>
+    <height>584</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QCheckBox" name="m_ChkFlip">
+     <property name="text">
+      <string>Flip</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QTreeWidget" name="m_LineHeaderView">
+     <property name="rootIsDecorated">
+      <bool>false</bool>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <attribute name="headerCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="headerCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Byte Numbers</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Description</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Value</string>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string>01-04</string>
+      </property>
+      <property name="text">
+       <string>Job identification number.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>05-08</string>
+      </property>
+      <property name="text">
+       <string>Line number.  For 3-D poststack data, this will typically contain the in-line number.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>09-12</string>
+      </property>
+      <property name="text">
+       <string>Reel number.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>13-14</string>
+      </property>
+      <property name="text">
+       <string>Number of data traces per ensemble.  Mandatory for prestack data.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>15-16</string>
+      </property>
+      <property name="text">
+       <string>Number of auxiliary traces per ensemble.  Mandatory for prestack data.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>17-18</string>
+      </property>
+      <property name="text">
+       <string>Sample interval in microseconds (µs).  Mandatory for all data types.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>19-20</string>
+      </property>
+      <property name="text">
+       <string>Sample interval in microseconds  (µs) of original field recording. </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>21-22</string>
+      </property>
+      <property name="text">
+       <string>Number of samples per data trace.  Mandatory for all types of data.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>23-24</string>
+      </property>
+      <property name="text">
+       <string>Number of samples per data trace for original field recording.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>25-26</string>
+      </property>
+      <property name="text">
+       <string>Data sample format code.  Mandatory for all data.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>27-28</string>
+      </property>
+      <property name="text">
+       <string>Ensemble fold — The expected number of data traces per trace ensemble (e.g. the CMP fold).</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>29-30</string>
+      </property>
+      <property name="text">
+       <string>Trace sorting code.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>31-32</string>
+      </property>
+      <property name="text">
+       <string>Vertical sum code.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>33-34</string>
+      </property>
+      <property name="text">
+       <string>Sweep frequency at start (Hz).</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>35-36</string>
+      </property>
+      <property name="text">
+       <string>Sweep frequency at end (Hz).</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>37-38</string>
+      </property>
+      <property name="text">
+       <string>Sweep length (ms).</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>39-40</string>
+      </property>
+      <property name="text">
+       <string>Sweep type code.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>41-42</string>
+      </property>
+      <property name="text">
+       <string>Trace number of sweep channel.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>43-44</string>
+      </property>
+      <property name="text">
+       <string>Sweep trace taper length in milliseconds at start if tapered (the taper starts at zero time and is effective for this length).</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>45-46</string>
+      </property>
+      <property name="text">
+       <string>Sweep trace taper length in milliseconds at end (the ending taper starts at sweep length minus the taper length at end).</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>47-48</string>
+      </property>
+      <property name="text">
+       <string>Taper type.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>49-50</string>
+      </property>
+      <property name="text">
+       <string>Correlated data traces.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>51-52</string>
+      </property>
+      <property name="text">
+       <string>Binary gain recovered.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>53-54</string>
+      </property>
+      <property name="text">
+       <string>Amplitude recovery method.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>55-56</string>
+      </property>
+      <property name="text">
+       <string>Measurement system.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>57-58</string>
+      </property>
+      <property name="text">
+       <string>Impulse signal polarity.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>59-60</string>
+      </property>
+      <property name="text">
+       <string>Vibratory polarity code.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>61-300</string>
+      </property>
+      <property name="text">
+       <string>Unassigned.</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>301-302</string>
+      </property>
+      <property name="text">
+       <string>SEG Y Format Revision Number. </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>303-304</string>
+      </property>
+      <property name="text">
+       <string>Fixed length trace flag. </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>305-306</string>
+      </property>
+      <property name="text">
+       <string>Number of 3200-byte, Extended Textual File Header records following the Binary Header. </string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>307-400</string>
+      </property>
+      <property name="text">
+       <string>Unassigned.</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShowTemplatesClass</class>
+ <widget class="QMainWindow" name="ShowTemplatesClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1263</width>
+    <height>677</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ShowTemplates</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="m_pTabContinuous">
+       <attribute name="title">
+        <string>Continuous Template</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTableView" name="tableView"/>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>Template</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Name</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditName">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_13">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Full Name</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditFullName">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_14">
+               <property name="text">
+                <string>Type</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditType">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>Unit (Metric)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditUnitM">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_6">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>Unit (Imperial)</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditUnitI">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Data Range (Metric)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEditDataMinM"/>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>To</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLineEdit" name="lineEditDataMaxM"/>
+             </item>
+             <item row="0" column="4">
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="5">
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>Display Range (Metric)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="6">
+              <widget class="QLineEdit" name="lineEditDspMinM"/>
+             </item>
+             <item row="0" column="7">
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>To</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="8">
+              <widget class="QLineEdit" name="lineEditDspMaxM"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string>Data Range (Imperial)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="lineEditDataMinI"/>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>To</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLineEdit" name="lineEditDataMaxI"/>
+             </item>
+             <item row="1" column="4">
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="5">
+              <widget class="QLabel" name="label_12">
+               <property name="text">
+                <string>Display Range (Imperial)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="6">
+              <widget class="QLineEdit" name="lineEditDspMinI"/>
+             </item>
+             <item row="1" column="7">
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>To</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="8">
+              <widget class="QLineEdit" name="lineEditDspMaxI"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QCheckBox" name="checkBox">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>Logarithmic Display</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_15">
+               <property name="text">
+                <string>Icon</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBoxIcon">
+               <item>
+                <property name="text">
+                 <string>T-AC.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-AC.png</normaloff>:/Icon/T-AC.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-AZI.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-AZI.png</normaloff>:/Icon/T-AZI.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-CAL.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-CAL.png</normaloff>:/Icon/T-CAL.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-DEPTH.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-DEPTH.png</normaloff>:/Icon/T-DEPTH.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-DIP.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-DIP.png</normaloff>:/Icon/T-DIP.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-EW.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-EW.png</normaloff>:/Icon/T-EW.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-FRA.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-FRA.png</normaloff>:/Icon/T-FRA.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-GEN.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-GEN.png</normaloff>:/Icon/T-GEN.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-GR.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-GR.png</normaloff>:/Icon/T-GR.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-LITH.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-LITH.png</normaloff>:/Icon/T-LITH.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-NPHI.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-NPHI.png</normaloff>:/Icon/T-NPHI.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-PE.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-PE.png</normaloff>:/Icon/T-PE.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-PERM.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-PERM.png</normaloff>:/Icon/T-PERM.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-POR.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-POR.png</normaloff>:/Icon/T-POR.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-POTA.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-POTA.png</normaloff>:/Icon/T-POTA.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-RC.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-RC.png</normaloff>:/Icon/T-RC.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-RHO.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-RHO.png</normaloff>:/Icon/T-RHO.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-RT.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-RT.png</normaloff>:/Icon/T-RT.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-SN.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-SN.png</normaloff>:/Icon/T-SN.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-SP.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-SP.png</normaloff>:/Icon/T-SP.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-SW.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-SW.png</normaloff>:/Icon/T-SW.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-THOR.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-THOR.png</normaloff>:/Icon/T-THOR.png</iconset>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>T-URAN.png</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../xconsole/x.qrc">
+                  <normaloff>:/Icon/T-URAN.png</normaloff>:/Icon/T-URAN.png</iconset>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>Alias</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditAlias">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="m_pTabDiscrete">
+       <attribute name="title">
+        <string>Discrete Template</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QTableView" name="m_pTableViewDiscrete"/>
+        </item>
+        <item row="1" column="0">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="8">
+           <widget class="QLabel" name="label_20">
+            <property name="text">
+             <string>Unit(Imperial)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="m_pEdtDiscreteFullName"/>
+          </item>
+          <item row="0" column="7">
+           <widget class="QLineEdit" name="m_pEdtDiscreteMetricUnit"/>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="m_pEdtDiscreteName"/>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Full Name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="m_pEdtDiscreteType"/>
+          </item>
+          <item row="0" column="9">
+           <widget class="QLineEdit" name="m_pEdtDiscreteImperialUnit"/>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>Type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="6">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>Unit(Metric)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_21">
+            <property name="text">
+             <string>Icon</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_22">
+            <property name="text">
+             <string>Alias</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="m_pEdtDiscreteIcon"/>
+          </item>
+          <item row="1" column="3" colspan="7">
+           <widget class="QLineEdit" name="m_pEdtDiscreteAlias"/>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="1" rowspan="2">
+         <widget class="QGroupBox" name="gbxDiscreteProperties">
+          <property name="title">
+           <string>Properties</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="1" column="0">
+            <widget class="QPushButton" name="m_pBtnPropertyNew">
+             <property name="text">
+              <string>New</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="m_pBtnPropertyDelete">
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QTableWidget" name="m_pTableProperties">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <column>
+              <property name="text">
+               <string>Properties</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Colors</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionDelete"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionReset"/>
+   <addaction name="actionSUS"/>
+   <addaction name="actionExit"/>
+  </widget>
+  <action name="actionSUS">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Metric.png</normaloff>:/Icon/Metric.png</iconset>
+   </property>
+   <property name="text">
+    <string>切换单位系统</string>
+   </property>
+   <property name="toolTip">
+    <string>在公制和英制单位系统间切换</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Exit24x24.png</normaloff>
+     <normalon>:/Icon/Exit.png</normalon>:/Icon/Exit24x24.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Icon/Save24x24.png</normaloff>
+     <normalon>:/Icon/Save32.png</normalon>:/Icon/Save24x24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>保存模版</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Reload24x24.png</normaloff>
+     <normalon>:/Icon/Reset.png</normalon>:/Icon/Reload24x24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reload</string>
+   </property>
+   <property name="toolTip">
+    <string>重置模版</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/Icon/New24x24.png</normaloff>
+     <normalon>:/Icon/New32.png</normalon>:/Icon/New24x24.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>创建新模版</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/Delete24x24.png</normaloff>:/Icon/Delete24x24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lineEditName</tabstop>
+  <tabstop>lineEditFullName</tabstop>
+  <tabstop>lineEditType</tabstop>
+  <tabstop>lineEditUnitM</tabstop>
+  <tabstop>lineEditUnitI</tabstop>
+  <tabstop>lineEditDataMinM</tabstop>
+  <tabstop>lineEditDataMaxM</tabstop>
+  <tabstop>lineEditDspMinM</tabstop>
+  <tabstop>lineEditDspMaxM</tabstop>
+  <tabstop>lineEditDataMinI</tabstop>
+  <tabstop>lineEditDataMaxI</tabstop>
+  <tabstop>lineEditDspMinI</tabstop>
+  <tabstop>lineEditDspMaxI</tabstop>
+  <tabstop>checkBox</tabstop>
+  <tabstop>lineEditAlias</tabstop>
+  <tabstop>tableView</tabstop>
+  <tabstop>m_pEdtDiscreteName</tabstop>
+  <tabstop>m_pEdtDiscreteFullName</tabstop>
+  <tabstop>m_pEdtDiscreteType</tabstop>
+  <tabstop>m_pEdtDiscreteMetricUnit</tabstop>
+  <tabstop>m_pEdtDiscreteImperialUnit</tabstop>
+  <tabstop>m_pEdtDiscreteIcon</tabstop>
+  <tabstop>m_pEdtDiscreteAlias</tabstop>
+  <tabstop>m_pBtnPropertyNew</tabstop>
+  <tabstop>m_pBtnPropertyDelete</tabstop>
+  <tabstop>m_pTableProperties</tabstop>
+  <tabstop>m_pTableViewDiscrete</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../xconsole/x.qrc"/>
+ </resources>
+ <connections/>
+</ui>
