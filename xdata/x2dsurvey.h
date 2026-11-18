@@ -17,8 +17,6 @@ public:
 	virtual QString GetTypeString() { return "2D Seismic Survey"; }
 	virtual bool IsFolder() { return true; }
 	virtual QStringList GetDescription();
-
-	QList<CXObject*> FetchAllSections();
 };
 
 #endif

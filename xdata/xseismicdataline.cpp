@@ -56,13 +56,13 @@ QString CXSeismicDataLine::GetTypeString()
 {
 	EXSectionType eType = GetDataLineType();
 	if (eType == eInlineSection)
-		return "One inline seismc data";
+		return u8"三维主测线地震数据";
 	else if (eType == eCrosslineSection)
-		return "One crossline seismc data";
+		return u8"三维联络测线地震数据";
 	else if (eType == eRandomSection)
-		return "One random section seismc data";
+		return u8"三维任意线地震数据";
 	else if (eType == e2DSection)
-		return "One 2-D seismc data";
+		return u8"二维地震数据";
 	else
 		return "";
 }
@@ -241,9 +241,11 @@ QStringList CXSeismicDataLine::GetDescription()
 {
 	QStringList sListDes;
 
-	sListDes << "Number of traces " << QString::number(GetTraceNumber());
-	sListDes << "Number of samples per trace " << QString::number(GetSamplingQty());
-	sListDes << "Sample interval " << QString::number(m_dSamplingRate);
+	sListDes << u8"地震道数目" << QString::number(GetTraceNumber());
+	sListDes << u8"起始时间" << QString::number(m_dSamplingStart);
+	sListDes << u8"终止时间" << QString::number(m_dSamplingEnd);
+	sListDes << u8"样点数目" << QString::number(GetSamplingQty());
+	sListDes << u8"采样间隔" << QString::number(m_dSamplingRate);
 
 	return sListDes;
 }

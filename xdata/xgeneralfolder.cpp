@@ -57,35 +57,35 @@ QString CXGeneralFolder::GetTypeString()
 	EXObjectType eType = GetObjectType();
 	
 	if (eType == EXWellFolder)
-		return "Well Folder";
+		return u8"井文件夹";
 	else if (eType == EXWellCurveAliasFolder)
-		return "Well Curve Aliases";
+		return u8"测井曲线别名";
 	else if (eType == EXFaultFolder)
-		return "Fault Folder";
+		return u8"断层文件夹";
 	else if (eType == EXFaultPolygonFolder)
-		return "Fault Polygon Folder";
+		return u8"断层多边形文件夹";
 	else if (eType == EXPointsFolder)
-		return "Points Folder";
+		return u8"散点文件夹";
 	else if (eType == EXSurfaceFolder)
-		return "Surface Folder";
+		return u8"Surface Folder";
 	else if (eType == EXHorizonFolder)
-		return "Horizon Folder";
+		return u8"层位文件夹";
 	else if (eType == EXGMFaultFolder)
-		return "Folder";
+		return u8"应力断层文件夹";
 	else if (eType == EXWaveletFolder)
-		return "Wavelet Folder";
+		return u8"子波文件夹";
 	else if (eType == EXFracturePatchFolder)
-		return "Fracture patches Folder";
+		return u8"裂缝片文件夹";
 	else if (eType == EXSeismicDVFolder)
-		return "Seismic Data Volumes";
+		return u8"地震数据体";
 	else if (eType == EXSeismicSectionFolder)
-		return "Seismic Sections";
+		return u8"地震剖面";
 	else if (eType == EXGeobodyFolder)
-		return "Geobodies";
+		return u8"地质体";
 	else if (eType == EXSeismicGatherFolder)
-		return "Seismic Gathers";
+		return u8"地震道集";
 	else
-		return "Folder";
+		return u8"文件夹";
 }
 
 QStringList CXGeneralFolder::GetDescription()

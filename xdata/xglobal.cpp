@@ -151,7 +151,7 @@ XDATA_EXPORT unsigned int g_InvalidTemplateID = 0;
 
 XDATA_EXPORT double g_dInvalidData = M_FINVALID;
 
-XDATA_EXPORT QString g_strProductName = "XStudio";
+XDATA_EXPORT QString g_strProductName = "RELES";
 
 XDATA_EXPORT QMap<QUuid, CXObject*> g_mapIDToObject;
 

@@ -131,17 +131,17 @@ CXObject* CX3DSurvey::GetFolder(EXObjectType eObjType, bool bCreate)
 
 		CXGeneralFolder *pFolder;
 		if (eObjType == EXSeismicDVFolder)
-			pFolder = new CXGeneralFolder("Seismic Data Volumes", EXSeismicDVFolder, "SeismicDVFolder.png");
+			pFolder = new CXGeneralFolder(u8"地震数据体", EXSeismicDVFolder, "SeismicDVFolder.png");
 		else if (eObjType == EXSeismicDataLineFolder)
-			pFolder = new CXGeneralFolder("Seismic Data Lines", EXSeismicDataLineFolder, "SeismicSectionFolder.png");
+			pFolder = new CXGeneralFolder(u8"地震数据线", EXSeismicDataLineFolder, "SeismicSectionFolder.png");
 		else if (eObjType == EXSeismicSectionFolder)
-			pFolder = new CXGeneralFolder("Seismic Sections", EXSeismicSectionFolder, "SeismicSectionFolder.png");
+			pFolder = new CXGeneralFolder(u8"地震剖面", EXSeismicSectionFolder, "SeismicSectionFolder.png");
 		else if (eObjType == EXHorizonFolder)
-			pFolder = new CXGeneralFolder("Horizons", EXHorizonFolder, "HorizonFolder.png");
+			pFolder = new CXGeneralFolder(u8"层位", EXHorizonFolder, "HorizonFolder.png");
 		else if (eObjType == EXFaultFolder)
-			pFolder = new CXGeneralFolder("Faults", EXFaultFolder, "FaultFolder.png");
+			pFolder = new CXGeneralFolder(u8"断层", EXFaultFolder, "FaultFolder.png");
 		else if (eObjType == EXGSFolder)
-			pFolder = new CXGeneralFolder("Stress", EXGSFolder, "StressFolder.png");
+			pFolder = new CXGeneralFolder(u8"应力", EXGSFolder, "StressFolder.png");
 		else
 			return NULL;
 

@@ -80,6 +80,7 @@ void CXBaseMapWindow::InitWindow()
 	// Tracking tools
 	m_ui.m_pToolBarPolygon->hide();
 	m_ui.m_pToolBarRandomSection->hide();
+	m_ui.m_pToolBarCombinedLine->hide();
 
 	connect(m_ui.m_pActionRandomSection_Mode, &QAction::toggled, this, &CXBaseMapWindow::slotRandomSectionMode);
 	connect(m_ui.m_pActionPolygon_Mode, &QAction::toggled, this, &CXBaseMapWindow::slotPolygonMode);
@@ -706,6 +707,11 @@ void CXBaseMapWindow::EnableRandomSectionMode(bool bEnable)
 void CXBaseMapWindow::EnablePolygonMode(bool bEnable)
 {
 	m_ui.m_pActionPolygon_Mode->setEnabled(bEnable);
+}
+
+void CXBaseMapWindow::EnableCombinedLineMode(bool bEnable)
+{
+	m_ui.actionCombinedLine->setEnabled(bEnable);
 }
 
 void CXBaseMapWindow::EnableRandomSectionDeleteAction(bool bEnable)

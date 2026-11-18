@@ -351,22 +351,7 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
-xconsole/GeneratedFiles/qrc_x.cpp
-XStudio/GeneratedFiles/ui_mainwindow.h
-xguiplus/GeneratedFiles/ui_xdlgtminversion.h
-xconsole/GeneratedFiles/qrc_x.cpp
-xconsole/GeneratedFiles/qrc_x.cpp
-xguiplus/GeneratedFiles/ui_xdlgtminversion.h
-XStudio/GeneratedFiles/ui_mainwindow.h
-xconsole/GeneratedFiles/qrc_x.cpp
-xconsole/GeneratedFiles/qrc_x.cpp
-XStudio/XTempLog.txt
-xcrossplot/GeneratedFiles/ui_xdlgcpsetting.h
-xcrossplot/GeneratedFiles/ui_xtabcpsetting.h
-/xcrossplot/GeneratedFiles
-/xhistogramplot/GeneratedFiles
-xguiplus/GeneratedFiles/ui_xdlggatherwin.h
-/xguiplus/GeneratedFiles
+*/GeneratedFiles
 *.txt
 *.lic
 *.txt

@@ -700,7 +700,8 @@ void CX2DSectionAxis::_SetDataTypeandResetDrawData()
 	auto p2DLine = dynamic_cast<CX2DSeismicLine*>(m_pObject);
 
 	auto pDV = dynamic_cast<CXSeismicDataVolume*>(m_pScene->GetBackgroundSection(false));
-	if (!pDV)
+	//	For 2D line, no pDV.
+	if (!p2DLine && !pDV)
 		return;
 
 	if (pSection)

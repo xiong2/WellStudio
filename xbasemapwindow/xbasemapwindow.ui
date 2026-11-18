@@ -14,7 +14,7 @@
    <string>Base Map Window</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../xconsole/x.qrc">
+   <iconset>
     <normaloff>:/Icon/BasemapWindow.png</normaloff>:/Icon/BasemapWindow.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget"/>
@@ -72,6 +72,7 @@
    </attribute>
    <addaction name="m_pActionPolygon_Mode"/>
    <addaction name="m_pActionRandomSection_Mode"/>
+   <addaction name="actionCombinedLine"/>
   </widget>
   <widget class="QToolBar" name="toolBarVolume">
    <property name="windowTitle">
@@ -133,6 +134,18 @@
    </attribute>
    <addaction name="m_pActionPolygonNew"/>
    <addaction name="m_pActionPolygonDelete"/>
+  </widget>
+  <widget class="QToolBar" name="m_pToolBarCombinedLine">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>BottomToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionCombinedLineNew"/>
   </widget>
   <action name="m_actionViewAll">
    <property name="icon">
@@ -372,6 +385,33 @@
    </property>
    <property name="text">
     <string>Delete Polygon</string>
+   </property>
+  </action>
+  <action name="actionCombinedLine">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/CombinedLine.png</normaloff>:/Icon/CombinedLine.png</iconset>
+   </property>
+   <property name="text">
+    <string>联合测线</string>
+   </property>
+  </action>
+  <action name="actionCombinedLineNew">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../xconsole/x.qrc">
+     <normaloff>:/Icon/CombinedLineNew.png</normaloff>:/Icon/CombinedLineNew.png</iconset>
+   </property>
+   <property name="text">
+    <string>创建联合测线</string>
    </property>
   </action>
  </widget>

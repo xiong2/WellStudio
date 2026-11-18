@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>XStudio</string>
+   <string>RELES</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -26,7 +26,7 @@
      <x>0</x>
      <y>0</y>
      <width>1268</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -37,7 +37,7 @@
    </property>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>项目</string>
     </property>
     <addaction name="actionNew_Project"/>
     <addaction name="actionOpen_Project"/>
@@ -48,7 +48,7 @@
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
-     <string>View</string>
+     <string>窗口</string>
     </property>
     <addaction name="actionLog_View"/>
     <addaction name="actionCrossplot_view"/>
@@ -59,11 +59,11 @@
    </widget>
    <widget class="QMenu" name="menuImport">
     <property name="title">
-     <string>I/O</string>
+     <string>加载</string>
     </property>
     <widget class="QMenu" name="menu">
      <property name="title">
-      <string>Import Wells</string>
+      <string>井数据</string>
      </property>
      <property name="icon">
       <iconset resource="../xconsole/x.qrc">
@@ -81,7 +81,7 @@
     </widget>
     <widget class="QMenu" name="menu_2">
      <property name="title">
-      <string>Import Fault</string>
+      <string>断层数据</string>
      </property>
      <property name="icon">
       <iconset resource="../xconsole/x.qrc">
@@ -102,7 +102,7 @@
    </widget>
    <widget class="QMenu" name="menuTools">
     <property name="title">
-     <string>Tools</string>
+     <string>工具</string>
     </property>
     <addaction name="actionTheoreticalWavelet"/>
     <addaction name="actionTemplates"/>
@@ -110,35 +110,14 @@
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>Help</string>
+     <string>帮助</string>
     </property>
     <addaction name="actionHelp"/>
     <addaction name="actionFAQ"/>
    </widget>
-   <widget class="QMenu" name="menuView">
-    <property name="title">
-     <string>Window</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuStress">
-    <property name="title">
-     <string>Stress</string>
-    </property>
-    <addaction name="actionHorizon_Management"/>
-    <addaction name="actionStress_Calculation"/>
-    <addaction name="actionRegional_Stress_Analysis"/>
-    <addaction name="separator"/>
-    <addaction name="actionGSBasemap_Window"/>
-    <addaction name="actionGSSection_Window"/>
-    <addaction name="actionPDG_Window"/>
-    <addaction name="separator"/>
-    <addaction name="actionAdd_to_tool_bar"/>
-   </widget>
    <addaction name="menuFile"/>
-   <addaction name="menuView"/>
    <addaction name="menuImport"/>
    <addaction name="menuWindow"/>
-   <addaction name="menuStress"/>
    <addaction name="menuTools"/>
    <addaction name="menuHelp"/>
   </widget>
@@ -178,7 +157,7 @@
   <widget class="QStatusBar" name="statusBar"/>
   <widget class="QDockWidget" name="dockDataTree">
    <property name="windowTitle">
-    <string>Data</string>
+    <string>数据</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -199,7 +178,7 @@
   </widget>
   <widget class="QDockWidget" name="dockWindowTree">
    <property name="windowTitle">
-    <string>Windows</string>
+    <string>窗口</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -224,7 +203,7 @@
      <normaloff>:/Icon/Folder(open)32.png</normaloff>:/Icon/Folder(open)32.png</iconset>
    </property>
    <property name="text">
-    <string>Open...</string>
+    <string>打开...</string>
    </property>
    <property name="toolTip">
     <string>打开已有项目</string>
@@ -239,7 +218,7 @@
      <normaloff>:/Icon/Exit.png</normaloff>:/Icon/Exit.png</iconset>
    </property>
    <property name="text">
-    <string>Exit</string>
+    <string>退出</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
@@ -254,7 +233,7 @@
      <normaloff>:/Icon/Save32.png</normaloff>:/Icon/Save32.png</iconset>
    </property>
    <property name="text">
-    <string>Save</string>
+    <string>保存</string>
    </property>
    <property name="toolTip">
     <string>保存当前项目</string>
@@ -269,7 +248,7 @@
      <normaloff>:/Icon/New32.png</normaloff>:/Icon/New32.png</iconset>
    </property>
    <property name="text">
-    <string>Create...</string>
+    <string>新建...</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
@@ -284,7 +263,7 @@
      <normaloff>:/Icon/Histogram32.png</normaloff>:/Icon/Histogram32.png</iconset>
    </property>
    <property name="text">
-    <string>Histogram view...</string>
+    <string>直方图窗口...</string>
    </property>
    <property name="toolTip">
     <string>创建直方图窗口</string>
@@ -296,7 +275,7 @@
      <normaloff>:/Icon/Setting.png</normaloff>:/Icon/Setting.png</iconset>
    </property>
    <property name="text">
-    <string>Templates...</string>
+    <string>模板...</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+T</string>
@@ -311,7 +290,7 @@
      <normaloff>:/Icon/Logview32.png</normaloff>:/Icon/Logview32.png</iconset>
    </property>
    <property name="text">
-    <string>Log View...</string>
+    <string>柱状图窗口...</string>
    </property>
    <property name="toolTip">
     <string>创建曲线回放窗口</string>
@@ -326,7 +305,7 @@
      <normaloff>:/Icon/Crossplot32.png</normaloff>:/Icon/Crossplot32.png</iconset>
    </property>
    <property name="text">
-    <string>Crossplot view...</string>
+    <string>交会图窗口...</string>
    </property>
    <property name="toolTip">
     <string>创建交会图窗口</string>
@@ -338,7 +317,7 @@
      <normaloff>:/Icon/Question4.png</normaloff>:/Icon/Question4.png</iconset>
    </property>
    <property name="text">
-    <string>Help...</string>
+    <string>帮助...</string>
    </property>
   </action>
   <action name="actionImportWellHeader">
@@ -347,7 +326,7 @@
      <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import Wellhead...</string>
+    <string>井头...</string>
    </property>
   </action>
   <action name="actionImportWellPath">
@@ -356,7 +335,7 @@
      <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import Path...</string>
+    <string>井轨迹...</string>
    </property>
   </action>
   <action name="actionImportWellLas">
@@ -365,7 +344,10 @@
      <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import Las...</string>
+    <string>LAS曲线...</string>
+   </property>
+   <property name="toolTip">
+    <string>加载LAS测井曲线</string>
    </property>
   </action>
   <action name="actionImportWellTops">
@@ -374,7 +356,7 @@
      <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import Tops...</string>
+    <string>井分层...</string>
    </property>
   </action>
   <action name="actionImportFaultStick">
@@ -383,7 +365,7 @@
      <normaloff>:/Icon/Fault.png</normaloff>:/Icon/Fault.png</iconset>
    </property>
    <property name="text">
-    <string>Import FaultStick...</string>
+    <string>断层棍...</string>
    </property>
   </action>
   <action name="actionImportFaultPolygon">
@@ -392,7 +374,7 @@
      <normaloff>:/Icon/FaultPolygon.png</normaloff>:/Icon/FaultPolygon.png</iconset>
    </property>
    <property name="text">
-    <string>Import Fault Polygon...</string>
+    <string>断层多边形...</string>
    </property>
   </action>
   <action name="actionImportPoints">
@@ -401,7 +383,7 @@
      <normaloff>:/Icon/Points.png</normaloff>:/Icon/Points.png</iconset>
    </property>
    <property name="text">
-    <string>Import Points...</string>
+    <string>散点...</string>
    </property>
   </action>
   <action name="action3DWindow">
@@ -413,7 +395,7 @@
      <normaloff>:/Icon/3DWindow32.png</normaloff>:/Icon/3DWindow32.png</iconset>
    </property>
    <property name="text">
-    <string>3DWindow...</string>
+    <string>三维显示窗口...</string>
    </property>
    <property name="toolTip">
     <string>创建3DWindow</string>
@@ -425,7 +407,7 @@
      <normaloff>:/Icon/Surface.png</normaloff>:/Icon/Surface.png</iconset>
    </property>
    <property name="text">
-    <string>Import 3D Horizon...</string>
+    <string>三维层位...</string>
    </property>
    <property name="iconText">
     <string>Import 3-D Horizon</string>
@@ -440,7 +422,7 @@
      <normaloff>:/Icon/Seismic.png</normaloff>:/Icon/Seismic.png</iconset>
    </property>
    <property name="text">
-    <string>Import Seismic...</string>
+    <string>SEGY地震数据...</string>
    </property>
   </action>
   <action name="actionSection_Window">
@@ -452,7 +434,7 @@
      <normaloff>:/Icon/SectionWindow32.png</normaloff>:/Icon/SectionWindow32.png</iconset>
    </property>
    <property name="text">
-    <string>Section Window...</string>
+    <string>剖面显示窗口...</string>
    </property>
    <property name="toolTip">
     <string>Create 2D Section Window</string>
@@ -467,7 +449,7 @@
      <normaloff>:/Icon/BasemapWindow32.png</normaloff>:/Icon/BasemapWindow32.png</iconset>
    </property>
    <property name="text">
-    <string>Basemap Window...</string>
+    <string>平面底图窗口...</string>
    </property>
    <property name="toolTip">
     <string>New Base Map Window</string>
@@ -479,7 +461,7 @@
      <normaloff>:/Icon/Seismic.png</normaloff>:/Icon/Seismic.png</iconset>
    </property>
    <property name="text">
-    <string>Create Survey...</string>
+    <string>创建三维地震测区...</string>
    </property>
   </action>
   <action name="actionImportReservoir">
@@ -488,7 +470,7 @@
      <normaloff>:/Icon/ReservoirModel.png</normaloff>:/Icon/ReservoirModel.png</iconset>
    </property>
    <property name="text">
-    <string>Import Geomodel...</string>
+    <string>地质模型l...</string>
    </property>
   </action>
   <action name="actionImportWellASCIILog">
@@ -497,7 +479,7 @@
      <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import ASCII...</string>
+    <string>ASCII曲线...</string>
    </property>
   </action>
   <action name="actionProject_Properties">
@@ -506,7 +488,7 @@
      <normaloff>:/Icon/ProjectProperties.png</normaloff>:/Icon/ProjectProperties.png</iconset>
    </property>
    <property name="text">
-    <string>Option...</string>
+    <string>项目属性...</string>
    </property>
   </action>
   <action name="actionSwitchWindowStyle">
@@ -518,7 +500,7 @@
      <normaloff>:/Icon/TopLevel32.png</normaloff>:/Icon/TopLevel32.png</iconset>
    </property>
    <property name="text">
-    <string>SwitchWindowStyle</string>
+    <string>切换窗口风格</string>
    </property>
    <property name="toolTip">
     <string>Switch Window Style</string>
@@ -530,7 +512,7 @@
      <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import WIS...</string>
+    <string>WIS格式数据...</string>
    </property>
   </action>
   <action name="actionImportWellXtf">
@@ -539,7 +521,7 @@
      <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import XTF...</string>
+    <string>XTF格式数据...</string>
    </property>
   </action>
   <action name="actionFAQ">
@@ -551,7 +533,7 @@
      <normaloff>:/Icon/Question4.png</normaloff>:/Icon/Question4.png</iconset>
    </property>
    <property name="text">
-    <string>About...</string>
+    <string>关于...</string>
    </property>
    <property name="toolTip">
     <string>About</string>
@@ -563,7 +545,7 @@
      <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import DLIS...</string>
+    <string>DLIS格式数据...</string>
    </property>
   </action>
   <action name="actionHorizon_Management">
@@ -640,7 +622,7 @@
      <normaloff>:/Icon/WellFile.png</normaloff>:/Icon/WellFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import Check Shot...</string>
+    <string>Check Shot数据...</string>
    </property>
    <property name="toolTip">
     <string>Import check shot data</string>
@@ -661,7 +643,7 @@
      <normaloff>:/Icon/WaveletFile.png</normaloff>:/Icon/WaveletFile.png</iconset>
    </property>
    <property name="text">
-    <string>Import Wavelet...</string>
+    <string>地震子波...</string>
    </property>
    <property name="toolTip">
     <string>Import wavelet from file</string>
@@ -673,7 +655,7 @@
      <normaloff>:/Icon/Wavelet.png</normaloff>:/Icon/Wavelet.png</iconset>
    </property>
    <property name="text">
-    <string>Theoretical Wavlet...</string>
+    <string>理论地震子波...</string>
    </property>
    <property name="toolTip">
     <string>Create theoretical wavelet</string>
@@ -685,7 +667,7 @@
      <normaloff>:/Icon/Seismic.png</normaloff>:/Icon/Seismic.png</iconset>
    </property>
    <property name="text">
-    <string>UpdateSEGY</string>
+    <string>修改SEGY文件</string>
    </property>
   </action>
   <action name="actionImportFracturePatch">
@@ -694,7 +676,7 @@
      <normaloff>:/Icon/FracturePatch.png</normaloff>:/Icon/FracturePatch.png</iconset>
    </property>
    <property name="text">
-    <string>Import Fracture Patches...</string>
+    <string>裂缝片数据...</string>
    </property>
    <property name="toolTip">
     <string>Import Fracture Patches</string>

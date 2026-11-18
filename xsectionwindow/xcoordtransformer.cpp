@@ -14,6 +14,7 @@ CXCoordTransformer::CXCoordTransformer(CXSectionScene* pScene)
 	assert(pAxis);
 	m_pXAxis = pAxis->GetXAxis();
 	m_pYAxis = pAxis->GetYAxis();
+
 	assert(m_pXAxis && m_pYAxis);
 
 	m_rectScene = pWindow->GetSceneRect();

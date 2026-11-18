@@ -46,6 +46,7 @@ public:
 	void SetPolygonlineReady(bool bReady);
 	void EnableRandomSectionMode(bool bEnable);
 	void EnablePolygonMode(bool bEnable);
+	void EnableCombinedLineMode(bool bEnable);
 	void EnableRandomSectionDeleteAction(bool bEnable);
 	void EnablePolygonDeleteAction(bool bEnable);
 	bool IsRandomSectionMode();

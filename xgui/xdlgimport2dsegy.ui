@@ -17,14 +17,14 @@
    <item row="0" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>2D Survey:</string>
+      <string>工区：</string>
      </property>
     </widget>
    </item>
    <item row="0" column="1">
     <widget class="QLineEdit" name="lineEditSurvey">
      <property name="text">
-      <string>2D Survey</string>
+      <string>二维工区</string>
      </property>
     </widget>
    </item>
@@ -44,14 +44,14 @@
    <item row="0" column="3">
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>Domain:</string>
+      <string>域</string>
      </property>
     </widget>
    </item>
    <item row="0" column="4">
     <widget class="QRadioButton" name="radioButtonTime">
      <property name="text">
-      <string>Time</string>
+      <string>时间域</string>
      </property>
      <property name="checked">
       <bool>true</bool>
@@ -61,7 +61,7 @@
    <item row="0" column="5">
     <widget class="QRadioButton" name="radioButtonDepth">
      <property name="text">
-      <string>Depth</string>
+      <string>深度域</string>
      </property>
     </widget>
    </item>
@@ -81,7 +81,7 @@
    <item row="0" column="7">
     <widget class="QLabel" name="label_3">
      <property name="text">
-      <string>Unit:</string>
+      <string>单位</string>
      </property>
     </widget>
    </item>
@@ -130,7 +130,7 @@
       </size>
      </property>
      <property name="text">
-      <string>Add files...</string>
+      <string>添加文件...</string>
      </property>
     </widget>
    </item>
@@ -152,7 +152,7 @@
       </size>
      </property>
      <property name="text">
-      <string>Remove files</string>
+      <string>删除文件</string>
      </property>
     </widget>
    </item>

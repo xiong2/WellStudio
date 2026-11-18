@@ -144,8 +144,8 @@ void CMainWindow::_Init()
 	ui.actionGSBasemap_Window->setData(eGSBaseMap);
 	ui.actionGSSection_Window->setData(eGSSectionWindow);
 
-	ui.menuView->addAction(ui.dockDataTree->toggleViewAction());
-	ui.menuView->addAction(ui.dockWindowTree->toggleViewAction());
+	//ui.menuView->addAction(ui.dockDataTree->toggleViewAction());
+	//ui.menuView->addAction(ui.dockWindowTree->toggleViewAction());
 
 	int i;
 	for(i = 0; i < MAX_RECENTPROJECTS; i++)

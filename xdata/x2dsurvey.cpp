@@ -14,11 +14,8 @@ CX2DSurvey::CX2DSurvey(const QString& strName): CXObject(strName)
 QStringList CX2DSurvey::GetDescription()
 {
 	QStringList strList;
+	QList<CXObject *> listLines = GetChildren(EX2DSeismicLine, true);
+	strList << u8"二维线数目" << QString::number(listLines.size());
 
 	return strList;
-}
-
-QList<CXObject*> CX2DSurvey::FetchAllSections()
-{
-	return GetChildren(EXSeismicDataLine);
 }
