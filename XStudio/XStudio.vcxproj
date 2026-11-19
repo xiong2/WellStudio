@@ -102,9 +102,9 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
-      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(OSG_LIB);$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(OSG)\lib;$(SolutionDir)$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>xbasic.lib;xdata.lib;xdataplus.lib;xbasicui.lib;xgui.lib;xguiplus.lib;xgraphicview.lib;xalgorithm.lib;xgeomodel.lib;xlogplot.lib;xhistogramplot.lib;xcrossplot.lib;xsectionwindow.lib;x3dwindow.lib;xbasemapwindow.lib;gsviewer.lib;xconsole.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Sqld.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>xbasic.lib;xdata.lib;xdataplus.lib;xbasicui.lib;xgui.lib;xguiplus.lib;xgraphicview.lib;xalgorithm.lib;xgeomodel.lib;xlogview.lib;xhistogramplot.lib;xcrossplot.lib;xsectionwindow.lib;x3dwindow.lib;xbasemapwindow.lib;gsviewer.lib;xconsole.lib;qtmaind.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Sqld.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
