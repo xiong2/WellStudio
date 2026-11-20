@@ -89,7 +89,7 @@ bool CXBMPickhandle::handle(const osgGA::GUIEventAdapter &ea, osgGA::GUIActionAd
 
 bool CXBMPickhandle::_IsSectionLine(CXObject* pObj)
 {
-	if (m_pWin->IsPolygonMode() || m_pWin->IsRandomSectionMode())
+	if (m_pWin->IsPolygonMode() || m_pWin->IsRandomSectionMode() || m_pWin->IsCombinedLineMode())
 		return false;
 
 	CXSeismicSection* pSection = dynamic_cast<CXSeismicSection *>(pObj);
@@ -239,7 +239,7 @@ void CXBMPickhandle::_PickObj(float fX, float fY)
 
 	if (!picker->containsIntersections())
 	{
-		if (!m_pWin->IsRandomSectionMode() && !m_pWin->IsPolygonMode())
+		if (!m_pWin->IsRandomSectionMode() && !m_pWin->IsPolygonMode() && !m_pWin->IsCombinedLineMode())
 		{
 			ResetPickedNodeStatus();
 		}

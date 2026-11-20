@@ -84,9 +84,11 @@ void CXBaseMapWindow::InitWindow()
 
 	connect(m_ui.m_pActionRandomSection_Mode, &QAction::toggled, this, &CXBaseMapWindow::slotRandomSectionMode);
 	connect(m_ui.m_pActionPolygon_Mode, &QAction::toggled, this, &CXBaseMapWindow::slotPolygonMode);
+	connect(m_ui.actionCombinedLine, &QAction::toggled, this, &CXBaseMapWindow::slotCombinedLineMode);
 
 	connect(m_ui.m_pActionRandomSectionNew, &QAction::toggled, this, &CXBaseMapWindow::slotRandomSectionNew);
 	connect(m_ui.m_pActionPolygonNew, &QAction::toggled, this, &CXBaseMapWindow::slotPolygonNew);
+	connect(m_ui.actionCombinedLineNew, &QAction::toggled, this, &CXBaseMapWindow::slotCombinedLineNew);
 
 	connect(m_ui.m_pActionRandomSectionDelete, &QAction::triggered, this, &CXBaseMapWindow::slotRandomSectionDelete);
 	connect(m_ui.m_pActionPolygonDelete, &QAction::triggered, this, &CXBaseMapWindow::slotPolygonDelete);
@@ -225,7 +227,52 @@ void CXBaseMapWindow::slotPolygonMode(bool bOpen)
 		m_ui.m_pActionRandomSection_Mode->blockSignals(true);
 		m_ui.m_pActionRandomSection_Mode->setChecked(false);
 		m_ui.m_pActionRandomSection_Mode->blockSignals(false);
+		m_ui.m_pToolBarRandomSection->hide();
+		m_ui.m_pToolBarRandomSection->setEnabled(true);
 
+		m_ui.actionCombinedLine->blockSignals(true);
+		m_ui.actionCombinedLine->setChecked(false);
+		m_ui.actionCombinedLine->blockSignals(false);
+		m_ui.m_pToolBarCombinedLine->hide();
+		m_ui.m_pToolBarCombinedLine->setEnabled(true);
+
+		m_ui.m_actionSelectMode->setChecked(true);
+	}
+}
+
+void CXBaseMapWindow::slotRandomSectionMode(bool bOpen)
+{
+	if (bOpen)
+	{
+		m_ui.m_pActionPolygon_Mode->blockSignals(true);
+		m_ui.m_pActionPolygon_Mode->setChecked(false);
+		m_ui.m_pActionPolygon_Mode->blockSignals(false);
+		m_ui.m_pToolBarPolygon->hide();
+		m_ui.m_pToolBarPolygon->setEnabled(true);
+
+		m_ui.actionCombinedLine->blockSignals(true);
+		m_ui.actionCombinedLine->setChecked(false);
+		m_ui.actionCombinedLine->blockSignals(false);
+		m_ui.m_pToolBarCombinedLine->hide();
+		m_ui.m_pToolBarCombinedLine->setEnabled(true);
+
+		m_ui.m_actionSelectMode->setChecked(true);
+	}
+}
+
+void CXBaseMapWindow::slotCombinedLineMode(bool bOpen)
+{
+	if (bOpen)
+	{
+		m_ui.m_pActionPolygon_Mode->blockSignals(true);
+		m_ui.m_pActionPolygon_Mode->setChecked(false);
+		m_ui.m_pActionPolygon_Mode->blockSignals(false);
+		m_ui.m_pToolBarPolygon->hide();
+		m_ui.m_pToolBarPolygon->setEnabled(true);
+
+		m_ui.m_pActionRandomSection_Mode->blockSignals(true);
+		m_ui.m_pActionRandomSection_Mode->setChecked(false);
+		m_ui.m_pActionRandomSection_Mode->blockSignals(false);
 		m_ui.m_pToolBarRandomSection->hide();
 		m_ui.m_pToolBarRandomSection->setEnabled(true);
 
@@ -242,6 +289,9 @@ void CXBaseMapWindow::slotRandomSectionNew(bool bNew)
 		m_ui.m_pActionPolygonNew->blockSignals(true);
 		m_ui.m_pActionPolygonNew->setChecked(false);
 		m_ui.m_pActionPolygonNew->blockSignals(false);
+		m_ui.actionCombinedLineNew->blockSignals(true);
+		m_ui.actionCombinedLineNew->setChecked(false);
+		m_ui.actionCombinedLineNew->blockSignals(false);
 
 		m_ui.m_actionSelectMode->setChecked(true);
 	}
@@ -256,6 +306,26 @@ void CXBaseMapWindow::slotPolygonNew(bool bNew)
 		m_ui.m_pActionRandomSectionNew->blockSignals(true);
 		m_ui.m_pActionRandomSectionNew->setChecked(false);
 		m_ui.m_pActionRandomSectionNew->blockSignals(false);
+		m_ui.actionCombinedLineNew->blockSignals(true);
+		m_ui.actionCombinedLineNew->setChecked(false);
+		m_ui.actionCombinedLineNew->blockSignals(false);
+
+		m_ui.m_actionSelectMode->setChecked(true);
+	}
+}
+
+void CXBaseMapWindow::slotCombinedLineNew(bool bNew)
+{
+	m_pScene->CreateHudCamera();
+
+	if (bNew)
+	{
+		m_ui.m_pActionRandomSectionNew->blockSignals(true);
+		m_ui.m_pActionRandomSectionNew->setChecked(false);
+		m_ui.m_pActionRandomSectionNew->blockSignals(false);
+		m_ui.m_pActionPolygonNew->blockSignals(true);
+		m_ui.m_pActionPolygonNew->setChecked(false);
+		m_ui.m_pActionPolygonNew->blockSignals(false);
 
 		m_ui.m_actionSelectMode->setChecked(true);
 	}
@@ -295,22 +365,6 @@ void CXBaseMapWindow::slotPolygonDelete()
 
 	CXProcessEvent processEvent;
 	pPickedPolygonObj->AddEvent(EDeleted);
-}
-
-void CXBaseMapWindow::slotRandomSectionMode(bool bOpen)
-{
-	if (bOpen)
-	{
-		//m_pScene->CreateHudCamera();
-		m_ui.m_pActionPolygon_Mode->blockSignals(true);
-		m_ui.m_pActionPolygon_Mode->setChecked(false);
-		m_ui.m_pActionPolygon_Mode->blockSignals(false);
-
-		m_ui.m_pToolBarPolygon->hide();
-		m_ui.m_pToolBarPolygon->setEnabled(true);
-
-		m_ui.m_actionSelectMode->setChecked(true);
-	}
 }
 
 void CXBaseMapWindow::slotSetCoordVisible(bool bVisible)
@@ -643,6 +697,18 @@ void CXBaseMapWindow::SetRandomSectionReady(bool bReady)
 	}
 }
 
+void CXBaseMapWindow::SetCombinedLineReady(bool bReady)
+{
+	m_bCombinedLineReadyToBorn = bReady;
+
+	if (!bReady)
+	{
+		m_ui.actionCombinedLineNew->blockSignals(true);
+		m_ui.actionCombinedLineNew->setChecked(false);
+		m_ui.actionCombinedLineNew->blockSignals(false);
+	}
+}
+
 void CXBaseMapWindow::SetPolygonlineReady(bool bReady)
 {
 	m_bPolygonReadyToBorn = bReady;
@@ -729,6 +795,11 @@ bool CXBaseMapWindow::IsRandomSectionMode()
 	return m_ui.m_pActionRandomSection_Mode->isChecked();
 }
 
+bool CXBaseMapWindow::IsCombinedLineMode()
+{
+	return m_ui.actionCombinedLine->isChecked();
+}
+
 bool CXBaseMapWindow::IsPolygonMode()
 {
 	return m_ui.m_pActionPolygon_Mode->isChecked();
@@ -737,6 +808,11 @@ bool CXBaseMapWindow::IsPolygonMode()
 bool CXBaseMapWindow::IsRandomSectionCreating()
 {
 	return m_ui.m_pActionRandomSectionNew->isChecked();
+}
+
+bool CXBaseMapWindow::IsCombinedLineCreating()
+{
+	return m_ui.actionCombinedLineNew->isChecked();
 }
 
 bool CXBaseMapWindow::IsPolygonCreating()

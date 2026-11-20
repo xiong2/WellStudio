@@ -404,7 +404,7 @@
     <bool>true</bool>
    </property>
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="icon">
     <iconset resource="../xconsole/x.qrc">
@@ -430,8 +430,8 @@
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>86</x>
-     <y>566</y>
+     <x>208</x>
+     <y>577</y>
     </hint>
    </hints>
   </connection>
@@ -462,8 +462,8 @@
      <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>463</x>
-     <y>566</y>
+     <x>208</x>
+     <y>577</y>
     </hint>
    </hints>
   </connection>
@@ -480,6 +480,38 @@
     <hint type="destinationlabel">
      <x>98</x>
      <y>566</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCombinedLine</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>m_pToolBarCombinedLine</receiver>
+   <slot>setVisible(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>560</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCombinedLine</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>m_pToolBarCombinedLine</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>504</x>
+     <y>560</y>
     </hint>
    </hints>
   </connection>

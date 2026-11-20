@@ -44,6 +44,7 @@ public:
 
 	void SetRandomSectionReady(bool bReady);
 	void SetPolygonlineReady(bool bReady);
+	void SetCombinedLineReady(bool bReady);
 	void EnableRandomSectionMode(bool bEnable);
 	void EnablePolygonMode(bool bEnable);
 	void EnableCombinedLineMode(bool bEnable);
@@ -51,10 +52,13 @@ public:
 	void EnablePolygonDeleteAction(bool bEnable);
 	bool IsRandomSectionMode();
 	bool IsPolygonMode();
+	bool IsCombinedLineMode();
 	bool IsRandomSectionCreating();
 	bool IsPolygonCreating();
+	bool IsCombinedLineCreating();
 	bool IsRandomSectionReady() { return m_bRandomSectionReadyToBorn; }
 	bool IsPolygonReady() { return m_bPolygonReadyToBorn; }
+	bool IsCombinedLineReady() { return m_bCombinedLineReadyToBorn; }
 
 	void ShowMessage(const QString&) const;
 	bool IsSelectMode() const;
@@ -68,9 +72,11 @@ public slots:
 	void slotScaleChanged(const QString& newScale);
 	void slotSectionValueChanged(double changedValue);
 	void slotRandomSectionMode(bool bOpen);
+	void slotCombinedLineMode(bool bOpen);
 	void slotPolygonMode(bool bOpen);
 	void slotRandomSectionNew(bool bNew);
 	void slotPolygonNew(bool bNew);
+	void slotCombinedLineNew(bool bNew);
 	void slotRandomSectionDelete();
 	void slotPolygonDelete();
 
@@ -110,6 +116,7 @@ private:
 
 	bool m_bRandomSectionReadyToBorn = false;
 	bool m_bPolygonReadyToBorn = false;
+	bool m_bCombinedLineReadyToBorn = false;
 
 	float m_fScale = 0.f;
 

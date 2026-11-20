@@ -75,7 +75,7 @@ void CXBMSurveyCallback::GetData(double* &pData, int& nSize)
 
 void CXBMSurveyCallback::_Process(osg::Node* node, osg::NodeVisitor* nv)
 {
-	if (!(m_pWin->IsRandomSectionCreating() || m_pWin->IsPolygonCreating()))
+	if (!(m_pWin->IsRandomSectionCreating() || m_pWin->IsPolygonCreating() || m_pWin->IsCombinedLineCreating()))
 		return;
 
 	osgGA::EventVisitor* ev = dynamic_cast<osgGA::EventVisitor*>(nv);
@@ -110,6 +110,11 @@ void CXBMSurveyCallback::_Process(osg::Node* node, osg::NodeVisitor* nv)
 			
 			if (m_pWin->IsPolygonCreating() && NX3DUtility::IsPolygonSelfIntersection(m_pVertex, m_x, m_y))
 				continue;
+
+			if (m_pWin->IsCombinedLineCreating())
+			{
+
+			}
 
 			_Append(curPos);
 		}
@@ -184,7 +189,7 @@ GLenum CXBMSurveyCallback::_GetShapeType()
 {
 	if (m_pWin->IsPolygonCreating())
 		return GL_LINE_LOOP;
-	else if (m_pWin->IsRandomSectionCreating())
+	else if (m_pWin->IsRandomSectionCreating() || m_pWin->IsCombinedLineCreating())
 		return GL_LINE_STRIP;
 	else
 		return GL_POINTS;
@@ -196,6 +201,8 @@ void CXBMSurveyCallback::_SetReady(bool bReady)
 		m_pWin->SetPolygonlineReady(true);
 	else if (m_pWin->IsRandomSectionCreating())
 		m_pWin->SetRandomSectionReady(true);
+	else if (m_pWin->IsCombinedLineCreating())
+		m_pWin->SetCombinedLineReady(true);
 }
 
 void CXBMSurveyCallback::_Append(const osg::Vec2& newPos)
