@@ -1,4 +1,5 @@
 #include "x2dseismicline.h"
+#include "xfunctiontemplate.h"
 #include "xobjectfactory.h"
 #include "xseismicdataline.h"
 #include "xgraphicsapi.h"
@@ -164,6 +165,101 @@ bool CX2DSeismicLine::GetDimension(double& dXMin, double& dXMax, double& dYMin, 
 	dZMax = m_dZMax;
 
 	return true;
+}
+
+int CX2DSeismicLine::PointOnLine(QPointF& pt, double dTolerance)
+{
+	if (m_numTraces == 0 || m_pX == NULL || m_pY == NULL)
+		return -1;
+
+	// Locate the nearest vertex, to which the point will be snapped
+	unsigned int iNearest = 0;
+	double dNearestDist2 = SQR(pt.x() - m_pX[0]) + SQR(pt.y() - m_pY[0]);
+
+	for (unsigned int i = 1; i < m_numTraces; ++i)
+	{
+		double dDist2 = SQR(pt.x() - m_pX[i]) + SQR(pt.y() - m_pY[i]);
+		if (dDist2 < dNearestDist2)
+		{
+			dNearestDist2 = dDist2;
+			iNearest = i;
+		}
+	}
+
+	if (m_numTraces == 1)
+	{
+		if (dNearestDist2 < dTolerance * dTolerance)
+		{
+			pt = QPointF(m_pX[0], m_pY[0]);
+			return 0;
+		}
+
+		return -1;
+	}
+
+	// Work out the minimum distance from the point to the segments
+	double dMinSegDist2 = dNearestDist2;
+
+	for (unsigned int i = 0; i < m_numTraces - 1; ++i)
+	{
+		double dX1 = m_pX[i], dY1 = m_pY[i];
+		double dDX = m_pX[i + 1] - dX1, dDY = m_pY[i + 1] - dY1;
+		double dLen2 = dDX * dDX + dDY * dDY;
+
+		double dT = dLen2 > 0.0 ? ((pt.x() - dX1) * dDX + (pt.y() - dY1) * dDY) / dLen2 : 0.0;
+		if (dT < 0.0)
+			dT = 0.0;
+		else if (dT > 1.0)
+			dT = 1.0;
+
+		double dEX = dX1 + dT * dDX - pt.x();
+		double dEY = dY1 + dT * dDY - pt.y();
+
+		double dDist2 = dEX * dEX + dEY * dEY;
+		if (dDist2 < dMinSegDist2)
+			dMinSegDist2 = dDist2;
+	}
+
+	if (dMinSegDist2 >= dTolerance * dTolerance)
+		return -1;
+
+	pt = QPointF(m_pX[iNearest], m_pY[iNearest]);
+
+	return (int)iNearest;
+}
+
+bool CX2DSeismicLine::IsIntersected(CX2DSeismicLine* pLine)
+{
+	if (pLine == NULL)
+		return false;
+
+	if (m_numTraces < 2 || pLine->m_numTraces < 2
+		|| m_pX == NULL || m_pY == NULL || pLine->m_pX == NULL || pLine->m_pY == NULL)
+		return false;
+
+	// Early rejection with the bounding boxes
+	if (!m_bDimensionCalculated)
+		_SetSelfDimension();
+
+	if (!pLine->m_bDimensionCalculated)
+		pLine->_SetSelfDimension();
+
+	if (m_dXMax < pLine->m_dXMin || pLine->m_dXMax < m_dXMin
+		|| m_dYMax < pLine->m_dYMin || pLine->m_dYMax < m_dYMin)
+		return false;
+
+	for (unsigned int i = 0; i < m_numTraces - 1; ++i)
+	{
+		for (unsigned int j = 0; j < pLine->m_numTraces - 1; ++j)
+		{
+			if (CXGraphicsAPI::AreTwoLineSegmentsIntersecting(
+				m_pX[i], m_pY[i], m_pX[i + 1], m_pY[i + 1],
+				pLine->m_pX[j], pLine->m_pY[j], pLine->m_pX[j + 1], pLine->m_pY[j + 1]))
+				return true;
+		}
+	}
+
+	return false;
 }
 
 void CX2DSeismicLine::calculateInflexions()

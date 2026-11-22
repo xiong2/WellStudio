@@ -79,6 +79,8 @@ enum EXObjectType
 
 	EXPrestackGather	= 65000,
 
+	EXCombinedLine		= 65500,
+
 	EX2DSurvey				= 66000,
 	EX2DSeismicLine		= 66100,
 	EXSeismicDataLine		= 66200,

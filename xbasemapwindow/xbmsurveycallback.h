@@ -4,9 +4,11 @@
 #include <osg/Callback>
 #include <osg/Array>
 #include <vector>
+#include <qvector.h>
 
 namespace osg { class Camera; class Geode; class Geometry; };
 class CXBaseMapWindow;
+class CXObject;
 
 class CXBMSurveyCallback : public osg::NodeCallback
 {
@@ -36,6 +38,8 @@ private:
 	void _Done();
 	void _Update();
 
+	void _FinishCreateCombinedLine();
+
 private:
 	CXBaseMapWindow* m_pWin = nullptr;
 	osg::Camera* m_pHUDCamera = nullptr;
@@ -48,6 +52,8 @@ private:
 	osg::ref_ptr<osg::Vec3Array> m_pVertex;
 
 	std::vector<osg::Vec3> m_vLocal;
+
+	QVector<CXObject *>	m_vecObj;	//	Only for combined line.
 };
 
 #endif // KEBMSURVEYCALLBACK_H

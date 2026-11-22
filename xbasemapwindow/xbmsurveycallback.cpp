@@ -113,7 +113,11 @@ void CXBMSurveyCallback::_Process(osg::Node* node, osg::NodeVisitor* nv)
 
 			if (m_pWin->IsCombinedLineCreating())
 			{
+				CXObject* pObj = m_pWin->GetOSGScene()->OnSeismicObj(curPos);
+				if (!pObj)
+					continue;
 
+				m_vecObj << pObj;
 			}
 
 			_Append(curPos);
@@ -242,6 +246,9 @@ void CXBMSurveyCallback::_Aim(const osg::Vec2& movePos)
 
 void CXBMSurveyCallback::_Pop()
 {
+	if(!m_vecObj.isEmpty())
+		m_vecObj.pop_back();
+
 	m_pVertex->erase(std::prev(m_pVertex->end(), 2));
 	m_vLocal.erase(std::prev(m_vLocal.end(), 2));
 	_Update();
@@ -254,14 +261,23 @@ void CXBMSurveyCallback::_Clear()
 	m_vLocal.clear();
 	m_pGeom->setVertexArray(m_pVertex);
 	m_pGeom->removePrimitiveSet(0, m_pGeom->getNumPrimitiveSets());
+
+	m_vecObj.clear();
 }
 
 void CXBMSurveyCallback::_Done()
 {
-	m_pVertex->pop_back();
-	m_vLocal.pop_back();
-	_Update();
-	_SetReady(true);
+	if (m_pWin->IsCombinedLineCreating())
+	{
+		_FinishCreateCombinedLine();
+	}
+	else
+	{
+		m_pVertex->pop_back();
+		m_vLocal.pop_back();
+		_Update();
+		_SetReady(true);
+	}
 }
 
 void CXBMSurveyCallback::_Update()
@@ -271,4 +287,9 @@ void CXBMSurveyCallback::_Update()
 	m_pGeom->removePrimitiveSet(0, m_pGeom->getNumPrimitiveSets());
 	m_pGeom->addPrimitiveSet(new osg::DrawArrays(GL_POINTS, 0, m_pVertex->size()));
 	m_pGeom->addPrimitiveSet(new osg::DrawArrays(_GetShapeType(), 0, m_pVertex->size()));
+}
+
+void CXBMSurveyCallback::_FinishCreateCombinedLine()
+{
+
 }

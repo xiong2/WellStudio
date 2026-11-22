@@ -25,6 +25,7 @@
 #include "x3dutility.h"
 #include "xseismicutmtool.h"
 #include "xgraphicsapi.h"
+#include "x2dseismicline.h"
 
 CXBasemapScene::CXBasemapScene(CXBaseMapWindow* pBaseMapWindow) 
 	: m_pBaseMapWin(pBaseMapWindow)
@@ -229,6 +230,54 @@ bool CXBasemapScene::IsInSurvey(const osg::Vec2& vecScreen)
 		return true;
 
 	return false;
+}
+
+CXObject* CXBasemapScene::OnSeismicObj(const osg::Vec2& vecScreen)
+{
+	osg::Vec3 vecLocal = NX3DUtility::MapToLocal(m_pCamera, osg::Vec3(vecScreen, 0.f));
+	osg::Vec3d vecWorld;
+	m_coordMap.MapLocalToWorld(vecLocal, vecWorld);
+
+	//	First to check whether on 3D survey.
+	for (const QUuid& objID : m_mapObjectToNodeBuilder.keys())
+	{
+		auto pSurvey = dynamic_cast<CX3DSurvey*>(::GetObjectByID(objID));
+		if (!pSurvey)
+			continue;
+
+		CXSeismicUTMTool& utm = pSurvey->GetUTM();
+
+		int iFI = utm.GetFirstInline();
+		int iLI = utm.GetLastInline();
+		int iFX = utm.GetFirstCrossline();
+		int iLX = utm.GetLastCrossline();
+
+		osg::Vec2d vecFIFX, vecFILX, vecLILX, vecLIFX;
+		utm.LineToXY(iFI, iFX, vecFIFX.x(), vecFIFX.y());
+		utm.LineToXY(iFI, iLX, vecFILX.x(), vecFILX.y());
+		utm.LineToXY(iLI, iLX, vecLILX.x(), vecLILX.y());
+		utm.LineToXY(iLI, iFX, vecLIFX.x(), vecLIFX.y());
+
+		double pBoundPoints[8] = { vecFIFX.x(), vecFIFX.y(), vecFILX.x(), vecFILX.y(), vecLILX.x(), vecLILX.y(), vecLIFX.x(), vecLIFX.y() };
+		if (CXGraphicsAPI::IsPointInsidePolygon(4, vecWorld.x(), vecWorld.y(), pBoundPoints))
+		{
+			return pSurvey;
+		}
+	}
+
+	//	Then try each 2D seismic line.
+	QPointF point(vecWorld.x(), vecWorld.y());
+	for (const QUuid& objID : m_mapObjectToNodeBuilder.keys())
+	{
+		auto pLine = dynamic_cast<CX2DSeismicLine*>(::GetObjectByID(objID));
+		if (!pLine)
+			continue;
+
+		if (pLine->PointOnLine(point, 10) != -1)
+			return pLine;
+	}
+
+	return nullptr;
 }
 
 void CXBasemapScene::CreateHudCamera()

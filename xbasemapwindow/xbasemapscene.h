@@ -25,6 +25,7 @@
 #include "x3dcolorbar.h"
 #include "x3dcursor.h"
 
+class CXObject;
 class CXBaseMapWindow;
 class CX3DBuilderAbstract;
 class CX3DSurvey;
@@ -60,6 +61,8 @@ public:
 	bool IsInSurvey(const osg::Vec3d& vecWorld, int& iInline, int& iXline);
 	bool IsInSurvey(const osg::Vec2& vecScreen);
     
+	CXObject* OnSeismicObj(const osg::Vec2& vecScreen);
+
     CX3DGlobalCoordMap* GetCoordMap() { return &m_coordMap; }
 
 private:

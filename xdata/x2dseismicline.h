@@ -3,6 +3,7 @@
 
 #include "xdata_global.h"
 #include "xobject.h"
+#include <QPointF>
 
 ///@brief	The class used to represent a 2D seismic line.
 ///@author	Xiong Xiong
@@ -40,6 +41,16 @@ public:
 
 	///	Get the indices of inflexion.
 	QList<int>& GetInflexionIndices() { return m_listInflexionInd; }
+
+	///@brief	Whether the point lies on the line within the tolerance dTolerance.
+	///@remark	If the point is on the line, it is snapped to the nearest vertex
+	///			of the line and the index of that vertex is returned, otherwise
+	///			-1 is returned and the point keeps unchanged.
+	int PointOnLine(QPointF& pt, double dTolerance);
+
+	///@brief	Whether this line intersects with the input line, checked segment
+	///			by segment; a degenerate line (less than 2 points) never intersects.
+	bool IsIntersected(CX2DSeismicLine* pLine);
 
 	CXSeismicDataLine* GetDefaultSection(bool bIncludePrestack);
 

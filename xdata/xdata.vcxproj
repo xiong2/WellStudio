@@ -169,6 +169,7 @@
     <ClInclude Include="gsthreadsurfacecurvature.h" />
     <ClInclude Include="gsthreadutminterpolation.h" />
     <ClInclude Include="gswelltops.h" />
+    <ClInclude Include="xcombinedline.h" />
     <ClInclude Include="xviewinfo3dfracturepatches.h" />
     <ClInclude Include="tracesurfaceboundingpolygons.h" />
     <ClInclude Include="x2dpolygon.h" />
@@ -482,6 +483,7 @@
     <ClCompile Include="xbasethread.cpp" />
     <ClCompile Include="xbrickreader.cpp" />
     <ClCompile Include="xcolormap.cpp" />
+    <ClCompile Include="xcombinedline.cpp" />
     <ClCompile Include="xcppointsmanager.cpp" />
     <ClCompile Include="xcursor.cpp" />
     <ClCompile Include="xcurvecells.cpp" />
