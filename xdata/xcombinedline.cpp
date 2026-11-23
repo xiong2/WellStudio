@@ -1,4 +1,5 @@
 #include <qpolygon.h>
+#include <qfile.h>
 #include "xcombinedline.h"
 #include "xobjectfactory.h"
 #include "xglobal.h"
@@ -14,6 +15,56 @@ CXCombinedLine::CXCombinedLine(QString sLineName) : CXObject(sLineName)
 {
 	SetObjectType(EXCombinedLine);
 	SetIconName("CombinedLine.png");
+}
+
+CXCombinedLine::~CXCombinedLine()
+{
+	_freeMemory();
+}
+
+int CXCombinedLine::GetTraceNumber()
+{
+	int nTrace = 0;
+	for (CXOneSection& section : m_vecSection)
+		nTrace += section.m_vecI1.size();
+
+	return nTrace;
+}
+
+void CXCombinedLine::_WriteData()
+{
+	if (!m_pDataInMem)
+		return;
+
+	QString strFileName = GetDataFileName();
+	QFile qFile(strFileName);
+	if (!qFile.open(QIODevice::WriteOnly))
+		return;
+
+	qFile.write((char*)m_pDataInMem, sizeof(float) * m_nSample * GetTraceNumber());
+}
+
+void CXCombinedLine::_ReadData()
+{
+	QString strFileName = GetDataFileName();
+	QFile qFile(strFileName);
+	if (!qFile.open(QIODevice::ReadOnly))
+		return;
+
+	_freeMemory();
+
+	unsigned int nSize = m_nSample * GetTraceNumber();
+	m_pDataInMem = new float[nSize];
+
+	qFile.read((char*)m_pDataInMem, sizeof(float) * nSize);
+}
+
+void CXCombinedLine::_freeMemory()
+{
+	if (m_pDataInMem)
+		delete[]m_pDataInMem;
+
+	m_pDataInMem = nullptr;
 }
 
 bool CXCombinedLine::IsTwoObjectIntersect(CXObject* pObj1, CXObject* pObj2)
@@ -138,4 +189,99 @@ bool CXCombinedLine::isLineIntersectSurvey(CX2DSeismicLine* pLine, CX3DSurvey* p
 	}
 
 	return false;
+}
+
+CXCombinedLine* CXCombinedLine::CreateOneInstance(QVector<CXObject *> vecObj, QPolygonF polyline)
+{
+	if(vecObj.size() < polyline.size() || polyline.size() <= 1)
+		return nullptr;
+
+	QPolygon polyIndices;
+	bool bLast3D = false;
+	CX3DSurvey *pLastSurvey = dynamic_cast<CX3DSurvey *>(vecObj[0]);
+	CX2DSeismicLine *pLastLine = nullptr;
+	if (pLastSurvey)
+	{
+		bLast3D = true;
+	}
+	else
+		pLastLine = dynamic_cast<CX2DSeismicLine *>(vecObj[0]);
+
+	for (int i = 1; i < polyline.size(); i++)
+	{
+		CX3DSurvey *pSurvey = dynamic_cast<CX3DSurvey *>(vecObj[i]);
+		CX2DSeismicLine *pLine = dynamic_cast<CX2DSeismicLine *>(vecObj[i]);
+		if (pSurvey)
+		{
+			if (pLastSurvey)
+			{
+				//	3D ~ 3D.
+				if (pLastSurvey != pSurvey)
+				{
+					//	Two points on 3D survey, the same?
+
+				}
+				else
+				{
+					// Still in the same 3D survey.
+					polyIndices += createOneSegment(pSurvey, polyline[i - 1], polyline[i]);
+				}
+			}
+			else
+			{
+				//	2D ~ 3D.
+			}
+		}
+		else
+		{
+			if (pLastSurvey)
+			{
+				//	3D ~ 2D
+			}
+			else
+			{
+				//	2D ~2D
+			}
+		}
+	}
+
+	return nullptr;
+}
+
+QPolygon CXCombinedLine::createOneSegment(CX3DSurvey* pSurvey, QPointF p1, QPointF p2)
+{
+	int m, n, i1, j1, i2, j2;
+	CXSeismicUTMTool& utm = pSurvey->GetUTM();
+	utm.XYToIJ(p1.x(), p1.y(), i1, j1);
+	utm.XYToIJ(p2.x(), p2.y(), i2, j2);
+
+	QPolygon poly;
+	if (qAbs(i2 - i1) >= qAbs(j2 - j1))
+	{
+		float fDelta = 1. * (j2 - j1) / (i2 - i1);
+		float fSum = fDelta;
+		int iInc = i2 > i1 ? 1 : -1;
+		for(m = i1; m != i2; m += iInc)
+		{
+			n = (int)(j1 + fSum);
+			poly << QPoint(m, n);
+			
+			fSum += fDelta;
+		}
+	}
+	else
+	{
+		float fDelta = 1. * (i2 - i1) / (j2 - j1);
+		float fSum = fDelta;
+		int iInc = j2 > j1 ? 1 : -1;
+		for (n = j1; n != j2; n += iInc)
+		{
+			m = (int)(i1 + fSum);
+			poly << QPoint(m, n);
+
+			fSum += fDelta;
+		}
+	}
+
+	return poly;
 }

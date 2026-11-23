@@ -10,6 +10,7 @@
 #include "xbasemapwindow.h"
 #include "xbasemapscene.h"
 #include "xgraphicsapi.h"
+#include "xcombinedline.h"
 
 CXBMSurveyCallback::CXBMSurveyCallback(osg::Camera* pHUDCamera, CXBaseMapWindow* pBMWindow)
 	: osg::Callback(), m_pWin(pBMWindow), m_pHUDCamera(pHUDCamera)
@@ -107,7 +108,7 @@ void CXBMSurveyCallback::_Process(osg::Node* node, osg::NodeVisitor* nv)
 
 			if (m_pWin->IsRandomSectionCreating() && !m_pWin->GetOSGScene()->IsInSurvey(curPos))
 				continue;
-			
+
 			if (m_pWin->IsPolygonCreating() && NX3DUtility::IsPolygonSelfIntersection(m_pVertex, m_x, m_y))
 				continue;
 
@@ -169,7 +170,7 @@ osg::Geode* CXBMSurveyCallback::_BuildPointLinesGeode()
 	pStateSet->setMode(GL_LIGHTING, osg::StateAttribute::OFF);
 
 	pGeode->addDrawable(_BuildPointLinesGeometry());
-	
+
 	return pGeode;
 }
 
@@ -179,7 +180,7 @@ osg::Geometry* CXBMSurveyCallback::_BuildPointLinesGeometry()
 
 	m_pVertex = new osg::Vec3Array;
 	m_pGeom->setVertexArray(m_pVertex);
-	
+
 	osg::Vec3Array* pColors = new osg::Vec3Array(1);
 	(*pColors)[0].set(1.0, 1.0, 0.0);
 	m_pGeom->setColorArray(pColors, osg::Array::BIND_OVERALL);
@@ -218,7 +219,7 @@ void CXBMSurveyCallback::_Append(const osg::Vec2& newPos)
 	osg::Vec3 localPos = NX3DUtility::MapToLocal(m_pCamera, osg::Vec3(newPos, 0.f));
 	localPos.z() = 0.f;
 	m_vLocal.push_back(localPos);
-	
+
 	_Update();
 }
 
@@ -246,7 +247,7 @@ void CXBMSurveyCallback::_Aim(const osg::Vec2& movePos)
 
 void CXBMSurveyCallback::_Pop()
 {
-	if(!m_vecObj.isEmpty())
+	if (!m_vecObj.isEmpty())
 		m_vecObj.pop_back();
 
 	m_pVertex->erase(std::prev(m_pVertex->end(), 2));
@@ -267,17 +268,14 @@ void CXBMSurveyCallback::_Clear()
 
 void CXBMSurveyCallback::_Done()
 {
+	m_pVertex->pop_back();
+	m_vLocal.pop_back();
+
 	if (m_pWin->IsCombinedLineCreating())
-	{
 		_FinishCreateCombinedLine();
-	}
-	else
-	{
-		m_pVertex->pop_back();
-		m_vLocal.pop_back();
-		_Update();
-		_SetReady(true);
-	}
+
+	_Update();
+	_SetReady(true);
 }
 
 void CXBMSurveyCallback::_Update()
@@ -291,5 +289,12 @@ void CXBMSurveyCallback::_Update()
 
 void CXBMSurveyCallback::_FinishCreateCombinedLine()
 {
+	QPolygonF polyline;
+	for (osg::Vec3 localP : m_vLocal)
+	{
+		osg::Vec3d vecWorld = m_pWin->GetOSGScene()->Local2World(localP);
+		polyline << QPointF(vecWorld.x(), vecWorld.y());
+	}
 
+	CXCombinedLine *pLine = CXCombinedLine::CreateOneInstance(m_vecObj, polyline);
 }

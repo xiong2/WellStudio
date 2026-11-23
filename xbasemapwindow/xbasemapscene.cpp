@@ -198,23 +198,26 @@ bool CXBasemapScene::IsInSurvey(const osg::Vec3d& vecWorld, int& iInline, int& i
 
 		CXSeismicUTMTool& utm = pSurvey->GetUTM();
 
-		int iFI = utm.GetFirstInline();
-		int iLI = utm.GetLastInline();
-		int iFX = utm.GetFirstCrossline();
-		int iLX = utm.GetLastCrossline();
-
-		osg::Vec2d vecFIFX, vecFILX, vecLILX, vecLIFX;
-		utm.LineToXY(iFI, iFX, vecFIFX.x(), vecFIFX.y());
-		utm.LineToXY(iFI, iLX, vecFILX.x(), vecFILX.y());
-		utm.LineToXY(iLI, iLX, vecLILX.x(), vecLILX.y());
-		utm.LineToXY(iLI, iFX, vecLIFX.x(), vecLIFX.y());
-
-		double pBoundPoints[8] = { vecFIFX.x(), vecFIFX.y(), vecFILX.x(), vecFILX.y(), vecLILX.x(), vecLILX.y(), vecLIFX.x(), vecLIFX.y()};
-		if (CXGraphicsAPI::IsPointInsidePolygon(4, vecWorld.x(), vecWorld.y(), pBoundPoints))
-		{
-			utm.XYToLine(vecWorld.x(), vecWorld.y(), iInline, iXline);
+		if (utm.XYToLine(vecWorld.x(), vecWorld.y(), iInline, iXline))
 			return true;
-		}
+
+		//int iFI = utm.GetFirstInline();
+		//int iLI = utm.GetLastInline();
+		//int iFX = utm.GetFirstCrossline();
+		//int iLX = utm.GetLastCrossline();
+
+		//osg::Vec2d vecFIFX, vecFILX, vecLILX, vecLIFX;
+		//utm.LineToXY(iFI, iFX, vecFIFX.x(), vecFIFX.y());
+		//utm.LineToXY(iFI, iLX, vecFILX.x(), vecFILX.y());
+		//utm.LineToXY(iLI, iLX, vecLILX.x(), vecLILX.y());
+		//utm.LineToXY(iLI, iFX, vecLIFX.x(), vecLIFX.y());
+
+		//double pBoundPoints[8] = { vecFIFX.x(), vecFIFX.y(), vecFILX.x(), vecFILX.y(), vecLILX.x(), vecLILX.y(), vecLIFX.x(), vecLIFX.y()};
+		//if (CXGraphicsAPI::IsPointInsidePolygon(4, vecWorld.x(), vecWorld.y(), pBoundPoints))
+		//{
+		//	utm.XYToLine(vecWorld.x(), vecWorld.y(), iInline, iXline);
+		//	return true;
+		//}
 	}
 
 	return false;
@@ -232,6 +235,13 @@ bool CXBasemapScene::IsInSurvey(const osg::Vec2& vecScreen)
 	return false;
 }
 
+osg::Vec3d CXBasemapScene::Local2World(const osg::Vec3& vecLocal)
+{
+	osg::Vec3d vecWorld;
+	m_coordMap.MapLocalToWorld(vecLocal, vecWorld);
+	return vecWorld;
+}
+
 CXObject* CXBasemapScene::OnSeismicObj(const osg::Vec2& vecScreen)
 {
 	osg::Vec3 vecLocal = NX3DUtility::MapToLocal(m_pCamera, osg::Vec3(vecScreen, 0.f));
@@ -247,22 +257,25 @@ CXObject* CXBasemapScene::OnSeismicObj(const osg::Vec2& vecScreen)
 
 		CXSeismicUTMTool& utm = pSurvey->GetUTM();
 
-		int iFI = utm.GetFirstInline();
-		int iLI = utm.GetLastInline();
-		int iFX = utm.GetFirstCrossline();
-		int iLX = utm.GetLastCrossline();
-
-		osg::Vec2d vecFIFX, vecFILX, vecLILX, vecLIFX;
-		utm.LineToXY(iFI, iFX, vecFIFX.x(), vecFIFX.y());
-		utm.LineToXY(iFI, iLX, vecFILX.x(), vecFILX.y());
-		utm.LineToXY(iLI, iLX, vecLILX.x(), vecLILX.y());
-		utm.LineToXY(iLI, iFX, vecLIFX.x(), vecLIFX.y());
-
-		double pBoundPoints[8] = { vecFIFX.x(), vecFIFX.y(), vecFILX.x(), vecFILX.y(), vecLILX.x(), vecLILX.y(), vecLIFX.x(), vecLIFX.y() };
-		if (CXGraphicsAPI::IsPointInsidePolygon(4, vecWorld.x(), vecWorld.y(), pBoundPoints))
-		{
+		int i, j;
+		if (utm.XYToIJ(vecWorld.x(), vecWorld.y(), i, j))
 			return pSurvey;
-		}
+		//int iFI = utm.GetFirstInline();
+		//int iLI = utm.GetLastInline();
+		//int iFX = utm.GetFirstCrossline();
+		//int iLX = utm.GetLastCrossline();
+
+		//osg::Vec2d vecFIFX, vecFILX, vecLILX, vecLIFX;
+		//utm.LineToXY(iFI, iFX, vecFIFX.x(), vecFIFX.y());
+		//utm.LineToXY(iFI, iLX, vecFILX.x(), vecFILX.y());
+		//utm.LineToXY(iLI, iLX, vecLILX.x(), vecLILX.y());
+		//utm.LineToXY(iLI, iFX, vecLIFX.x(), vecLIFX.y());
+
+		//double pBoundPoints[8] = { vecFIFX.x(), vecFIFX.y(), vecFILX.x(), vecFILX.y(), vecLILX.x(), vecLILX.y(), vecLIFX.x(), vecLIFX.y() };
+		//if (CXGraphicsAPI::IsPointInsidePolygon(4, vecWorld.x(), vecWorld.y(), pBoundPoints))
+		//{
+		//	return pSurvey;
+		//}
 	}
 
 	//	Then try each 2D seismic line.
@@ -273,7 +286,7 @@ CXObject* CXBasemapScene::OnSeismicObj(const osg::Vec2& vecScreen)
 		if (!pLine)
 			continue;
 
-		if (pLine->PointOnLine(point, 10) != -1)
+		if (pLine->PointOnLine(point, 200) != -1)
 			return pLine;
 	}
 

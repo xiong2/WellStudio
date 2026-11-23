@@ -60,6 +60,7 @@ public:
 	void SetColorbarObjVisible(const QUuid& objID, bool bVisible);
 	bool IsInSurvey(const osg::Vec3d& vecWorld, int& iInline, int& iXline);
 	bool IsInSurvey(const osg::Vec2& vecScreen);
+	osg::Vec3d Local2World(const osg::Vec3& vecLocal);
     
 	CXObject* OnSeismicObj(const osg::Vec2& vecScreen);
 
