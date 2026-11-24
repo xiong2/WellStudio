@@ -14,13 +14,21 @@ Build with VS2017 or MSBuild; set platform to `x64`, Debug or Release:
 msbuild WellStudio.sln /p:Configuration=Release /p:Platform=x64
 ```
 
+Build one project (with its solution dependencies) via its target name:
+
+```sh
+msbuild WellStudio.sln /t:xgui /p:Configuration=Release /p:Platform=x64
+```
+
 Prerequisites (see README.md):
 - Qt 5.13.2 (msvc2017_64), registered in Qt VS Tools (Qt Options)
 - Third-party OSG and LAPACK builds. System environment variables must be set:
   - `LAPACK`, `OSG_INCLUDE`, `OSG_LIB` pointing into the 3rdparty archive
   - `PATH` must include `%LAPACK%\bin` and the OSG `bin` directory (next to `OSG_LIB`) for runtime DLLs
 
-Only two projects produce executables: **XStudio** (the main app) and **XLicense** (license tool). Everything else is a DLL or static library, so a build of XStudio transitively builds the whole stack.
+The solution contains 18 projects; **XStudio** is its only executable. Everything else is a DLL or static library, so a build of XStudio transitively builds the whole stack. **XLicense** (license tool, depends only on xbasic) has a `.vcxproj` in its directory but is **not in the solution** — build it separately with `msbuild XLicense\XLicense.vcxproj`. `TMInversion/` and `TMProj/` are stale leftovers (only `.vcxproj.user` + build output), not projects.
+
+There is no test framework in this repository.
 
 ## Architecture
 
