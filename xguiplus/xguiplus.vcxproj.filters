@@ -224,6 +224,9 @@
     <ClInclude Include="kelocalcrosscorr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_xdlgcutdatalines.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="xcanvasrosediagram.cpp">
@@ -805,6 +808,15 @@
     <ClCompile Include="kelocalcrosscorr.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_xdlgcutdatalines.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_xdlgcutdatalines.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="xdlgcutdatalines.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="xcanvasrosediagram.h">
@@ -1141,6 +1153,12 @@
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="xdlggatherflatten.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="xdlgcutdatalines.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="xdlgcutdatalines.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Select-String -Path D:\\\\codes\\\\wellstudio\\\\WellStudio.sln -Pattern 'GlobalSection\\\\\\(SolutionConfigurationPlatforms' -Context 0,8 | ForEach-Object { $_.Context.PostContext })",
+      "Bash(git *)",
+      "PowerShell(Resolve-DnsName *)"
+    ]
+  }
+}

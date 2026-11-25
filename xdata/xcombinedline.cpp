@@ -6,6 +6,10 @@
 #include "xgraphicsapi.h"
 #include "x3dsurvey.h"
 #include "x2dseismicline.h"
+#include "xregulardatareader.h"
+#include "xseismicdatavolume.h"
+#include "xseismicdataline.h"
+#include "xregulardatareader.h"
 
 BEGIN_REGISTER_OBJECT_TO_FACTORY(CXCombinedLine)
 EXCombinedLine
@@ -26,7 +30,7 @@ int CXCombinedLine::GetTraceNumber()
 {
 	int nTrace = 0;
 	for (CXOneSection& section : m_vecSection)
-		nTrace += section.m_vecI1.size();
+		nTrace += section.m_vecInd.size();
 
 	return nTrace;
 }
@@ -84,9 +88,9 @@ bool CXCombinedLine::IsTwoObjectIntersect(CXObject* pObj1, CXObject* pObj2)
 	else if (pLine1 && pLine2)
 		return pLine1->IsIntersected(pLine2);
 	else if (pSurvey1)
-		return isLineIntersectSurvey(pLine2, pSurvey1);
+		return IsLineIntersectSurvey(pLine2, pSurvey1);
 	else
-		return isLineIntersectSurvey(pLine1, pSurvey2);
+		return IsLineIntersectSurvey(pLine1, pSurvey2);
 
 	return false;
 }
@@ -123,7 +127,7 @@ bool CXCombinedLine::isTwoSurveyIntersect(CX3DSurvey* pSurvey1, CX3DSurvey* pSur
 	return polygon1.intersects(polygon2);
 }
 
-bool CXCombinedLine::isLineIntersectSurvey(CX2DSeismicLine* pLine, CX3DSurvey* pSurvey)
+bool CXCombinedLine::IsLineIntersectSurvey(CX2DSeismicLine* pLine, CX3DSurvey* pSurvey, QVector<QPointF>* pVecIntersects)
 {
 	if (pLine == NULL || pSurvey == NULL)
 		return false;
@@ -163,32 +167,46 @@ bool CXCombinedLine::isLineIntersectSurvey(CX2DSeismicLine* pLine, CX3DSurvey* p
 		|| dLineMaxY < dSurveyMinY || dSurveyMaxY < dLineMinY)
 		return false;
 
-	QPolygonF polygon;
-	polygon << QPointF(dCornerX[0], dCornerY[0]) << QPointF(dCornerX[1], dCornerY[1])
-		<< QPointF(dCornerX[2], dCornerY[2]) << QPointF(dCornerX[3], dCornerY[3]);
-
-	// The line intersects the survey if one of its vertices lies inside the rectangle
-	for (unsigned int i = 0; i < numTraces; ++i)
-	{
-		if (polygon.containsPoint(QPointF(pLineX[i], pLineY[i]), Qt::OddEvenFill))
-			return true;
-	}
-
-	// ... or if one of its segments crosses an edge of the rectangle
+	// Only boundary crossings count: a polyline lying entirely inside the
+	// rectangle produces no crossing and is therefore not intersecting.
+	QVector<QPointF> vecPoints;
+	double dX, dY;
 	for (unsigned int i = 0; i < numTraces - 1; ++i)
 	{
 		for (int k = 0; k < 4; ++k)
 		{
 			int kNext = (k + 1) % 4;
 
-			if (CXGraphicsAPI::AreTwoLineSegmentsIntersecting(
+			if (CXGraphicsAPI::IntersectionOfTwoLines(
 				pLineX[i], pLineY[i], pLineX[i + 1], pLineY[i + 1],
-				dCornerX[k], dCornerY[k], dCornerX[kNext], dCornerY[kNext]))
-				return true;
+				dCornerX[k], dCornerY[k], dCornerX[kNext], dCornerY[kNext],
+				dX, dY))
+			{
+				// A vertex sitting on an edge is hit by its two adjacent segments,
+				// and a crossing at a corner by the two edges meeting there.
+				bool bDuplicate = false;
+				for (const QPointF& qExisting : vecPoints)
+				{
+					if (qAbs(qExisting.x() - dX) < 1.0E-6 && qAbs(qExisting.y() - dY) < 1.0E-6)
+					{
+						bDuplicate = true;
+						break;
+					}
+				}
+
+				if (!bDuplicate)
+					vecPoints << QPointF(dX, dY);
+			}
 		}
 	}
 
-	return false;
+	if (vecPoints.isEmpty())
+		return false;
+
+	if (pVecIntersects)
+		*pVecIntersects = vecPoints;
+
+	return true;
 }
 
 CXCombinedLine* CXCombinedLine::CreateOneInstance(QVector<CXObject *> vecObj, QPolygonF polyline)
@@ -196,16 +214,30 @@ CXCombinedLine* CXCombinedLine::CreateOneInstance(QVector<CXObject *> vecObj, QP
 	if(vecObj.size() < polyline.size() || polyline.size() <= 1)
 		return nullptr;
 
+	QVector<CXOneSection> vecSection;
+	QVector<float*>	vecBuff;
+	CXCombinedLine *pCL = new CXCombinedLine();
+	
+	QPointF prePoint;
 	QPolygon polyIndices;
 	bool bLast3D = false;
 	CX3DSurvey *pLastSurvey = dynamic_cast<CX3DSurvey *>(vecObj[0]);
 	CX2DSeismicLine *pLastLine = nullptr;
+	double dVal;
 	if (pLastSurvey)
 	{
 		bLast3D = true;
+		CXSeismicDataVolume *pDV = pLastSurvey->GetDefaultDV();
+		pCL->m_nSample = pDV->GetSamplingQty();
+		pDV->GetSamplingRange(pCL->m_dZStart, dVal, pCL->m_dZStep);
 	}
 	else
+	{
 		pLastLine = dynamic_cast<CX2DSeismicLine *>(vecObj[0]);
+		CXSeismicDataLine *pDLine = pLastLine->GetDefaultSection();
+		pCL->m_nSample = pDLine->GetSamplingQty();
+		pDLine->GetSamplingRange(pCL->m_dZStart, dVal, pCL->m_dZStep);
+	}
 
 	for (int i = 1; i < polyline.size(); i++)
 	{
@@ -218,7 +250,7 @@ CXCombinedLine* CXCombinedLine::CreateOneInstance(QVector<CXObject *> vecObj, QP
 				//	3D ~ 3D.
 				if (pLastSurvey != pSurvey)
 				{
-					//	Two points on 3D survey, the same?
+					//	Two points on different 3D.
 
 				}
 				else
@@ -237,12 +269,48 @@ CXCombinedLine* CXCombinedLine::CreateOneInstance(QVector<CXObject *> vecObj, QP
 			if (pLastSurvey)
 			{
 				//	3D ~ 2D
+				QVector<QPointF> vecInts;
+				if (!IsLineIntersectSurvey(pLine, pLastSurvey, &vecInts))
+				{
+					qDebug() << "Something error!";
+					return nullptr;
+				}
+
+				prePoint = vecInts[0];
+				QPolygon poly = createOneSegment(pLastSurvey, polyline[i - 1], prePoint);
+				polyIndices += poly;
+
+				CXOneSection section;
+				section.m_refID = pLastSurvey->GetObjectID();
+				section.m_vecInd = polyIndices;
+				float* pData = populateOneSection(section);
+
+				vecSection << section;
+				vecBuff << pData;
+
+				pLastSurvey = nullptr;
+				pLastLine = pLine;
 			}
 			else
 			{
 				//	2D ~2D
 			}
 		}
+	}
+
+	// To finish it.
+	if (pLastSurvey)
+	{
+		//	End in 3D
+	}
+	else
+	{
+		//	End on 2D.
+		int iIDX1 = pLastLine->PointOnLine(prePoint);
+		int iIDX2 = pLastLine->PointOnLine(polyline.last());
+		CXOneSection section;
+		section.m_refID = pLastLine->GetObjectID();
+		float* pData = populateOneSection(section, iIDX1, iIDX2);
 	}
 
 	return nullptr;
@@ -284,4 +352,69 @@ QPolygon CXCombinedLine::createOneSegment(CX3DSurvey* pSurvey, QPointF p1, QPoin
 	}
 
 	return poly;
+}
+
+float* CXCombinedLine::populateOneSection(CXOneSection& section, int iIDX1, int iIDX2)
+{
+	qreal x, y;
+	CX3DSurvey *pSurvey = dynamic_cast<CX3DSurvey *>(::GetObjectByID(section.m_refID));
+	if (pSurvey)
+	{
+		CXSeismicDataVolume *pDV = pSurvey->GetDefaultDV();
+		CXSeismicUTMTool& utm = pDV->GetUTM();
+		for (QPoint p : section.m_vecInd)
+		{
+			utm.IJToXY(p.x(), p.y(), x, y);
+			section.m_coords << QPointF(x, y);
+		}
+
+		int nTrace = section.m_vecInd.size();
+		int nSample = pDV->GetSamplingQty();
+		CXRegularDataReader<float> *pReader = new CXRegularDataReader<float>(pDV->GetTraceFileName(), 
+			utm.GetNI(), utm.GetNJ(), nSample);
+
+		float *pData = new float[nTrace * nSample];
+		float *pPointer = pData;
+		for (int i = 0; i < nTrace; i++)
+		{
+			pReader->ReadUVTrace(section.m_vecInd[i].x(), section.m_vecInd[i].y(), pPointer);
+			pPointer += nSample;
+		}
+
+		delete pReader;
+		return pData;
+	}
+	else
+	{
+		CX2DSeismicLine *pLine = dynamic_cast<CX2DSeismicLine *>(::GetObjectByID(section.m_refID));
+		CXSeismicDataLine *pDLine = pLine->GetDefaultSection();
+
+		int nSample = pDLine->GetSamplingQty();
+		int nTrace = qAbs(iIDX1 - iIDX2) + 1;
+		float *pBuff = new float[nTrace * nSample];
+
+		unsigned int *pCDP = pLine->GetCDPData();
+		double *pX, *pY;
+		pLine->GetCoordData(pX, pY);
+		float *pData = pDLine->GetData();
+
+		if (iIDX1 > iIDX2)
+			for (int i = iIDX1, n = 0; i >= iIDX2; i--, n++)
+			{
+				section.m_vecInd << QPoint(pCDP[i], 0);
+				section.m_coords << QPointF(pX[i], pY[i]);
+				memcpy(pBuff + n * nSample, pData + i * nSample, nSample * 4);
+			}
+		else
+			for (int i = iIDX1, n = 0; i <= iIDX2; i++, n++)
+			{
+				section.m_vecInd << QPoint(pCDP[i], 0);
+				section.m_coords << QPointF(pX[i], pY[i]);
+				memcpy(pBuff + n * nSample, pData + i * nSample, nSample * 4);
+			}
+
+		return pBuff;
+	}
+
+	return nullptr;
 }

@@ -55,6 +55,8 @@ public:
 	///@brief Read partial section data. The buffer must be pre-allocated
 	virtual bool ReadSection(CXSeismicSection *, float* pBuffer, SKETraceInfo* pTraceInfo = NULL);
 
+	bool ResetLine(double dSZ, double dEZ, double dZStep, float fRatio = 1.);
+
 protected:
 	//virtual float* _GetHistogramData(int& nDataNum, bool& bDeleted);
 	virtual void _SetSelfDimension();

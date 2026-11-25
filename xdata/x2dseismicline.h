@@ -46,13 +46,13 @@ public:
 	///@remark	If the point is on the line, it is snapped to the nearest vertex
 	///			of the line and the index of that vertex is returned, otherwise
 	///			-1 is returned and the point keeps unchanged.
-	int PointOnLine(QPointF& pt, double dTolerance);
+	int PointOnLine(QPointF& pt, double dTolerance = 200.);
 
 	///@brief	Whether this line intersects with the input line, checked segment
 	///			by segment; a degenerate line (less than 2 points) never intersects.
 	bool IsIntersected(CX2DSeismicLine* pLine);
 
-	CXSeismicDataLine* GetDefaultSection(bool bIncludePrestack);
+	CXSeismicDataLine* GetDefaultSection(bool bIncludePrestack = false);
 
 protected:
 	virtual void _SetSelfDimension();

@@ -26,12 +26,16 @@ public:
 
 	static CXCombinedLine* CreateOneInstance(QVector<CXObject *>, QPolygonF);
 
+	// The line intersects the survey only if the polyline crosses the rectangle's
+	// boundary; a polyline fully contained in the survey is not intersecting.
+	static bool IsLineIntersectSurvey(CX2DSeismicLine* pLine, CX3DSurvey* pSurvey, QVector<QPointF>* pVecIntersects = nullptr);
+
 private:
 	static bool isTwoSurveyIntersect(CX3DSurvey*, CX3DSurvey*);
 
-	static bool isLineIntersectSurvey(CX2DSeismicLine*, CX3DSurvey*);
-
 	static QPolygon createOneSegment(CX3DSurvey *, QPointF, QPointF);
+
+	static float* populateOneSection(CXOneSection&, int iIDX1 = -1, int iIDX2 = -1);
 
 	virtual void _WriteData() override;
 	virtual void _ReadData() override;

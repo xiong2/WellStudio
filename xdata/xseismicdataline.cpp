@@ -412,3 +412,50 @@ bool CXSeismicDataLine::ReadSection(CXSeismicSection *pSection, float* pBuffer, 
 	qFile.close();
 	return true;
 }
+
+bool CXSeismicDataLine::ResetLine(double dSZ, double dEZ, double dZStep, float fRatio)
+{
+	if (dSZ < m_dSamplingStart || dEZ > m_dSamplingEnd || dZStep < m_dSamplingRate)
+		return false;
+
+	if (!m_pDataInMem)
+		LoadData();
+
+	int i, j, nTrace = GetTraceNumber();
+	int nSample = GetSamplingQty();
+	int nNSample = (dEZ - dSZ) / dZStep + 1;
+	int iTOffset = (dSZ - m_dSamplingStart) / m_dSamplingRate;
+	float *pBuff = new float[nTrace * nSample];
+
+	if (dZStep == m_dSamplingRate)
+	{
+		for (i = 0; i < nTrace; i++)
+			memcpy(pBuff + i * nNSample, m_pDataInMem + i * nSample + iTOffset, 4 * nNSample);
+	}
+	else
+	{
+		int n = dZStep / m_dSamplingRate;
+		for (i = 0; i < nTrace; i++)
+			for (j = 0; j < nNSample; j++)
+				pBuff[i * nNSample + j] = m_pDataInMem[i * nSample + iTOffset + j * n];
+	}
+
+	if (fRatio != 1.)
+	{
+		int nSize = nTrace * nSample;
+		for (i = 0; i < nSize; i++)
+			pBuff[i] *= fRatio;
+	}
+
+	delete[]m_pDataInMem;
+	m_dSamplingStart = dSZ;
+	m_dSamplingEnd = dEZ;
+	m_dSamplingRate = dZStep;
+	m_pDataInMem = pBuff;
+
+	_WriteData();
+
+	SetNeedCalcDimension();
+
+	return true;
+}

@@ -71,6 +71,8 @@
 #include "xdlggatherwin.h"
 #include "xdlggatherflatten.h"
 
+#include "xdlgcutdatalines.h"
+
 CXRBM::CXRBM(QMenu& menu, CXObject* pObj)
 :m_menu(menu), m_pObject(pObj)
 {
@@ -247,6 +249,11 @@ void CXRBM::AddAction()
 		m_menu.addAction(QIcon(::GetIconPath() + "Calculator.png"), "Biot coefficient volume ...", this, SLOT(slotBiot()));
 		m_menu.addAction(QIcon(::GetIconPath() + "Calculator.png"), "Biot coefficient volume ...", this, SLOT(slotBiot()));
 		m_menu.addAction(QIcon(::GetIconPath() + "GeobodyCollection.png"), "Merge data volumes ...", this, SLOT(slotGeneral()));
+		break;
+	}
+	case EX2DSurvey:
+	{
+		m_menu.addAction(QIcon(::GetIconPath() + "2DLine.png"), u8"整理二维测线 ...", this, SLOT(slotGeneral()));
 		break;
 	}
 	case EXSeismicSection:
@@ -571,6 +578,11 @@ void CXRBM::slotGeneral()
 	{
 		XDlgGatherWin *pDlg = new XDlgGatherWin(m_pObject);
 		pDlg->show();
+	}
+	else if (pAction->iconText().contains(u8"整理二维测线"))
+	{
+		XDlgCutDataLines *pDlg = new XDlgCutDataLines(m_pObject);
+		pDlg->exec();
 	}
 }
 
