@@ -33,6 +33,7 @@ EXGSFolderHorizon,
 EXGSFolderSection,
 EXGSFolderPDG,
 EXFracturePatchFolder,
+EXCLineFolder,
 EXGSFolderStage
 END_REGISTER_OBJECT_TO_FACTORY(CXGeneralFolder)
 
@@ -76,6 +77,8 @@ QString CXGeneralFolder::GetTypeString()
 		return u8"子波文件夹";
 	else if (eType == EXFracturePatchFolder)
 		return u8"裂缝片文件夹";
+	else if (eType == EXCLineFolder)
+		return u8"组合测线文件夹";
 	else if (eType == EXSeismicDVFolder)
 		return u8"地震数据体";
 	else if (eType == EXSeismicSectionFolder)

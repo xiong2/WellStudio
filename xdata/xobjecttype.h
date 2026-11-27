@@ -32,6 +32,7 @@ enum EXObjectType
 	EXFractureInversionFolder = 2500,
 	EXAnisotropyForwardingFolder = 2600,
 	EXFracturePatchFolder = 2700,
+	EXCLineFolder = 2800,
 
 	// Project preserved [100, 1,000)
 

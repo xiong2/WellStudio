@@ -92,6 +92,9 @@
     <ClInclude Include="xbmprestackgatherbuilder.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="xcombinedlinebuilder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="x2dseismiclinebuilder.cpp">
@@ -167,6 +170,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="xbmprestackgatherbuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xcombinedlinebuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

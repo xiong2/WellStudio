@@ -11,6 +11,9 @@
 #include "xbasemapscene.h"
 #include "xgraphicsapi.h"
 #include "xcombinedline.h"
+#include "xalgorithmutility.h"
+#include "xtree.h"
+#include "xglobal.h"
 
 CXBMSurveyCallback::CXBMSurveyCallback(osg::Camera* pHUDCamera, CXBaseMapWindow* pBMWindow)
 	: osg::Callback(), m_pWin(pBMWindow), m_pHUDCamera(pHUDCamera)
@@ -297,4 +300,12 @@ void CXBMSurveyCallback::_FinishCreateCombinedLine()
 	}
 
 	CXCombinedLine *pLine = CXCombinedLine::CreateOneInstance(m_vecObj, polyline);
+	CXAlgorithmUtility::CalculateHistogram(pLine->GetDataFileName(), pLine->GetSampleNumber(), pLine);
+	m_clUid = pLine->GetObjectID();
+
+	CXObject *pCLFolder = ::GetRootObjectFolder(EXCLineFolder);
+	pLine->SetObjectName(pCLFolder->GetUnallocatedName(u8"ÁªºÏ²âÏß"));
+	pCLFolder->AddChild(pLine);
+
+	::AddObjectEvent(pCLFolder);
 }

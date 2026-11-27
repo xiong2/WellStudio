@@ -158,6 +158,7 @@
     <ClInclude Include="xbmsurveybuilder.h" />
     <ClInclude Include="xbmsurveycallback.h" />
     <ClInclude Include="xbmwellpathbuilder.h" />
+    <ClInclude Include="xcombinedlinebuilder.h" />
     <CustomBuild Include="xbmdlgproperty.h">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing xbmdlgproperty.h...</Message>
@@ -258,6 +259,7 @@
     <ClCompile Include="xbmsurveybuilder.cpp" />
     <ClCompile Include="xbmsurveycallback.cpp" />
     <ClCompile Include="xbmwellpathbuilder.cpp" />
+    <ClCompile Include="xcombinedlinebuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="xbasemapwindow.ui">

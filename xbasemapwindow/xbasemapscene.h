@@ -45,7 +45,8 @@ public:
     osg::Camera *GetHudCamera(){ return m_pHudCamera; }
 	const osg::BoundingBox& GetSceneBoundBox(){ return m_coord.GetBoundBox(); }
     void CreateRandomSection();
-    void Create2DPolygon();
+	void Create2DPolygon();
+	void CreateCombinedLine();
 	void UpdateHUDWithWindow();
 	void SetCursorVisible(bool bVisible);
 	void SetColorbarVisible(bool bVisible);

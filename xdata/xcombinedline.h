@@ -20,7 +20,13 @@ public:
 	CXCombinedLine(QString strName = "");
 	~CXCombinedLine();
 
+	virtual bool SerializeData(CXArchive& ar) override;
+
+	virtual QStringList GetDescription() override;
+
 	int GetTraceNumber();
+
+	QPolygonF GetTurnPoints();
 
 	static bool IsTwoObjectIntersect(CXObject*, CXObject*);
 
@@ -29,6 +35,8 @@ public:
 	// The line intersects the survey only if the polyline crosses the rectangle's
 	// boundary; a polyline fully contained in the survey is not intersecting.
 	static bool IsLineIntersectSurvey(CX2DSeismicLine* pLine, CX3DSurvey* pSurvey, QVector<QPointF>* pVecIntersects = nullptr);
+
+	int GetSampleNumber() { return m_nSample; }
 
 private:
 	static bool isTwoSurveyIntersect(CX3DSurvey*, CX3DSurvey*);

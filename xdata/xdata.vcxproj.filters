@@ -547,6 +547,9 @@
     <ClInclude Include="xcombinedline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="xviewinfocombinedline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="x2dpolygon.cpp">
@@ -1072,6 +1075,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="xcombinedline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xviewinfocombinedline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -265,6 +265,7 @@
     <ClInclude Include="xviewinfo3dsurvey.h" />
     <ClInclude Include="xviewinfo3dwelltopformation.h" />
     <ClInclude Include="xviewinfo3dwelltops.h" />
+    <ClInclude Include="xviewinfocombinedline.h" />
     <ClInclude Include="xviewinfocpcurve.h" />
     <ClInclude Include="xviewinfocppolygon.h" />
     <ClInclude Include="xviewinfohiscurve.h" />
@@ -565,6 +566,7 @@
     <ClCompile Include="xviewinfo3dsurvey.cpp" />
     <ClCompile Include="xviewinfo3dwelltopformation.cpp" />
     <ClCompile Include="xviewinfo3dwelltops.cpp" />
+    <ClCompile Include="xviewinfocombinedline.cpp" />
     <ClCompile Include="xviewinfocpcurve.cpp" />
     <ClCompile Include="xviewinfocppolygon.cpp" />
     <ClCompile Include="xviewinfogather.cpp" />

@@ -71,6 +71,7 @@ bool CXBMPickhandle::handle(const osgGA::GUIEventAdapter &ea, osgGA::GUIActionAd
 	case osgGA::GUIEventAdapter::DOUBLECLICK:
 		m_pWin->GetOSGScene()->CreateRandomSection();
 		m_pWin->GetOSGScene()->Create2DPolygon();
+		m_pWin->GetOSGScene()->CreateCombinedLine();
 
 		if (_IsSeismicTimeslicePicked())
 		{

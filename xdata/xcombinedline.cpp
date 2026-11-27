@@ -26,6 +26,64 @@ CXCombinedLine::~CXCombinedLine()
 	_freeMemory();
 }
 
+bool CXCombinedLine::SerializeData(CXArchive& ar)
+{
+	if (ar.IsSaving())
+	{
+		ar << m_nSample;
+		ar << m_dZStart;
+		ar << m_dZStep;
+		ar << m_vecSection.size();
+		for (const CXOneSection& section : m_vecSection)
+		{
+			ar << section.m_refID;
+			ar << section.m_iOffset;
+			ar << section.m_vecInd;
+			ar << section.m_coords;
+		}
+	}
+	else
+	{
+		ar >> m_nSample;
+		ar >> m_dZStart;
+		ar >> m_dZStep;
+
+		int iSize;
+		ar >> iSize;
+		m_vecSection.clear();
+		for (int i = 0; i < iSize; i++)
+		{
+			CXOneSection section;
+			ar >> section.m_refID;
+			ar >> section.m_iOffset;
+			ar >> section.m_vecInd;
+			ar >> section.m_coords;
+
+			m_vecSection.append(section);
+		}
+	}
+
+	return true;
+}
+
+QStringList CXCombinedLine::GetDescription()
+{
+	QStringList sList;
+	sList << u8"起始时间" << QString::number(m_dZStart, 'f', 0);
+	sList << u8"终止时间" << QString::number(m_dZStart + (m_nSample - 1) * m_dZStep, 'f', 0);
+	sList << u8"采样间隔" << QString::number(m_dZStep, 'f', 0);
+	sList << u8"样点数目" << QString::number(m_nSample);
+	sList << u8"剖面数目" << QString::number(m_vecSection.size());
+
+	int nTrace = 0;
+	for (CXOneSection section : m_vecSection)
+		nTrace += section.m_vecInd.size();
+
+	sList << u8"总道数" << QString::number(nTrace);
+
+	return sList;
+}
+
 int CXCombinedLine::GetTraceNumber()
 {
 	int nTrace = 0;
@@ -33,6 +91,19 @@ int CXCombinedLine::GetTraceNumber()
 		nTrace += section.m_vecInd.size();
 
 	return nTrace;
+}
+
+QPolygonF CXCombinedLine::GetTurnPoints()
+{
+	QPolygonF polyline;
+	if (!m_vecSection.isEmpty())
+	{
+		polyline << m_vecSection[0].m_coords.first();
+		for (CXOneSection& section : m_vecSection)
+			polyline << section.m_coords.last();
+	}
+
+	return polyline;
 }
 
 void CXCombinedLine::_WriteData()
@@ -219,7 +290,6 @@ CXCombinedLine* CXCombinedLine::CreateOneInstance(QVector<CXObject *> vecObj, QP
 	CXCombinedLine *pCL = new CXCombinedLine();
 	
 	QPointF prePoint;
-	QPolygon polyIndices;
 	bool bLast3D = false;
 	CX3DSurvey *pLastSurvey = dynamic_cast<CX3DSurvey *>(vecObj[0]);
 	CX2DSeismicLine *pLastLine = nullptr;
@@ -256,7 +326,14 @@ CXCombinedLine* CXCombinedLine::CreateOneInstance(QVector<CXObject *> vecObj, QP
 				else
 				{
 					// Still in the same 3D survey.
-					polyIndices += createOneSegment(pSurvey, polyline[i - 1], polyline[i]);
+					QPolygon poly = createOneSegment(pSurvey, polyline[i - 1], polyline[i]);
+					CXOneSection section;
+					section.m_refID = pLastSurvey->GetObjectID();
+					section.m_vecInd = poly;
+					float* pData = populateOneSection(section);
+
+					vecSection << section;
+					vecBuff << pData;
 				}
 			}
 			else
@@ -278,11 +355,10 @@ CXCombinedLine* CXCombinedLine::CreateOneInstance(QVector<CXObject *> vecObj, QP
 
 				prePoint = vecInts[0];
 				QPolygon poly = createOneSegment(pLastSurvey, polyline[i - 1], prePoint);
-				polyIndices += poly;
 
 				CXOneSection section;
 				section.m_refID = pLastSurvey->GetObjectID();
-				section.m_vecInd = polyIndices;
+				section.m_vecInd = poly;
 				float* pData = populateOneSection(section);
 
 				vecSection << section;
@@ -311,9 +387,29 @@ CXCombinedLine* CXCombinedLine::CreateOneInstance(QVector<CXObject *> vecObj, QP
 		CXOneSection section;
 		section.m_refID = pLastLine->GetObjectID();
 		float* pData = populateOneSection(section, iIDX1, iIDX2);
+		vecSection << section;
+		vecBuff << pData;
 	}
 
-	return nullptr;
+	int nTotalTrace = 0;
+	for (CXOneSection& section : vecSection)
+	{
+		section.m_iOffset = nTotalTrace * pCL->m_nSample;
+		nTotalTrace += section.m_vecInd.size();
+	}
+
+	float *pBuff = new float[pCL->m_nSample * nTotalTrace];
+	for (int i = 0; i < vecSection.size(); i++)
+	{
+		memcpy(pBuff + vecSection[i].m_iOffset, vecBuff[i], pCL->m_nSample * vecSection[i].m_vecInd.size() * 4);
+		delete[]vecBuff[i];
+	}
+
+	pCL->m_vecSection = vecSection;
+	pCL->m_pDataInMem = pBuff;
+	pCL->_WriteData();
+
+	return pCL;
 }
 
 QPolygon CXCombinedLine::createOneSegment(CX3DSurvey* pSurvey, QPointF p1, QPointF p2)

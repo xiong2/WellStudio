@@ -28,6 +28,7 @@
 #include <cassert>
 #include "xviewinfo3dhorizon.h"
 #include "xviewinfo2dseismicline.h"
+#include "xviewinfocombinedline.h"
 #include "xbaseconsole.h"
 #include "xseismicsection.h"
 #include "xviewinfolfmgeometry.h"
@@ -192,6 +193,10 @@ CXViewInfoObject* CXWindow::GetObjectViewInfo(const QUuid& objID)
 		{
 			pViewInfo = new CXViewInfo2DSeismicLine;
 		}
+		else if (eObjType == EXCombinedLine)
+		{
+			pViewInfo = new CXViewInfoCombinedLine;
+		}
 		else if (eObjType == EX3DPoints)
 		{
 			pViewInfo = new CXViewInfo3DPoints;
@@ -219,6 +224,10 @@ CXViewInfoObject* CXWindow::GetObjectViewInfo(const QUuid& objID)
 		else if (eObjType == EX2DSeismicLine)
 		{
 			pViewInfo = new CXViewInfo2DSeismicLine;
+		}
+		else if (eObjType == EXCombinedLine)
+		{
+			pViewInfo = new CXViewInfoCombinedLine;
 		}
 		else if (eObjType == EX3DSurvey)
 		{

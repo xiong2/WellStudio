@@ -417,6 +417,12 @@ XDATA_EXPORT CXObject* GetRootObjectFolder(EXObjectType eObjType, bool bCreate)
 			strIconName = "FracturePatchFolder.png";
 		}
 		break;
+		case EXCLineFolder:
+		{
+			strObjName = "CombinedLineFolder";
+			strIconName = "CLineFolder.png";
+		}
+		break;
 		case EXGeobodyFolder:
 		{
 			strObjName = "Geobodies";

@@ -364,6 +364,23 @@ void CXBasemapScene::Create2DPolygon()
 	m_pBaseMapWin->SetObjectVisibility(p2DPolygon->GetObjectID(), true);
 }
 
+void CXBasemapScene::CreateCombinedLine()
+{
+	if (!m_pBaseMapWin->IsCombinedLineReady())
+		return;
+
+	auto pSurveyCallback = dynamic_cast<CXBMSurveyCallback*>(m_pHudCamera->getEventCallback());
+	if (!pSurveyCallback)
+		return;
+
+	// stop HUD Callback, and remove HUD geometry.
+	m_pBaseMapWin->SetCombinedLineReady(false);
+	m_pHudCamera->removeChildren(0, m_pHudCamera->getNumChildren());
+
+	CXTree::Instance().ChangeTreeItemStatus(QList<QUuid>{pSurveyCallback->GetCombinedLineID()}, true);
+	m_pBaseMapWin->SetObjectVisibility(pSurveyCallback->GetCombinedLineID(), true);
+}
+
 bool CXBasemapScene::SetOjbectVisiability(QUuid objID, bool bVisible)
 {
     if (bVisible && m_mapObjectToNodeBuilder.contains(objID))

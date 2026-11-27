@@ -5,6 +5,7 @@
 #include <osg/Array>
 #include <vector>
 #include <qvector.h>
+#include <quuid.h>
 
 namespace osg { class Camera; class Geode; class Geometry; };
 class CXBaseMapWindow;
@@ -21,6 +22,7 @@ public:
 	void UpdateVertexWhileScroll();
 	void GetXYofTuringPoint(std::vector<double>& vecX, std::vector<double>& vecY);
 	void GetData(double* &pData, int& nSize);
+	QUuid GetCombinedLineID() { return m_clUid; }
 
 private:
 	void _Process(osg::Node* node, osg::NodeVisitor* nv);
@@ -54,6 +56,7 @@ private:
 	std::vector<osg::Vec3> m_vLocal;
 
 	QVector<CXObject *>	m_vecObj;	//	Only for combined line.
+	QUuid	m_clUid;
 };
 
 #endif // KEBMSURVEYCALLBACK_H
